@@ -1,0 +1,11 @@
+<template name="searchResult">
+ <view class="search-result">
+ <block wx:for="{{list}}" wx:key="{{index}}">
+  <view class="search-result__cell" catchtap='onTapSearchResultKeyword' data-text='{{item.text}}'>
+    <view class="search-result__cell__icon iconfont iconxiaosousuo"></view>
+    <rich-text class="search-result__cell__text text-clamp-1" nodes="{{item.richText}}"></rich-text>
+  </view>
+  <view class="search-result__line"></view>
+ </block>
+ </view>
+</template>

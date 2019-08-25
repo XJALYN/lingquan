@@ -1,0 +1,9 @@
+<template name="search">
+<view class="search">
+ <view class="search-left" catchtap='onPushToSearch' data-type='0'>
+    <view class="search__icon iconfont iconxiaosousuo"></view>
+    <input class="search__input" placeholder='请输入搜索关键词' disabled='true'></input>
+ </view>
+</view>
+
+</template>

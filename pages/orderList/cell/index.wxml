@@ -1,0 +1,40 @@
+<template name="cell">
+  <view class="cell" bindtap='onPushToOrderDetail' data-checkoutordercode='{{checkoutOrderCode}}'>
+    <view class="cell__header">
+      <view class="cell__shop__name" bindtap='onPushGoodsList'>{{checkoutOrderCode}}</view>
+      <view class="cell__status">{{orderStateText}}</view>
+    </view>
+    <block wx:for="{{checkoutOrderItemDto}}" wx:key="{{index}}">
+     <view class="cell__mid" >
+      <image class="cell__mid__icon" src="{{item.headImageUrl}}?x-oss-process=style/xcxBalanceMesPic"></image>
+      <view class="cell__mid__left">
+        <view class="cell__mid__left__name">{{item.prodName}}</view>
+        <!-- 规格 -->
+        <!-- <view class="cell__mid__left__tip">{{item.specification+item.model}}</view> -->
+      </view>
+      <view class="cell__mid__right">
+        <view class="cell__mid__right__price">￥{{item.unitPriceSales}}</view>
+        <view class="cell__mid__right__num">x{{item.quantity}}</view>
+      </view>
+    </view>
+        <view wx:if ="{{checkoutOrderItemDto.length -1 != index}}" class="cell__line"></view>
+    </block>
+    
+    <view  class="cell__line__dashed"></view>
+ 
+
+    <view class="cell__bottom">
+
+     <view class="cell__bottom__amount">
+      <text>合计：</text><text class="cell__bottom__amount__value">￥{{amountPayable}}</text>
+     </view>
+      <view class="cell__submit" wx:if="{{orderState==60}}"  catchtap='onConfireSign' data-checkordercode='{{checkoutOrderCode}}'>确认收货</view>
+      <view class="cell__submit" wx:if="{{orderState==20}}"  catchtap='onPay' data-checkordercode='{{checkoutOrderCode}}'>去支付</view>
+    </view>
+<!-- goods.png -->
+   
+
+
+  </view>
+
+</template>

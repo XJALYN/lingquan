@@ -1,0 +1,23 @@
+<template name="find">
+  <view class="find">
+    <view class="find__top">
+      <view class="find__title">达人说</view>
+      <view class="find__subtitle" catchtap='onPushToFind' data-menuindex='0'>查看更多</view>
+      <view class="find__icon iconfont iconyoujiantou"></view>
+    </view>
+    <scroll-view class="find__list" scroll-x="{{true}}">
+      <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class="find__list__item">
+       <view class="find__cell">
+          <image class="find__cell__icon" src="{{item.headImgUrl}}" lazy-load></image>
+          <view class="find__cell__name">{{item.username}}</view>
+          <view class="find__cell__rank">{{item.userLabel}}</view>
+          <view class="find__cell__btn" data-articleid="{{item.articleId}}" bindtap='onPushToFindDetail'>前往查看</view>
+        </view>
+      </view>
+     
+    
+      </block>
+    </scroll-view> 
+  </view>
+</template>

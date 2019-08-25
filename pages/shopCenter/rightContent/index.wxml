@@ -1,0 +1,13 @@
+<template name="rightContent">
+  <view class="right-content">
+    <view class="right-content-title">商品分类</view>
+    <view class="right-content__list">
+      <block wx:for="{{list}}" wx:key="{{index}}">
+        <view class="right-content__list__item" catchtap='onPushToSearch' data-type='2' data-categorycode="{{item.categoryCode}}">
+          <image class="right-content__list__item__icon" src="{{item.categoryImgUrl}}"></image>
+          <view class="right-content__list__item__title">{{item.categoryName}}</view>
+        </view>
+        </block>
+    </view>
+  </view>
+</template>

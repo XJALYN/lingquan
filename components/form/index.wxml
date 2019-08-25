@@ -1,0 +1,4 @@
+<!--components/form/index.wxml-->
+ <form report-submit='true' bindsubmit='onReport' data-item="{{item}}">
+      <button class='glrBtn'  plain style="border: none"  form-type='submit'><slot/></button>
+  </form>

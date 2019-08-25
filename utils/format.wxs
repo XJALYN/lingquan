@@ -1,0 +1,18 @@
+function toFixed(value){
+   return parseFloat(value).toFixed(2)
+}
+function toFormatPhone(value){
+  var result = ""
+  for(var i = 0;i<value.length;i++){
+    console.log(i)
+    result += value.charAt(i)
+   if(i==3||i==7){
+     result += " "
+   }
+  }
+  console.log(result)
+  return result
+}
+
+module.exports.toFixed = toFixed
+module.exports.toFormatPhone = toFormatPhone

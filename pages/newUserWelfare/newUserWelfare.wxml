@@ -1,0 +1,29 @@
+<!--pages/newUserWelfare/newUserWelfare.wxml-->
+<image class="bg_image" mode="widthFix" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_001.png"></image>
+<view class="content">
+<swiper class="banner" previous-margin="226rpx" next-margin="226rpx" current="{{vipIndex}}" bindchange="onChangeSwiper">
+ <swiper-item wx:for="{{vipList}}" wx:key="{{index}}">
+   <image class="banner__image" src="{{item.icon}}" style="transform: scale({{vipIndex==index?1:0.7}});opacity:{{vipIndex==index?1:0.5}}"></image>
+ </swiper-item>
+</swiper>
+<image class="arrow__left" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_arrow_left.png" wx:if="{{vipIndex==1||vipIndex==2}}" bindtap="onSlideLeft"></image>
+<image class="arrow__right" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_arrow_right.png" wx:if="{{vipIndex==1||vipIndex==0}}" bindtap="onSlideRight"></image>
+<view class="title" wx:if="{{vipIndex != 2}}">
+  <view>花<text>{{vipList[vipIndex].payPrice}}</text>{{vipList[vipIndex].title}}会员</view>
+  <view class="title__tip">(享首单必反、会员折扣价、多倍积分)</view>
+  <view>即送价值<text>{{vipList[vipIndex].price}}</text>福袋<text>1个</text></view>
+</view>
+
+<view class="title" wx:else>
+  <view>限时开通限量卡会员</view>
+  <view class="title__tip">(享首单必反、会员折扣价、多倍积分)</view>
+  <view>即送价值<text>{{vipList[vipIndex].price}}</text>福袋<text>1个</text></view>
+</view>
+<image class="slog-image" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_slog.png"></image>
+<image class="vip-goods-image" src="{{vipList[vipIndex].src}}"></image>
+</view>
+
+
+<image class="bg_image" mode="widthFix" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_03.png"></image>
+<image class="bg_image" mode="widthFix" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_04.png"></image>
+<image class="bg_image" mode="widthFix" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_05.png" bindtap="onPushToMember"></image>

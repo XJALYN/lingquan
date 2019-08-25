@@ -1,0 +1,8 @@
+<template name="navigatorList">
+  <view class="navigator-list">
+    <view class="navigator__item" wx:for="{{list}}" wx:key="{{index}}" data-categorycode="{{item.categoryCode}}" bindtap="onPushToSearch" data-type="2" bindtap="onPushToSearch">
+      <image class="navigator__item__icon" src="{{item.categoryImgUrl}}" ></image>
+      <view class="navigator__item__title">{{item.categoryName}}</view>
+    </view>
+  </view>
+</template>

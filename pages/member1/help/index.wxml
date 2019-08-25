@@ -1,0 +1,7 @@
+<template name="help">
+ <view class="help" bindtap='onLaunchMiniProgram'>
+  <!-- <text class="help-text">好友助力</text>
+  <text class="help-value">0元</text>
+  <text class="help-text">体验季卡会员</text> -->
+ </view>
+</template>

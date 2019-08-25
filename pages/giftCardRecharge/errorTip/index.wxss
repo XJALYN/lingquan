@@ -1,0 +1,17 @@
+.warn{
+ position: absolute;
+ top: 290rpx;
+ left: 32rpx;
+ display: flex;
+ align-items: center;
+}
+.warn-icon{
+ width: 28rpx;
+ height: 28rpx;
+ color: #F61B6D;
+}
+.warn-title{
+  font-size: 24rpx;
+  color: #F61B6D;
+  margin-left: 8rpx;
+}

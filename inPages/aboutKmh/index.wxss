@@ -1,0 +1,41 @@
+/* inPages/aboutKmh/index.wxss */
+.aboutbeatu{display: block;width:334rpx;height: 415rpx;position: absolute;left:50%;margin-left: -167rpx;top: 50%;margin-top:-208rpx  }
+.aboutKmh{padding: 32rpx;height: auto;overflow: hidden;}
+.akBor{border:11rpx solid #333333;border-radius:40rpx;padding:12rpx;background-color: #fff;position: relative }
+.akBorder{border:1rpx dashed #999;padding:33rpx 24rpx;height: auto;overflow: hidden;border-radius: 20rpx;}
+.akName{width: 384rpx;height: 67rpx;margin: 0 auto;font-size: 48rpx;text-align: center;color: #282828;font-weight:bold;}
+.akIco{width:315rpx;height: 15rpx;background:linear-gradient(146deg,rgba(255,202,224,1) 0%,rgba(250,59,123,1) 100%);margin:-25rpx auto;}
+.akMes{width: 100%;height: auto;overflow: hidden;padding-top:40rpx;}
+.akMes view{width: 100%;height: auto;overflow: hidden;font-size: 28rpx;color: #666;margin:35rpx 0;line-height:40rpx;}
+.akMes view text{color: #333;font-weight: bold}
+.akVideo{margin-top: 30rpx;}
+.akVideo video{
+  width: 100%;
+  height: 336rpx;
+}
+.akMes_clear{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+.search-result{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.search-result__cell{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+
+}
+.search-result__line{
+  margin-left: 31rpx;
+  width: calc(100% - 31rpx);
+  height: 2rpx;
+  background: #E8E8E8;
+}
+.search-result__cell__icon{
+ width: 38rpx;
+ height: 38rpx;
+ font-size: 38rpx;
+ line-height: 38rpx;
+ color:#333333;
+ margin-left: 55rpx;
+}
+.search-result__cell__text{
+ margin-left: 16rpx;
+ font-size: 24rpx;
+}

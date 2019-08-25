@@ -1,0 +1,29 @@
+<!--inPages/recommend/index.wxml-->
+<view class='recommend animated fadeIn'>
+    <view class='recommendLi' wx:for="{{zclist}}" wx:key="{{index}}">
+          <view class='recommendUl'  bindtap='goWeixin' data-href="{{item.link}}">
+              <!-- <web-view class='recommendLink' src='{{item.link}}'> -->
+                  <image class='recImg' src='{{item.articleImageUrl}}?x-oss-process=style/recom_img' lazy-load></image>
+                  <view class='recMes'>
+                    <view class='recName ellips_line3'>{{item.title}}</view>
+                    <view class='recTime'>
+                      <text class='recDate'>{{item.createTime}}</text>
+                      
+                    </view>
+                  </view>
+              <!-- </web-view>  -->
+          </view>
+          <view class='recModule'>
+              <view class=''  wx:if="{{item.canPraise==0}}" bindtap='onclickNo'>
+                  <icon class="hasSup iconfont iconzhongcao1 {{item.canPraise==0?'niceIn':''}}" size="20"></icon>
+                  <text>{{item.praiseNum}}</text>
+              </view>
+              <view  data-articleid='{{item.articleId}}' data-index="{{index}}" bindtap='onclickZc' wx:if="{{item.canPraise==1}}">
+                  <icon class="noSup iconfont iconzhongcao " size="20" ></icon>
+                  <text>{{item.praiseNum}}</text>
+              </view>
+          </view>
+    </view>
+
+  
+</view>

@@ -1,0 +1,20 @@
+<view>
+ <view class="cell__address" catchtap='onPushToAddress'>
+  <view class="cell__address__title">收货地址</view>
+  <view class="cell__address__arraw iconfont iconyoujiantou"></view>
+ </view>
+
+ <view class="list">
+   <view class="list__item" catchtap='onPushToAbountKmh'>
+    <view class="list__item__title">关于鲲美会</view>
+    <view class="list__item__arraw iconfont iconyoujiantou"></view>
+   </view>
+   <view class="list__line"></view>
+   <button class="list__item" open-type="feedback" style='border:none;padding:0 0;background-color:white;' plain >
+    <view class="list__item__title">问题反馈</view>
+    <view class="list__item__arraw iconfont iconyoujiantou"></view>
+   </button>
+ </view>
+
+ <view class="version">版本 {{version}}</view>
+</view>

@@ -1,0 +1,96 @@
+.say-list{
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding-bottom: 30rpx;
+}
+.say-list__title{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  line-height: 42rpx;
+  height: 42rpx;
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.say-list__cell{
+ margin-top: 30rpx;
+ width: 100%;
+ display: flex;
+
+}
+.say-list__cell__line{
+  margin-top: 30rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  border-bottom: 1rpx dotted #D8D8D8;
+}
+.say-list__cell__icon{
+  margin-left: 32rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.say-list__cell__mid{
+  margin-left: 16rpx;
+  flex:1;
+  margin-right: 32rpx;
+}
+.say-list__cell__mid__top{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.say-list__cell__mid__name{
+ height: 40rpx;
+ line-height: 40rpx;
+ font-size: 28rpx;
+ color: #333333;
+ flex:1;
+ font-weight: bold;
+}
+.say-list__cell__mid__show{
+  color: #F61B6D;
+  font-size: 24rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+}
+.say-list__cell__mid__text{
+  margin-top: 8rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 33rpx;
+}
+.say-list__cell__mid__from{
+  margin-top: 8rpx;
+  align-self: flex-end;
+  color: #333333;
+  font-size: 24rpx;
+  font-weight: bold;
+  text-align: right;
+}
+.say-list__more{
+ margin-top: 30rpx;
+ width:160rpx;
+ height:60rpx;
+ align-self: center;
+ border-radius:30px;
+ border:1px solid rgba(216,216,216,1);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+.say-list__more__title{
+ font-size: 24rpx;
+ color: #333333;
+}
+.say-list__more__arrow{
+ color: #333333;
+ font-size: 12rpx;
+ margin-left: 4rpx;
+}

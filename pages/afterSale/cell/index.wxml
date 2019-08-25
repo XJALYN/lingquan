@@ -1,0 +1,39 @@
+<template name="cell">
+  <view class="cell" bindtap='onPushToAfterDetail' data-refundrecordcode='{{refundRecordCode}}'>
+    <view class="cell__header">
+      <view class="cell__shop__name" bindtap='onPushGoodsList'>{{checkoutOrderCode}}</view>
+      <view class="cell__status">{{refundRecordStateText}}</view>
+    </view>
+    <block >
+     <view class="cell__mid" wx:for="{{refundRecordItems}}" wx:key="{{index}}">
+      <image class="cell__mid__icon" src="{{item.imageUrl}}?x-oss-process=style/xcxBalanceMesPic"></image>
+      <view class="cell__mid__left">
+        <view class="cell__mid__left__name text-clame-1">{{item.prodName}}</view>
+        <!-- <view class="cell__mid__left__tip">商品规格</view> -->
+      </view>
+      <view class="cell__mid__right">
+        <view class="cell__mid__right__price">￥{{item.prodPaymentPrice}}</view>
+        <view class="cell__mid__right__num">x{{item.refundQuantity}}</view>
+      </view>
+    </view>
+        <view wx:if="{{refundRecordItems.length -1 == index}}" class="cell__line"></view>
+    </block>
+    
+    <view  class="cell__line__dashed"></view>
+ 
+
+    <view class="cell__bottom">
+
+     <view class="cell__bottom__amount">
+       退款单号:{{refundRecordCode}}
+     </view>
+      <!-- <view class="cell__submit"   catchtap='onPushToAfterSaleApply' data-checkoutordercode='{{checkoutOrderCode}}' wx:if="{{flag==true}}">申请售后</view> -->
+      <view class="cell__submit"   catchtap='onPushToReturnedSalesNote' data-refundrecordcode='{{refundRecordCode}}' wx:if="{{refundType==2 &&(refundRecordState==40||refundRecordState==56)}}">填写退货单</view>
+    </view>
+<!-- goods.png -->
+   
+
+
+  </view>
+
+</template>

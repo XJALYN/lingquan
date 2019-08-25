@@ -1,0 +1,26 @@
+
+<template name="header">
+<view class="header">
+ <image class="header-bg" hidden="{{listIndex != 0}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_header_1.png"></image>
+ <image class="header-bg" hidden="{{listIndex != 1}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_header_2.png"></image>
+ <image class="header-bg" hidden="{{listIndex != 2}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_header_3.png"></image>
+ <image class="header-bg" hidden="{{listIndex != 3}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_header_4.png">
+ </image>
+
+ <swiper class="banner-list" bindchange='onSwiperChange' current='{{listIndex}}' next-margin='40rpx' previous-margin='65rpx'>
+  <swiper-item wx:for="{{list}}" wx:key="{{index}}">
+  <view class="banner__item">
+   <image class="banner-image" src="{{item.membercardBackgroundimgurl}}?x-oss-process=style/xcxMemberCard"></image>
+   <view wx:if="{{index==vipIndex}}" class="banner__item__status banner__item__status__vip{{vipIndex}}">当前等级</view>
+   <view class="banner__item__slogan banner__item__status__vip{{listIndex}}">{{item.membercardDesc}}</view>
+  </view>
+   
+  </swiper-item>
+ </swiper>
+  <view class="banner-list__dot__list">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="banner-list__dot__list__item {{index==listIndex?'banner-list__dot__list__item--active':''}}" ></view>
+  </block>
+ </view>
+</view>
+</template>

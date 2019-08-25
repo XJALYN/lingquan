@@ -1,0 +1,10 @@
+<!--pages/myIntegral/myIntegral.wxml-->
+<import src="./cell/index" />
+
+<template is="cell" wx:for="{{list}}" wx:key="{{index}}" data="{{...item}}"/>
+
+<kc-footer-loading wx:if="{{list.length >= 10}}" noMore="{{noMore}}"/>
+
+<kc-placeholder-image wx:if="{{list.length == 0}}" imageClassName="iconfont iconzanwujifen" title="暂无积分" />
+
+<kc-author-modal show="{{needAuthor}}"/>

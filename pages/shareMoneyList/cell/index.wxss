@@ -1,0 +1,45 @@
+.cell{
+  margin-top: 20rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 10rpx;
+}
+.cell__left{
+ height: 160rpx;
+ margin-left: 30rpx;
+ flex:1;
+}
+.cell__left__title{
+ margin-top: 32rpx;
+ height: 42rpx;
+ font-size: 30rpx;
+ font-weight:500; 
+}
+.cell__left__date{
+ margin-top: 24rpx;
+ height: 33rpx;
+ color: #999999;
+ font-size: 24rpx;
+ flex:1;
+}
+.cell__right{
+ margin-right: 30rpx;
+}
+.cell__right__price{
+ margin-top: 31rpx;
+ font-size: 36rpx;
+ color: #F61B6D;
+ font-weight: bold;
+ text-align: right
+}
+.cell__right__status{
+ margin-top: 16rpx;
+ height: 33rpx;
+ font-size: 24rpx;
+ color: #999999;
+ text-align: right;
+}

@@ -1,0 +1,5 @@
+<template name="limitCard">
+  <view class="limit-card" bindtap='onHideLimitCard'>
+    <image class="limit-card__image animated zoomIn" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_limit_card_success.png"></image>
+  </view>
+</template>

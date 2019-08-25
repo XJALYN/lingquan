@@ -1,0 +1,133 @@
+/* components/authorAlert/index.wxss */
+.author__bg{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgba(0,0,0,0.6);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.author__content{
+  width: 520rpx;
+  position: relative;
+  background-color: white;
+  height: 550rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0,0,0,0.1);
+  border-radius:20rpx;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* .author__header{
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 0rpx;
+  background: #02B4BD;
+  height: 63rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+} */
+.author__top{
+ display: flex;
+ flex-direction: column;
+ height: 246rpx;
+ width: 542rpx;
+ font-size: 32rpx;
+ color: white;
+ position: relative;
+ background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/authorModalBg.png");
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+ background-position:0rpx 0rpx;
+}
+.author__img{
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 555rpx;
+  height: 250rpx;
+  z-index: 0;
+}
+
+.author__top__title{
+   margin-top: 76rpx;
+   margin-left: 38rpx;
+   margin-right: 57rpx;
+   width: calc(100% - 114rpx);
+   font-size: 32rpx;
+   
+}
+.author__top__desc{
+  margin-top: 20rpx;
+   margin-left: 57rpx;
+   margin-right: 57rpx;
+   width: calc(100% - 114rpx);
+  font-size: 28rpx;
+  line-height: 27rpx;
+  height: 27rpx;
+  
+}
+
+
+.author__title{
+  margin-top: 18rpx;
+  margin-left: 52rpx;
+  color: #333333;
+  font-size: 32rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.author__desc{
+  margin-top: 52rpx;
+   margin-left: 46rpx;
+   margin-right: 57rpx;
+   width: calc(100% - 114rpx);
+  color: #999999;
+  font-size: 24rpx;
+  
+}
+.author__desc--two{
+  margin-left: 57rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.author__content__bottom{
+  display: flex;
+  flex-direction: column;
+}
+.author__submit{
+  margin-top: 40rpx;
+  margin-right: 140rpx;
+  width:240rpx;
+height:66rpx;
+text-align: center;
+font-weight: bold;
+color: white;
+background-color:#F673a1;
+box-shadow:0px 0px 9px 0px rgba(71,59,63,0.4);
+border-radius:33rpx;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 33rpx;
+padding: 0 0;
+box-sizing: border-box;
+
+}
+.author__content__bottom__line{
+  margin-top: 59rpx;
+  height: 2rpx;
+  margin-left: 40rpx;
+  width: 440rpx;
+  background: #EDEDED;
+}
+.author__submit view{
+  height: 24rpx;
+  line-height: 24rpx;
+}

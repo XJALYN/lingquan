@@ -1,0 +1,20 @@
+<template name="navigatorList">
+  <view class="navigator-list">
+    <view class="navigator__item" bindtap='onLaunchMiniProgram'>
+      <image class="navigator__item__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeFree.png" lazy-load></image>
+      <view class="navigator__item__title">免费拿好物</view>
+    </view>
+     <view class="navigator__item" bindtap='onPushToRedPacket'>
+      <image class="navigator__item__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeRedpacket.png" lazy-load></image>
+      <view class="navigator__item__title">膨胀红包</view>
+    </view>
+     <view class="navigator__item" bindtap="onPushToFind">
+      <image class="navigator__item__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeDiscovery.png" lazy-load></image>
+      <view class="navigator__item__title">发现</view>
+    </view>
+     <view class="navigator__item" bindtap='onPushToUserCenter'>
+      <image class="navigator__item__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeMain.png" lazy-load></image>
+      <view class="navigator__item__title">我的</view>
+    </view>
+  </view>
+</template>

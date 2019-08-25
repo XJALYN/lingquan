@@ -1,0 +1,14 @@
+<!--components/authorAlert/index.wxml-->
+<view class="author__bg" wx:if="{{show}}">
+<view class="author__content">
+  <view class="author__top">
+    <view class="author__top__title">「鲲美会」遇见你,好幸运!</view>
+    <view class="author__top__desc">Nice to meet you</view>
+  </view>
+  <view class="author__desc">「鲲美会」申请获得您的微信授权</view>
+  <view class="author__content__bottom">
+   <view class="author__content__bottom__line"></view>
+    <button class="author__submit" wx:if="{{type==0}}" open-type='{{openSetting?"openSetting":"getUserInfo"}}' bindgetuserinfo='bindgetuserinfo' plain style='border:none;background: #F673a1;color: white;'>好哒</button>
+  </view>
+</view>
+</view>

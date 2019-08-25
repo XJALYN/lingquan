@@ -1,0 +1,76 @@
+/* inPages/recommend/index.wxss */
+@import "../../app.wxss";
+icon{padding: 0;margin: 0;}
+.recommend{padding:30rpx 32rpx;height: auto;overflow: hidden;}
+.recommendLi{position: relative;width: 100%;height: auto;overflow: hidden}
+.recommendUl{padding:30rpx;height: auto;overflow: hidden;background-color: #fff;border-radius:10rpx;margin-bottom: 20rpx;position:relative;}
+.recommendLink{display: block;width: 100%;height: auto;overflow: hidden;}
+.recImg{display: block;width: 260rpx;height: 260rpx;float: left;border-radius: 10rpx}
+.recMes{width: 340rpx;height: auto;overflow: hidden;float: right;}
+.recName{width: 100%;height: 120rpx;color: #333;font-size: 28rpx;margin-bottom: 50rpx;padding-top: 10rpx;font-weight: bold}
+.recTime{width: 100%;height: auto;overflow: hidden;padding-top: 15rpx;}
+.recDate{font-size:24rpx;color: #999;float: left;padding-top: 15rpx; }
+.recModule{width:94rpx;glyph-orientation-horizontal: 56rpx;border: 1rpx solid #57B939;border-radius:29rpx;float: right;padding: 0 20rpx;height: 58rpx;position: absolute;bottom:50rpx;right: 30rpx; }
+.hasSup{display: block;float: left;margin:0rpx;color: #57B939;font-size:36rpx;margin-top: 7rpx;  }
+.recModule text{float: left;font-size: 28rpx;color: #57B939;padding-top:11rpx;padding-left:5rpx;}
+.noSup{display: block;float: left;margin:0rpx;color: #57B939;font-size:36rpx;margin-top:7rpx;}
+.niceIn {
+	-webkit-animation:niceIn 0.8s .2s ease;
+	-moz-animation:niceIn 0.8s .2s ease;
+	-o-animation:niceIn 0.8s .2s ease;
+	animation:niceIn 0.8s .2s ease;
+}
+@-webkit-keyframes niceIn {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.3);
+		-ms-transform: scale(1.3);
+		transform: scale(1.3)
+	}
+	70% {
+		-webkit-transform: scale(.5);
+		-ms-transform: scale(.5);
+		transform: scale(.5)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+@keyframes niceIn {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.3);
+		-ms-transform: scale(1.3);
+		transform: scale(1.3)
+	}
+	70% {
+		-webkit-transform: scale(.5);
+		-ms-transform: scale(.5);
+		transform: scale(.5)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+
+
+

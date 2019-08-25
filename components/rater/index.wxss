@@ -1,0 +1,15 @@
+/* components/rater/index.wxss */
+@import "../../app.wxss";
+.rater{
+  display: flex;
+  align-items: center;
+}
+.rater__star{
+  width: 40rpx;
+  height: 40rpx;
+  color: rgba(218, 214, 214, 1);
+  margin-right: 16rpx;
+}
+.rater__star--active{
+  color: rgba(246, 27, 109, 1);
+}

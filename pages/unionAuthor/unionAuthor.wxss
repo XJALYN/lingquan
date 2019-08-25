@@ -1,0 +1,150 @@
+/* components/authorAlert/index.wxss */
+.author__bg{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #F6F6F6;
+ display: flex;
+ flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+.author__content{
+  margin-top: 40rpx;
+  width: 686rpx;
+  height: 460rpx;
+  position: relative;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.author__content__middle{
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.author__content__guanlian{
+ 
+}
+
+.author__content__icon{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.author__content__title{
+  margin-top: 70rpx;
+  color: #333333;
+  font-size: 28rpx;
+
+}
+.author__content__slogan{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+
+.author__top{
+ display: flex;
+ flex-direction: column;
+ height: 246rpx;
+ width: 542rpx;
+ font-size: 32rpx;
+ color: white;
+ position: relative;
+ background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/authorModalBg.png");
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+ background-position:0rpx 0rpx;
+}
+.author__img{
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 555rpx;
+  height: 250rpx;
+  z-index: 0;
+}
+
+.author__top__title{
+   margin-top: 76rpx;
+   margin-left: 38rpx;
+   margin-right: 57rpx;
+   width: calc(100% - 114rpx);
+   font-size: 32rpx;
+   
+}
+.author__top__desc{
+  margin-top: 20rpx;
+   margin-left: 57rpx;
+   margin-right: 57rpx;
+   width: calc(100% - 114rpx);
+  font-size: 28rpx;
+  line-height: 27rpx;
+  height: 27rpx;
+  
+}
+
+
+.author__title{
+  margin-top: 18rpx;
+  margin-left: 52rpx;
+  color: #333333;
+  font-size: 32rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.author__desc{
+   margin-top: 30rpx;
+   width: calc(100% - 114rpx);
+  color: rgba(153, 153, 153, 1);
+  font-size: 24rpx;
+  text-align: center;
+  
+}
+.author__desc--two{
+  margin-left: 57rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.author__content__bottom{
+  display: flex;
+  flex-direction: column;
+}
+.author__submit{
+  margin-top: 287rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  height:100rpx;
+  border-radius: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color:#F61B6D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 33rpx;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+.author__content__bottom__line{
+  margin-top: 59rpx;
+  height: 2rpx;
+  margin-left: 40rpx;
+  width: 440rpx;
+  background: #EDEDED;
+}
+.author__submit view{
+  height: 24rpx;
+  line-height: 24rpx;
+}

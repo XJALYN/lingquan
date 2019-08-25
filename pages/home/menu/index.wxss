@@ -1,0 +1,96 @@
+.menu{
+  border-top:20rpx white solid;
+  width: 100%;
+  white-space: nowrap;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  scrollbar-face-color: rgba(0,0,0,0);
+  scrollbar-highlight-color: rgba(0,0,0,0);
+}
+.menu::-webkit-scrollbar {display:none}
+.menu__item{
+  display: inline-block;
+  margin-left: 36rpx;
+  color: #333333;
+  font-size: 28rpx;
+  position: relative;
+  align-items: center;
+  padding-bottom: 0;
+  padding-top:0;
+  height: 72rpx;
+
+}
+.menu__item__light{
+
+  width:116rpx;
+  height:54rpx;
+  color: white;
+  background:url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/kmhnav.png");
+  background-size: 100% 100%;
+  border-radius:27rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   overflow-x: hidden;
+   margin-top: 8rpx;
+   margin-bottom: 8rpx;
+  
+}
+.menu__item__title{
+  margin-top: auto;
+  margin-bottom: auto;
+ height:54rpx;
+ line-height: 54rpx;
+ text-align: center;
+}
+.menu__item__move{
+  animation: ease-in-out infinite 3s menu__item__move__animated;
+  margin-left: -200rpx;
+  height:54rpx;
+  line-height: 54rpx;
+}
+@keyframes menu__item__move__animated{
+ 0%{
+  margin-left: 110rpx;
+ }
+ 100%{
+  margin-left: -200rpx;
+ }
+ 
+}
+.menu__item--active{
+  font-size: 36rpx;
+  font-weight: bold;
+  
+}
+
+
+.menu__item__line{
+  position: absolute;
+  width: 1rpx;
+  height: 6rpx;
+  bottom:4rpx;
+  background-color: rgba(0,0,0,0);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: ease 0.3s all;
+  animation: ease 0.3s menu__line-big;
+}
+.menu__item__line--active{
+  background-color: #333333;
+  width: 46rpx;
+}
+@keyframes menu__line-big{
+  0%{
+    width: 0rpx;
+  }
+  100%{
+    width: 46rpx;
+  }
+}

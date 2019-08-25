@@ -1,0 +1,24 @@
+/* inPages/liveList/index.wxss */
+@import "./cell/index";
+.cell-no{
+  margin-top:45rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  position: relative;
+}
+.cell-no__image{
+ width: 686rpx;
+ height: 335rpx;
+ background: #eee;
+ border-radius: 10rpx;
+}
+
+.cell-no__title{
+  margin-top: 27rpx;
+  margin-left: 8rpx;
+ color: #999999;
+ font-size: 36rpx;
+ font-weight: bold;
+}

@@ -1,0 +1,10 @@
+<template name="addressSelectCell">
+  <picker mode="region" bindchange='{{input}}'>
+  <view class="address-select-cell">
+   <view class="address-select-cell__title">{{title}}</view>
+   <view wx:if="{{value}}" class="address-select-cell__value">{{value}}</view>
+   <view wx:else class="address-select-cell__value__placehold">{{placehold}}</view>
+   <view class="address-select-cell__line"></view>
+   </view>
+   </picker>
+</template>

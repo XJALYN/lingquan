@@ -1,0 +1,6 @@
+<template name="errorTip">
+ <view class="warn">
+ <view class="warn-icon iconfont iconcuowutishi"></view>
+ <view class="warn-title">{{title}}</view>
+</view>
+</template>

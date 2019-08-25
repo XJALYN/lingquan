@@ -1,0 +1,39 @@
+.left-menu{
+  margin-top: 110rpx;
+  width: 160rpx;
+  max-width: 160px;
+  background: white;
+  height: calc(100vh - 120rpx);
+}
+
+.left-menu__item{
+  width: 160rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: relative;
+}
+
+
+.left-menu__item__title{
+  color: #333333;
+}
+
+.left-menu__item--active{
+ background: #F6F6F6;
+}
+
+.left-menu__item__line--left{
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 6rpx;
+  top: 50%;
+  transform:translateY(-50%);
+  transition: ease all 0.3s;
+}
+.left-menu__item__line--left--active{
+  background: #333333;
+  height: 88rpx;
+}

@@ -1,0 +1,20 @@
+<template name="cell">
+
+    <view class='goods-cell'>
+
+      <image class='goods-cell__image' src='{{imageUrl}}?x-oss-process=style/xcxBalanceMesPic'></image>
+      <!-- 右边 -->
+      <view class='goods-cell__right'>
+        <view class='goods-cell__right__title text-clamp'>{{prodName}}</view>
+          <view class="goods-cell__num">x{{buyQuantity}}</view>
+          <!-- 数量加减 -->
+          <view class='goods-cell__num-list' wx:if="{{typeIndex==1}}">
+            <text class='goods-cell__num-list_sub' bindtap='onSubNum' data-index='{{index}}' data-num="{{refundQuantity}}">-</text>
+            <input class="goods-cell__input" bindinput="onInputRefundNum"  type='number' data-index='{{index}}' value='{{refundQuantity}}' style='height:50rpx;' bindblur='onInputRefundMoneyBlur' bindconfirm='onInputRefundMoneyBlur'/>
+            <text class='goods-cell__num-list_add' bindtap='onAddNum' data-index='{{index}}' data-num="{{refundQuantity}}">+</text>
+          </view>
+      </view>
+    </view>
+
+   
+</template>

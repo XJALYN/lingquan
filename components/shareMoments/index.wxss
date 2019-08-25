@@ -1,0 +1,52 @@
+/* components/shareMoments/index.wxss */
+@import "../../app.wxss";
+
+.shareMes {
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  right: 0rpx;
+  bottom: 0rpx;
+  z-index: 9;
+  background: rgba(0,0,0,0.5);
+}
+
+.shareMent {
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  right: 0rpx;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  z-index: 8;
+  
+}
+
+.shareImage {
+  position: absolute;
+  width: 650rpx;
+  height: 925rpx;
+  top: 50rpx;
+  left: 50rpx;
+  z-index: 10;
+  border-radius: 8rpx;
+}
+
+.smBtn {
+  position: absolute;
+  width: 650rpx;
+  height: 80rpx;
+  top: 1045rpx;
+  left: 50rpx;
+
+  border-radius: 36px;
+  font-size: 34rpx;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80rpx;
+  z-index: 10;
+  background: #F61B6D;
+}

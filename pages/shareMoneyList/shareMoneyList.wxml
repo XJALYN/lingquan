@@ -1,0 +1,12 @@
+<!--pages/shareMoneyList/shareMoneyList.wxml-->
+<import src="./header/index" />
+<import src="./cell/index" />
+<template is="header" data="{{startDate,endDate}}"/>
+<block wx:for="{{list}}" wx:key="{{index}}">
+  <template is="cell" data="{{...item}}"/>
+</block>
+<kc-footer-loading wx:if="{{list.length >= 10}}" noMore="{{noMore}}"/>
+<kc-placeholder-image title="暂无分享金" imageClassName="iconfont iconzanwufenxiangjin" wx:if="{{list.length == 0}}"/>
+
+<kc-author-modal show="{{needAuthor}}"/>
+

@@ -1,0 +1,763 @@
+/* pages/balanceMes/balanceMes.wxss */
+
+.balanceMes {
+  padding: 30rpx 32rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.balanceOne {
+  padding: 40rpx 30rpx;
+  height: 80rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.haIco {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  float: left;
+  background-color: #f61b6d;
+}
+
+.haIco icon {
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 43rpx;
+  line-height: 80rpx;
+}
+
+.balanOmes {
+  width: 460rpx;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.baoName {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.baoAdress {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 40rpx;
+}
+
+.balanceNext {
+  display: block;
+  font-size: 28rpx;
+  color: #999;
+  position: absolute;
+  right: 30rpx;
+  top: 48rpx;
+}
+
+.noAdress {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.noAdress text {
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+  padding: 20rpx 30rpx;
+  font-weight: bold;
+}
+
+.noAdress icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 19rpx;
+  background-image: url(https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/addressline.png);
+  background-size: 100% 100%;
+}
+
+.balanceTwo {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 17rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.shopIco {
+  color: #f61b6d;
+  display: block;
+  float: left;
+  margin: 19rpx 8rpx 0 0;
+  font-size: 35rpx;
+}
+
+.balantName {
+  padding: 18rpx 30rpx;
+  height: auto;
+  overflow: hidden;
+  font-size: 32rpx;
+  color: #333;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.balantName text {
+  padding: 13rpx 0;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  font-weight: bold;
+}
+
+.balantDetail {
+  padding: 0rpx 30rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.balantCount {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e8e8e8;
+  padding: 40rpx 0;
+}
+
+.balantDetail image {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  float: left;
+  border-radius: 10rpx;
+}
+
+.balantMes {
+  width: 310rpx;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.balantmName {
+  width: 100%;
+  height: 66rpx;
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.balantmType {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #999;
+  font-size: 22rpx;
+}
+
+.balantNum {
+  width: 120rpx;
+  height: auto;
+  overflow: hidden;
+  float: right;
+}
+
+.balantNum text:nth-child(1) {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #f61b6d;
+  text-align: right;
+}
+
+.balantNum text:nth-child(2) {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #999;
+  text-align: right;
+  margin-top: 83rpx;
+}
+
+.placehold {
+  font-size: 24rpx;
+  color: #d8d8d8;
+}
+
+.balantFreight {
+  padding: 30rpx 0 0 0;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.balantFreight text:nth-child(1) {
+  font-size: 24rpx;
+  color: #333;
+  float: left;
+}
+
+.balantFreight text:nth-child(2) {
+  font-size: 24rpx;
+  color: #f61b6d;
+  float: right;
+  font-weight: bold;
+}
+.balantFreight text:nth-child(4) {
+  font-size: 24rpx;
+  color: #333;
+  float: right;
+  margin-right: 0rpx !important;
+}
+
+.balantFreight icon {
+  position: absolute;
+  right: 0;
+  top: 13rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.balantFreight text:nth-child(3) {
+  color: #333;
+  font-size: 24rpx;
+  float: right;
+  margin-right: 40rpx;
+}
+
+.balantLeave {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 18rpx 0 20rpx 0;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.balantLeave text:nth-child(1) {
+  font-size: 24rpx;
+  color: #333;
+  float: left;
+  line-height: 60rpx;
+}
+
+.balantLeave input {
+  font-size: 24rpx;
+  color: #333;
+  float: left;
+  width: 500rpx;
+  margin: 0rpx 0 0 20rpx;
+  text-align: left;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.balantPrice {
+  padding: 40rpx 0;
+  height: auto;
+  overflow: hidden;
+}
+
+.balantPrice text:nth-child(1) {
+  float: right;
+  color: #f61b6d;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.balantPrice text:nth-child(2) {
+  float: right;
+  color: #f61b6d;
+  font-size: 24rpx;
+  padding-top: 4rpx;
+}
+
+.balantPrice text:nth-child(3) {
+  float: right;
+  color: #f61b6d;
+  font-size: 28rpx;
+}
+
+.balanceThree {
+  padding: 25rpx 30rpx 30rpx 30rpx;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  margin-top: 17rpx;
+  border-radius: 10rpx;
+}
+
+.balanceThree text {
+  font-size: 28rpx;
+  color: #333;
+  float: left;
+  margin-top: 10rpx;
+}
+
+.balanceThree icon {
+  display: block;
+  float: right;
+  margin-top: -5rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.balanceFour {
+  padding: 14rpx 30rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: block;
+  margin-top: 20rpx;
+}
+
+.balanceFname {
+  height: 80rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #333;
+  float: left;
+  line-height: 80rpx;
+}
+
+.balanceFtype {
+  width: 170rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  padding: 0rpx 0rpx;
+  float: right;
+}
+
+.balanceFtype icon {
+  display: block;
+  float: left;
+  margin-right: 12rpx;
+  font-size: 44rpx;
+  color: #10bb50;
+  margin-top: 13rpx;
+}
+
+.balanceFtype text {
+  float: left;
+  color: #484848;
+  font-size: 28rpx;
+  line-height: 45rpx;
+  margin: 18rpx 0;
+}
+
+.blank80 {
+  height: 180rpx;
+  clear: both;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.chooseMes {
+  position: fixed;
+  bottom: 0;
+  height: 800rpx;
+  background-color: #fff;
+  z-index: 12;
+  left: 0;
+  right: 0;
+  border-radius: 20px 20px 0px 0px;
+  padding-bottom: 30rpx;
+}
+.blance_content{
+  height: 503rpx;
+}
+
+.cmList {
+  width: 100%;
+  height: 700rpx;
+  overflow-y: scroll;
+  padding-bottom: 50rpx;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cmName {
+  width: 100%;
+  height: 130rpx;
+  line-height: 130rpx;
+  position: relative;
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.cmName text {
+  position: absolute;
+  right: 32rpx;
+  color: #f61b6d;
+}
+
+.cmlRoll {
+  width: 615rpx;
+  height: 205rpx;
+  background-image: url(https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/couponsBg1.png);
+  background-size: 100% 100%;
+  float: right;
+  margin-right: 32rpx;
+  position: relative;
+}
+
+.cmList label {
+  width: 100%;
+  height: 205rpx;
+  display: block;
+  margin-top: 20rpx;
+}
+
+.cmList label:last-child {
+  margin-bottom: 20rpx;
+}
+
+.cmList label radio {
+  display: block;
+  width: 34rpx;
+  height: 34rpx;
+  float: left;
+  margin: 84rpx 32rpx;
+}
+
+.cmrMes {
+  width: 213rpx;
+  height: 205rpx;
+  float: left;
+}
+
+.cmrPrice {
+  text-align: center;
+  padding-top: 50rpx;
+  color: #fff;
+}
+
+.cmrPrice text:nth-child(1) {
+  font-size: 20rpx;
+  padding-right: 10rpx;
+}
+
+.cmrPrice text:nth-child(2) {
+  font-size: 59rpx;
+}
+
+.cmrDetail {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 24rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.cmrRight {
+  width: 400rpx;
+  height: 205rpx;
+  float: left;
+}
+
+.cmrRight text:nth-child(1) {
+  padding: 50rpx 0 0 30rpx;
+  height: auto;
+  overflow: hidden;
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+}
+
+.cmrRight text:nth-child(2) {
+  padding: 30rpx 0 0 30rpx;
+  height: auto;
+  overflow: hidden;
+  font-size: 22rpx;
+  color: #999;
+  display: block;
+}
+
+.cmrName {
+  width: 213rpx;
+  height: 205rpx;
+  float: left;
+  font-size: 50rpx;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  line-height: 205rpx;
+}
+
+.cmrRights {
+  width: 350rpx;
+  height: 205rpx;
+  float: left;
+  padding-left: 30rpx;
+}
+
+.cmrRights text:nth-child(1) {
+  padding-top: 40rpx;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.cmrRights text:nth-child(2) {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.cmrRights text:nth-child(3) {
+  padding-top: 26rpx;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #999;
+  font-size: 22rpx;
+}
+
+.radio-group .radio:last-child .cmlRoll {
+  background-image: url(https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/nocouponsbg.png);
+}
+
+.radio-group .radio:last-child .cmrRight text {
+  display: none;
+}
+
+.cmrRight view {
+  display: none;
+}
+
+.radio-group .radio:last-child .cmrRight view {
+  display: block;
+  width: 100%;
+  height: 25rpx;
+  text-align: center;
+  line-height: 205rpx;
+  font-size: 32rpx;
+  color: #999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.radio-group .radio:last-child .cmrRights text {
+  display: none;
+}
+
+.cmrRights view {
+  display: none;
+}
+
+.radio-group .radio:last-child .cmrRights view {
+  display: block;
+  width: 100%;
+  height: 25rpx;
+  text-align: center;
+  line-height: 205rpx;
+  font-size: 32rpx;
+  color: #999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.noUser {
+  background-image: url(https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/nouser.png);
+}
+
+.balanName {
+  width: 300rpx;
+  height: auto;
+  overflow: hidden;
+  float: right;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 55rpx;
+  padding-top: 5rpx;
+  text-align: right;
+}
+
+.balanceSubmit {
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #f61b6d;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #fff;
+  position: fixed;
+  left: 32rpx;
+  right: 32rpx;
+  bottom: 40rpx;
+}
+
+.subModule {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140rpx;
+  background-color: rgba(246, 246, 246, 1);
+  z-index: 10;
+}
+
+radio {
+  transform: scale(0.8);
+}
+
+.animated {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.balance {
+  margin-top: 50rpx;
+  display: flex;
+  align-items: center;
+}
+
+.balance__icon__selecte {
+  margin-left: 32rpx;
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 17rpx;
+  font-size: 34rpx;
+  color: #f61b6d;
+}
+
+.balance__icon {
+  margin-left: 32rpx;
+  width: 34rpx;
+  height: 34rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.balance__title {
+  margin-left: 16rpx;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  flex: 1;
+}
+
+.balance__value {
+  margin-right: 32rpx;
+  font-size: 30rpx;
+  color: #f61b6d;
+}
+
+.telephone-charge{
+  height: 218rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.telephone-charge__header{
+ margin-top: 30rpx;
+ margin-left: 30rpx;
+ display: flex;
+ align-items: center;
+}
+
+.telephone-charge__icon{
+ width: 37rpx;
+ height: 37rpx;
+ font-size: 37rpx;
+ line-height: 37rpx;
+ color: rgba(246, 27, 109, 1);
+ 
+}
+
+.telephone-charge__title{
+  margin-left: 11rpx;
+  color: rgba(51, 51, 51, 1);
+  font-size: 30rpx;
+  font-weight: bold;
+
+}
+
+.telephone-charge__content{
+  margin-top: 18rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  align-items: center;
+  background:rgba(246,246,246,1);
+  border-radius: 10rpx;
+  height: 100rpx;
+}
+
+.telephone-charge__content__phone{
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+}
+.telephone-charge__content__phone--placehold{
+  font-weight: normal;
+}
+
+
+
+.telephone-charge__content__icon{
+  margin-right: 30rpx;
+  width: 33rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+  font-size: 33rpx;
+  color: rgba(153, 153, 153, 1);
+}

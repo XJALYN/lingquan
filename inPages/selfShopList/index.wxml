@@ -1,0 +1,34 @@
+<!--components/selfShopList/index.wxml-->
+<import src="./freeGet/index" />
+<import src="./classifyList/index" />
+<import src="./navigatorList/index" />
+<import src="./bannerList/index" />
+<import src="./brandList/index" />
+<import src="./recommendGoodsList/index" />
+
+
+
+<view class='animated fadeIn'>
+
+<!-- banner 列表 -->
+<template is="bannerList"  data="{{list:data.banner,bannerIndex}}" />
+
+ <!-- 导航 -->
+<template is="navigatorList" data="{{list:data.firstCategoryList}}"/>
+
+ <!-- 会员专享 -->
+ <template wx:if="{{data.priviledgeList.length > 0}}" is="freeGet" data="{{topBg:'https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/selflist_top_vip.png',list:data.priviledgeList}}"/>
+
+  <!-- 发现好物 -->
+ <template is="freeGet" data="{{topBg:'https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/selflist_top_find.png',list:data.discoveryGoodsList}}"/>
+
+<!-- 商品图标列表 -->
+ <template is="brandList" data="{{list:data.kmBrands,brandIndex}}"/>
+
+  <!-- 鲲美优选 -->
+ <template is="classifyList" data="{{topBg:'https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/selflist_top_classifylist.png',list:data.kmSelectDtos}}"/>
+
+ <template is="recommendGoodsList" data="{{list:data.guessYouLike}}"/>
+
+</view>
+

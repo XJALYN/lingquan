@@ -1,0 +1,4 @@
+<template name="help">
+ <view class="help" bindtap='onLaunchMiniProgram'>
+ </view>
+</template>

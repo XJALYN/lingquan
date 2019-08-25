@@ -1,0 +1,23 @@
+<!--components/authorPhone/index.wxml-->
+<view wx:if="{{needPhone}}">
+    <view class='mask'></view>
+    <view class='userInfo'>
+      <view class='uiHeader'>
+          <text class='uhName'>免费拿好物</text>
+          <text class='uhMes'>成为鲲美会会员,才可参与免费拿好物</text>
+      </view>
+      <!-- <view class='useList'>
+        <icon class='userico icon font_family icon-guanzhu'></icon>
+        <text class='userMes'>关注公众号</text>
+        <text class='userHint' hidden='gdcType'>已达成</text>
+        <button class='userBtn' hidden='gdcTypeBtn'>去达成</button>
+      </view> -->
+      <view class='useList'>
+        <icon class='userico icon font_family icon-bangdingshoujihaoma'></icon>
+        <text class='userMes'>绑定手机号码</text>
+        <text style='flex:1'></text>
+        <button class='userBtn'  open-type='getPhoneNumber' bindgetphonenumber='onGetUserPhone'  plain style="border:none;background:#00A9B2;color:white;">去达成</button>
+      </view>
+      <icon class='closeIco icon font_family icon-guanbi' bindtap='onHide'></icon>
+    </view>
+  </view>

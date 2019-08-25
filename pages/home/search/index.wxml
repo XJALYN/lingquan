@@ -1,0 +1,22 @@
+<template name="search">
+
+<view class="search">
+
+ <view class="search-left" bindtap='onPushToSearch' data-type="0">
+    <view class="search__icon iconfont iconxiaosousuo"></view>
+     <kc-form>
+    <input class="search__input" placeholder='发现美、找到美、会更美' disabled='true'></input>
+    </kc-form>
+ </view>
+
+ <view class="search__right" bindtap='onPushToGoodsList'>
+
+   <image class="search__right__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeClassify.png"></image>
+  
+   <view class="search__right__title">分类</view>
+ </view>
+</view>
+
+
+
+</template>

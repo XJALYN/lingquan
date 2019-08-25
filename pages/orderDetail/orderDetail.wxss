@@ -1,0 +1,74 @@
+/* pages/orderDetail/orderDetail.wxss */
+.orderDetail{padding:20rpx 32rpx;height: auto;overflow: hidden; }
+.orderAdress{width: 100%;height: auto;overflow: hidden;background-color: #fff;border-radius:10px;}
+.odType{padding: 0 30rpx;height:110rpx;border-bottom: 2rpx solid #E8E8E8;}
+.odType text:nth-child(1){float: left;font-size: 28rpx;color: #333;margin-top: 40rpx;}
+.odType text:nth-child(2){float: right;font-size: 28rpx;color: #F61B6D;margin-top: 40rpx;}
+
+.odTlist{padding: 0 30rpx;height:auto;overflow: hidden;}
+.odtlOne{padding: 22rpx 0 32rpx 0;height:auto;overflow: hidden;border-bottom: 1rpx solid #E8E8E8; }
+.odtlOnext{float: right;color:#999999;margin-top:45rpx;}
+
+
+.odtLico{width:80rpx;height: 80rpx;background-color:#333333;border-radius: 40rpx;float:left;margin:20rpx 30rpx 0 0;}
+.odtLico icon{text-align: center;line-height: 80rpx;color: #fff;display: block;}
+.odtMes{width: 480rpx;height: auto;overflow: hidden;float: left;}
+.odtMes text:nth-child(1){width: 100%;height:80rpx;color: #333;font-size: 28rpx;display: block;}
+.odtMes text:nth-child(2){width: 100%;height: auto;color: #999;font-size: 24rpx;display: block;padding-top: 10rpx;}
+
+.odtlTwo{padding: 22rpx 0 32rpx 0;height:auto;overflow: hidden;}
+.odTlico{width:80rpx;height: 80rpx;background-color:#F61B6D;border-radius: 40rpx;float:left;margin:20rpx 30rpx 0 0;}
+.odTlico icon{text-align: center;line-height: 80rpx;color: #fff;display: block;}
+.odtMess{width:515rpx;height: auto;overflow: hidden;float: left;}
+.odtMess text:nth-child(1){width: 100%;height: auto;overflow: hidden;font-size: 28rpx;color: #333;display: block;padding-top: 15rpx;font-weight: bold}
+.odtMess text:nth-child(2){width: 100%;height: auto;overflow: hidden;font-size: 24rpx;color: #999;display: block;padding-top: 10rpx;}
+
+.odshopList{width: 100%;height: auto;overflow: hidden;background-color: #fff;border-radius: 10rpx;margin-top: 20rpx;}
+.odsName{padding:0 0 0 30rpx; height:100rpx;font-size:28rpx;color: #333;border-bottom: 1rpx solid #E8E8E8;  }
+.odsNames{width: 300rpx; height:auto;padding-top: 10rpx;font-size:28rpx;color: #333;float: left;padding: 35rpx 0 0 0;}
+.odsList{padding: 0 30rpx;height: auto;overflow: hidden; }
+.odslLi{width: 100%;height: auto;overflow: hidden;padding: 32rpx 0px 0 0;border-bottom: 1rpx solid #E8E8E8;}
+.odslLi image{display: block;width:160rpx;height: 160rpx;float: left;margin:0rpx 20rpx  32rpx 0;border-radius:10rpx; }
+.odsMes{width:305rpx;height: auto;overflow: hidden;float: left; }
+.odsMes text:nth-child(1){width: 100%;height:66rpx;font-size: 24rpx;color: #333;font-weight: bold;padding-top: 10rpx;}
+.odsMes text:nth-child(2){width: 100%;height:66rpx;font-size: 22rpx;color: #999;padding-top: 14rpx;}
+.odsPrice{width:140rpx;float: right;text-align: right;}
+.odsPrice text:nth-child(1){font-size: 24rpx;color:#F61B6D;display:block;width: 100%;}
+.odsPrice text:nth-child(2){font-size: 24rpx;color:#999;display:block;width: 100%;margin-top: 80rpx;}
+.odsList .odslLi:last-child{border-bottom: 1rpx dotted #E8E8E8;}
+.odslPrice{width: 100%;height:100rpx;line-height: 100rpx;}
+.odslPrice text:nth-child(1){font-size: 28rpx;color:#F61B6D;font-weight: bold;float: right;}
+.odslPrice text:nth-child(2){font-size: 28rpx;color:#333333;font-weight: bold;float: right;}
+.favourableList{padding: 40rpx 30rpx 26rpx 30rpx;background-color: #fff;border-radius: 10rpx;margin-top: 20rpx;}
+.favourableList view{width: 100%;height: auto;overflow:hidden;padding:0 0 14rpx 0; }
+.favourableList view text:nth-child(1){float: left;font-size: 28rpx;color: #999;}
+.favourableList view text:nth-child(2){float: right;font-size: 28rpx;color: #333;text-align: left;max-width: 480rpx;}
+
+.orderWait{padding:30rpx;background-color: #fff;border-radius: 10rpx;margin-bottom: 20rpx;}
+.orderWname{width: 100%;height: auto;overflow: hidden;}
+.orderWname view{color:#F61B6D;font-size:38rpx;float: left;margin:0rpx 10rpx 0 0;}
+.orderWname text{font-size: 30rpx;color:#F61B6D;font-weight:bold;}
+.owHint{width: 100%;height: auto;overflow: hidden;color: #333;font-size: 24rpx;padding-top: 15rpx;}
+.owHint text{color:#F61B6D;}
+.blank110{height: 110rpx;margin-top: 20rpx;width: 100%;}
+.owBtn{position: fixed;left: 0;right: 0;height:110rpx;background-color:#fff;bottom: 0rpx;}
+.owBtn view:nth-child(1){width:160rpx;height: 60rpx;border: 1rpx solid #F61B6D;color: #F61B6D;font-size: 28rpx;border-radius:30rpx;float: right;margin: 25rpx 32rpx 0 25rpx;line-height: 60rpx;text-align: center}
+.owBtn view:nth-child(2){width:160rpx;height: 60rpx;border: 1rpx solid #999999;color: #666666;font-size: 28rpx;border-radius:30rpx;float: right;margin: 25rpx 32rpx 0 25rpx;line-height: 60rpx;text-align: center}
+
+.orderSh{width:160rpx;height: 60rpx;border: 1rpx solid #999999 !important;color: #666666 !important;font-size: 28rpx;border-radius:30rpx;float: right;margin: 25rpx 32rpx 0 25rpx;line-height: 60rpx;text-align: center}
+
+
+.shopNameIco{color: #F61B6D;display: block;float: left;margin:36rpx 8rpx 0 0rpx;font-size: 35rpx; }
+.serviceName{height: auto;overflow: hidden;color: #F61B6D;font-size: 28rpx;float: right;padding-top: 35rpx;}
+.serviceIco{color: #F61B6D;display: block;float: right;margin:35rpx 8rpx 0 0rpx;font-size: 35rpx;margin-left: 14rpx;}
+.serciceModule{width:auto;height: auto;background-color:rgba(0,0,0,0);float:right;border: none;line-height: normal;}
+button::after{
+border:none;
+}
+input{
+outline:none;
+border:none;
+list-style: none;
+}
+
+

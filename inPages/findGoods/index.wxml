@@ -1,0 +1,58 @@
+<!--inPages/findGoods/index.wxml-->
+
+<view class='findGoods animated fadeIn'>
+    <view class='fgList' wx:for="{{list}}" wx:key="{{index}}">
+        <view class='fgName'>
+          <image class='fgnHead' src='{{item.headImageUrl}}' lazy-load></image>
+          <view class='fgInfo'>
+              <view class='fgiName'>
+                <text>{{item.philosopherName}}</text>
+                <text>{{item.philosopherEvaluate}}</text>
+              </view>
+              <view class='fgTime'>{{item.createDate}}</view>
+          </view>
+          <view class='fgSup'>
+            <text>{{item.likeNum}}</text>
+            <icon class="hasSupport iconfont icondianzan {{item.articleLikeStatus==1?'niceIn':''}}" wx:if="{{item.articleLikeStatus==1}}" bindtap='onclickNoSupport'></icon>
+            <icon class='noSupport iconfont iconweidianzan' wx:if="{{item.articleLikeStatus==0}}" data-articleid='{{item.articleId}}' data-index="{{index}}" bindtap='onclickSupport'></icon>
+          </view>
+        </view>
+
+        <view class='fgImg' >
+          <block wx:for="{{item.articleImgUrlList}}" wx:key="{{imageIndex}}" wx:for-item="image" wx:for-index="imageIndex">
+<image src='{{image}}?x-oss-process=style/firstMainPic' wx:key="{{imageIndex}}" catchtap='onPreviewImages' data-index="{{imageIndex}}" data-list='{{item.articleImgUrlList}}' lazy-load></image>
+          </block>
+            
+        </view>
+
+        <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
+            <text class='ellips_line3'>{{item.articleAbstract}}</text>
+            <text>查看</text>
+        </view>
+
+        <view class='fgDetail' bindtap='onclickComdetail' data-prodcode="{{item.prodCode}}" wx:if="{{item.prodCode}}">
+            <image src='{{item.prodImageUrl}}?x-oss-process=style/xcxBalanceMesPic' lazy-load></image>
+            <view class='fgdMes'>
+                <text class='fgdmName'>{{item.prodName}}</text>
+                <view class='fgdPrice'>
+                  <text>¥</text>
+                  <text>{{item.standardRetailPrice}}</text>
+                  <view class='iconfont icongouwuchexiao' size='20'></view>
+                </view>
+            </view>
+        </view>
+        
+        <view class='fgdPeople' wx:if="{{item.prodCode}}">
+            <view class='fgdHead'>
+               <image wx:for="{{item.buyHeadImgUrlList}}" src='{{item}}' wx:key="{{index}}" lazy-load></image>
+            </view>
+            <view class='fgdPnum'>
+                已有 <text>{{item.buyNum}}</text>位用户购买
+            </view>
+        </view>
+    </view>
+
+
+    
+    
+</view>

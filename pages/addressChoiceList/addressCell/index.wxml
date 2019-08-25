@@ -1,0 +1,34 @@
+<template name="addressCell">
+
+    <view
+      class="address-cell" bindtap='onSelectedAddress' data-address="{{address}}" data-id='{{addressId}}'
+    >
+      <view class="address__top">
+        <view class="address__name">{{contact}}</view>
+        <view class="address__phone">{{phone}}</view>
+      </view>
+      <view class="address__detail">{{province+city+area+detail}}</view>
+      <view class="address__bottom">
+         <icon class="address__icon" type="success" color='#eee' size="15"  wx:if="{{!defaultAddress}}" catchtap='onSetDefault' data-id="{{addressId}}"/>
+         <icon class="address__icon" type="success" color='#F61B6D'size="15" wx:if="{{defaultAddress}}" data-id="{{addressId}}"/>
+        <view class="address__default__title" data-id="{{addressId}}" >设为默认</view>
+        <view style="flex:1"></view>
+        <view
+          class="address__btn" catchtap="onEdit" data-id="{{addressId}}"
+          data-contact='{{contact}}'
+          data-phone='{{phone}}'
+          data-postcode="{{postcode}}"
+          data-province="{{province}}"
+          data-city="{{city}}"
+          data-area="{{area}}"
+          data-detail="{{detail}}"
+        >编辑</view>
+        <view
+          class="address__btn address__delete"
+         catchtap="onDelete" data-id="{{addressId}}"
+        >删除</view>
+      </view>
+      <!-- <view class="address__line"></view> -->
+    </view>
+
+</template>

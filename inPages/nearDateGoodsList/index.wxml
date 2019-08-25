@@ -1,0 +1,31 @@
+<!--inPages/nearDateGoodsList/index.wxml-->
+
+
+    <!-- 商品列表展示 -->
+    <view class="goods-list__list animated fadeIn">
+    <!--  -->
+      <block wx:for="{{list}}" wx:key="{{index}}">
+        <view class="goods-list__list__item" catchtap="onPushToGoodsDetail" data-prodcode='{{item.prodCode}}'>
+          <image class="goods-list__list__item__icon" src="{{item.imageUrl}}?x-oss-process=style/onPushToGoodsPic" mode='aspectFill' lazy-load></image>
+          <view class="goods-list__list__item__date" wx:if="{{item.status == 1}}">有效期: {{item.expireDate}}</view>
+          <view class="goods-list__list__item__date" wx:if="{{item.status == 3}}">已售罄</view>
+          
+          <view class="goods-list__list__item__title text-clamp">
+            <text class="goods-list__list__item__title__text1" wx:if="{{item.isClearance}}">临期</text>
+            <!-- <text class="goods-list__list__item__title__text2">包邮</text> -->
+            <text class="goods-list__list__item__title__text3 ">{{item.prodName}}</text>
+            <text class="goods-list__list__item__title__text4">{{specs}}</text>
+          </view>
+          <view class="goods-list__list__item__bootom">
+            <image class="goods-list__list__item__bottom__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeV.png" lazy-load></image>
+            <view class="goods-list__list__item__bottom__price">¥{{item.vipPrice}}</view>
+            <view class="goods-list__list__item__bottom__big__price">¥{{item.standardRetailPrice}}</view>
+            <image class="goods-list__list__item__bottom__big__delete" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/shoppingCart.png" catchtap='onAddShoppingCart' data-prodcode='{{item.prodCode}}' lazy-load></image>
+          </view>
+        </view>
+      </block>
+    </view>
+
+     <kc-placeholder-image wx:if="{{list.length==0}}" title="我们正在搬运好物中" imageClassName="iconfont iconzanwushangpin"></kc-placeholder-image>
+
+     <kc-footer-loading noMore="{{noMore}}" wx:if="{{list.length > 6}}" title="我是有底线的"/>

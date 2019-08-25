@@ -1,0 +1,25 @@
+.help{
+  margin-top: 40rpx;
+  display: flex;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  height: 140rpx;
+  width: 686rpx;
+  text-align: center;
+  line-height: 140rpx;
+  background:black;
+  border-radius: 70rpx;
+  justify-content: center;
+   background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/banner.png?x-oss-process=style/xcxOnLaunchMiniProgram");
+  background-size: 100% 100%;
+}
+.help-text{
+ color: white;
+ font-size: 40rpx;
+}
+.help-value{
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+ color:#D8C59B;
+ font-size: 40rpx;
+}

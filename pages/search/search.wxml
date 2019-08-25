@@ -1,0 +1,20 @@
+<!--pages/search/search.wxml-->
+<import src="./search/index" />
+<import src="./searchResult/index" />
+<import src="./historyList/index" />
+<import src="./goodsList/index" />
+
+<template is="search" data="{{searchText}}"/>
+
+<!-- 历史搜索 -->
+<template wx:if="{{!showGoodsList&&resultList.length==0}}"  is="historyList" data="{{list:cacheKeyWords}}" />
+
+<!-- 搜索结果 -->
+<template wx:if="{{!showGoodsList}}" is="searchResult" data="{{list:resultList}}" />
+
+<template wx:if="{{showGoodsList}}" is="goodsList" data="{{filterIndex,goodsTotal,goodsList}}"/>
+
+ <!-- -->
+<kc-footer-loading noMore="{{noMore}}" wx:if="{{goodsList.length > 6 && showGoodsList}}"> </kc-footer-loading>
+
+<kc-author-modal show="{{needAuthor}}"/>

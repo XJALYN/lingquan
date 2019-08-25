@@ -1,0 +1,6 @@
+<!--components/memberUpgrade/index.wxml-->
+<view class="author__bg" hidden="{{!show}}">
+<view class="author__content" bindtap='onPushToNewUserWelfare'>
+    <view class="bth-close iconfont iconguanbi" catchtap='onHidden'></view>
+</view>
+</view>

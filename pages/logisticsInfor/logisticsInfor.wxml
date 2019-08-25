@@ -1,0 +1,20 @@
+<!--pages/logisticsInfor/logisticsInfor.wxml-->
+<view class="logInfor">
+  <view class="logiMes">
+    <view class="lmLi">
+      <text>物流公司</text>
+      <text>申通快递</text>
+      <view class=""></view>
+    </view>
+     <view class="lmLi">
+      <text>物流单号</text>
+      <text>申通快递</text>
+      <view class=""></view>
+    </view>
+     <view class="lmLi">
+      <text>物流费用</text>
+      <input type="" placeholder="" placeholder-style="color:#D8D8D8"></input>
+      <view class=""></view>
+    </view>
+  </view>
+</view>

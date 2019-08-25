@@ -1,0 +1,149 @@
+.cell{
+  margin-top: 20rpx;
+  margin-left: 32rpx;
+  width: calc(100% - 64rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 10rpx;
+}
+.cell__header{
+  display: flex;
+  height: 98rpx;
+  width: 100%;
+  border-bottom:1rpx solid #E8E8E8;
+  align-items: center;
+
+ 
+}
+
+.cell__shop__name{
+ font-size: 28rpx;
+ color: #333333;
+ flex:1;
+ font-weight: 500;
+  margin-left: 30rpx;
+
+}
+.cell__status{
+  color: #F61B6D;
+  font-size: 28rpx;
+  margin-right: 30rpx;
+  text-align: right;
+
+
+}
+.cell__mid{
+  width: 100%;
+  display: flex;
+  align-items:flex-start;
+  height: 221rpx;
+  position: relative;
+}
+
+.cell__mid__icon{
+  margin-top: 30rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  background-color: #eee;
+  margin-left: 30rpx;
+}
+
+.cell__mid__left{
+ margin-left: 23rpx;
+ flex:1;
+}
+
+.cell__mid__left__name{
+  margin-top: 38rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #020202;
+  font-size: 24rpx;
+  font-weight:bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-right: 20rpx;
+}
+
+.cell__mid__left__tip{
+  margin-top: 18rpx;
+  color: #999999;
+  width: 308rpx;
+  font-size: 22rpx;
+}
+
+.cell__mid__right{
+  margin-right: 32rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cell__mid__right__price{
+  color: #F61B6D;
+  font-size: 24rpx;
+}
+
+.cell__mid__right__num{
+  position: absolute;
+  bottom: 29rpx;
+  right:32rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+
+.cell__line__dashed{
+  border-bottom:1rpx dashed #e8e8e8; 
+  width: calc(100% - 64rpx);
+}
+.cell__line{
+ margin-left: 40rpx;
+ margin-right: 40rpx;
+ width: calc(100% - 80rpx);
+ height: 2rpx;
+ background-color: #e8e8e8;
+}
+
+.cell__bottom{
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ padding-bottom: 30rpx;
+}
+.cell__bottom__amount{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 28rpx;
+  color: #999999;
+  justify-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.cell__bottom__amount__value{
+  color: #333333;
+  font-size: 28rpx;
+  margin-right: 30rpx;
+}
+
+.cell__submit{
+  margin-top: 30rpx;
+  color: #F61B6D;
+  font-size: 28rpx;
+  width:160rpx;
+  text-align: center;
+  height:60rpx;
+   line-height: 60rpx;
+   border-radius: 30rpx;
+   border: 1px solid #F61B6D;
+   align-self: flex-end;
+   margin-right: 30rpx;
+
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "kc-dou-yin":"../../inPages/douYin/index",
+    "kc-find":"../../inPages/findGoods/index",
+    "kc-recommend":"../../inPages/recommend/index"
+  },
+  "navigationBarTitleText": "发现"
+}

@@ -1,0 +1,78 @@
+.goods{
+  position:absolute;
+  top: 452rpx;
+  left: 32rpx;
+  width: 451rpx;
+  height: 226rpx;
+  border-radius: 10rpx;
+  background: white;
+  z-index: 100;
+}
+
+.goods__title{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  color: #666666;
+  font-size: 22rpx;
+}
+.goods__left{
+  margin-top: 20rpx;
+  height: 126rpx;
+  display: flex;
+  width: 100%;
+}
+.goods__left__icon{
+  margin-left: 30rpx;
+  width: 126rpx;
+  height: 126rpx;
+  background-color: #eee;
+}
+.goods__left__info__name{
+  margin-top: 7rpx;
+  margin-left: 30rpx;
+  font-size: 22rpx;
+  color: #333333;
+  height: 61rpx;
+}
+.goods__left__info__bottom{
+  margin-top: 16rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  position: relative;
+  width: 275rpx;
+ 
+}
+.goods__left__info__bottom__price{
+ color: #F61B6D;
+ font-size: 28rpx;
+ font-weight: 500;
+}
+.goods__left__info__bottom__bid-price{
+  margin-left: 16rpx;
+  color: #999999;
+  font-size: 22rpx;
+  flex:1;
+  
+}
+.goods__left__info__bottom__enter-icon{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 20rpx;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  color: #F61B6D;
+}
+.goods__delete{
+  position: absolute;
+  top: 29rpx;
+  right: 20rpx;
+  width: 14rpx;
+  height: 14rpx;
+  color: #333;
+  font-size: 14rpx;
+  text-align: center;
+  line-height: 14rpx;
+}

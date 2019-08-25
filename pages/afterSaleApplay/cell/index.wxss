@@ -1,0 +1,74 @@
+.goods-cell{
+ width: calc(100% - 60rpx);
+ margin-left: 30rpx;
+ display: flex;
+ align-items: center;
+ height: 172rpx;
+}
+.goods-cell__image{
+  width: 160rpx;
+  height: 160rpx;
+  background: #E1E1E1;
+}
+.goods-cell__right{
+ height: 172rpx;
+ flex:1;
+ position: relative;
+}
+.goods-cell__right__title{
+  margin-top: 12rpx;
+  margin-left: 20rpx;
+  color: #333333;
+  font-size: 24rpx;
+  
+  font-weight: 500;
+  height: 66rpx;
+  margin-right: 107rpx;
+
+}
+.goods-cell__num{
+  position: absolute;
+  top: 12rpx;
+  right: 0rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.goods-cell__num-list{
+  position: absolute;
+  right: 0;
+  bottom: 8rpx;
+ height: 50rpx;
+ display: flex;
+ align-items: center;
+}
+.goods-cell__num-list_sub{
+ width: 41rpx;
+ border-top-left-radius: 25rpx;
+ border-bottom-left-radius: 25rpx;
+ line-height: 50rpx;
+ text-align: center;
+ height: 50rpx;
+ color: #999999;
+ border:2rpx solid #999999;
+ border-right: none;
+
+}
+.goods-cell__input{
+  width: 76rpx;
+  height: 50rpx;
+  border:2rpx solid #999999;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333333;
+}
+.goods-cell__num-list_add{
+  width: 41rpx;
+  line-height: 50rpx;
+  text-align: center;
+  height: 50rpx;
+  color: #999999;
+  border:2rpx solid #999999;
+  border-left: none;
+  border-top-right-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+}

@@ -1,0 +1,121 @@
+.address-cell {
+  margin-top: 20rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  text-align: left;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 10rpx;
+
+}
+.address__top {
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.address__phone {
+  margin-left: 82rpx;
+  font-size:30rpx;
+  font-weight: bold;
+}
+
+.address__name {
+  margin-left: 40rpx;
+  font-size:30rpx;
+  font-weight:bold;
+}
+
+.address__detail {
+  margin-top: 12rpx;
+  font-weight: 500;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+  color: #999999;
+  font-size: 24rpx;
+}
+
+
+
+.address__bottom {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.address__icon {
+  margin-left: 40rpx;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-top: 3rpx;
+
+}
+
+.address__icon__active {
+  margin-left: 40rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background-color: #F61B6D;
+  padding: 0 0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32rpx;
+  color: white;
+  font-size: 32rpx;
+}
+
+.address__default__title {
+  margin-left: 8rpx;
+  color: #333333;
+  font-size: 24rpx;
+}
+
+.address__edit {
+  width: 140rpx;
+  height: 54rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 27rpx;
+  border: 2rpx solid #ccc;
+  font-size: 24rpx;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.address__btn {
+  width: 108rpx;
+  height: 54rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 27rpx;
+  border: 2rpx solid #ccc;
+  font-size: 24rpx;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.address__delete {
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.address__line {
+   margin-left: 40rpx;
+  margin-right: 40rpx;
+  width: calc(100% - 80rpx);
+  align-items: flex-end;
+  margin-top: 18rpx;
+  background-color: #eee;
+  height: 2rpx;
+  
+}

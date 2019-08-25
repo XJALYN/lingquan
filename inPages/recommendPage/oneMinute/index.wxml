@@ -1,0 +1,8 @@
+
+<template name="oneMinute">
+ <view class="one-minute" bindtap='onSwitchMenu' data-index='1'>
+   <image class="one-minute__icon" src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/home_one_minus.png'></image>
+   <view class="one-minute__title">1分钟了解鲲美会</view>
+   <view class="one-minute__arrow iconfont iconyoujiantou"></view>
+ </view>
+</template>

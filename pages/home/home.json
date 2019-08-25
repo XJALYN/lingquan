@@ -1,0 +1,19 @@
+{
+  "navigationBarTitleText": "鲲美会",
+  "usingComponents": {
+    "kc-recommend-page":"../../inPages/recommendPage/index",
+    "kc-self-shop-list":"../../inPages/selfShopList/index",
+    "kc-self-live-list":"../../inPages/liveList/index",
+    "kc-dou-yin": "../../inPages/douYin/index",
+    "kc-find": "../../inPages/findGoods/index",
+    "kc-recommend": "../../inPages/recommend/index",
+    "kc-date-goods-list":"../../inPages/nearDateGoodsList/index",
+    "kc-about-kmh":"../../inPages/aboutKmh/index",
+    "kc-guide-add-grogram":"../../components/guideAddGrogram/index",
+    "kc-new-user-welfare":"../../components/newUserWelfare/index",
+    "kc-qixi-alert":"../../components/qixiAlert/index"
+  },
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

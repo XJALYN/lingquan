@@ -1,0 +1,28 @@
+<template name="cell">
+<view class="cell {{(used||(!used && !isInDate))?'cell__bg_2':'cell__bg_1'}}">
+<view class="cell__left {{(used||(!used && !isInDate))?'cell__left--invalue':''}}" wx:if="{{couponType==2}}">
+ <view class="cell__left__top">
+ <view class="cell__left__text">¥</view>
+   <view class="cell__left__discount">{{couponAmount}}</view>
+   
+ </view>
+
+ <view class="cell__left__tip">
+   满{{fullAmount}}立减
+ </view>
+</view>
+
+<view class="cell__left_1 {{(used||(!used && !isInDate))?'cell__left--invalue':''}}" wx:if="{{couponType==1}}">包邮</view>
+
+
+
+<!-- 右边 -->
+<view class="cell__right">
+  <view class="cell__right__title {{(used||(!used && !isInDate))?'cell__right__title--invalid':''}}">{{couponTitle}}</view>
+  <view class="cell__right__date">有效期至 {{inDate}}</view>
+  <view class="cell__right__btn-use" wx:if="{{!used && isInDate}}" catchtap='onPushToHome'>立即使用</view>
+ <view class="cell__right__btn-use cell__right__btn-use-disabled" wx:if="{{used}}">已使用</view>
+  <view class="cell__right__btn-use cell__right__btn-use-disabled" wx:if="{{!used && !isInDate}}">已失效</view> 
+</view>
+</view>
+</template>

@@ -1,0 +1,26 @@
+<!--pages/vipBuyRecord/vipBuyRecord.wxml-->
+
+<view class="list">
+<view class="cell" wx:for="{{list}}" wx:key="{{index}}">
+  <image class="cell__icon" src="{{item.memberCardIcon}}"></image>
+  <view class="cell__mid">
+    <view class="cell__title">{{item.memberCardName}}</view>
+    <view class="cell__time">{{item.createTime}}</view>
+  </view>
+  <view class="cell__right" wx:if="{{item.memberCardName=='限量卡会员'}}">
+    <view class="cell__status">尊贵升级</view>
+    <view class="cell__status-text">限量发放</view>
+  </view>
+
+  <view class="cell__right" wx:else>
+    <view class="cell__status">-{{item.orderAmount}}</view>
+    <view class="cell__status-text">购买成功</view>
+  </view>
+</view>
+
+</view>
+<kc-footer-loading wx:if="{{list.length >= 10}}" noMore="{{noMore}}"/>
+<kc-placeholder-image wx:if="{{list.length == 0}}" imageClassName="iconfont iconzanwuquan" title="暂无会员购买记录" />
+
+<kc-author-modal show="{{needAuthor}}"/>
+

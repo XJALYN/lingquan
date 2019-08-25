@@ -1,0 +1,97 @@
+/* pages/afterSaleApplay/afterSaleApplay.wxss */
+@import "./cell/index";
+.detail{
+  margin-top: 20rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  background-color: white;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32rpx;
+}
+.cell{
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.cell__title{
+  margin-left: 29rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.cell__value{
+  margin-left: 6rpx;
+  font-size: 28rpx;
+  color: #383838;
+}
+.radio-group{
+  display: flex;
+  align-items: center;
+  margin-right: 6rpx;
+  font-size: 28rpx;
+  color: #383838;
+}
+.radio-group__radio{
+  margin-left: 44rpx;
+}
+.radio-group__radio__text{
+   margin-left: 10rpx;
+}
+
+ radio{
+ transform:scale(0.8);
+}
+.refund{
+   margin-top: 20rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  background-color: white;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+
+}
+.refund__cell{
+  padding: 30rpx 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.refund__cell__title{
+ color: #333333;
+ font-size: 28rpx;
+ margin-left:30rpx;
+}
+.refund__line{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: calc(100% - 60rpx);
+  height: 1rpx;
+  background-color: #E8E8E8;
+}
+.refund__cell__value{
+ margin-left: 17rpx;
+ font-size: 28rpx;
+ color: #333333;
+ flex:1;
+}
+.refund-btn{
+  margin-top: 100rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  margin-bottom: 142rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #F61B6D;
+  color: white;
+  border-radius: 50rpx;
+  text-align: center;
+  font-size: 32rpx;
+  z-index: 10;
+}
+.refund-btn---disable{
+  background-color: #999;
+}

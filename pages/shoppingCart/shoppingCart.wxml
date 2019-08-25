@@ -1,0 +1,89 @@
+<!--pages/shoppingCart/shoppingCart.wxml-->
+<view class='shoppingCart' wx:if="{{loaded}}">
+    <view class='shopcartMes'>
+        <view class='shopName' wx:if="{{shopCarListData.length > 0}}">
+            <view class='iconfont iconziying1'></view>
+            <text class='shoppingTitle'>鲲美自营</text>
+            <text class='shopComplete' bindtap='onclickComplete' hidden='{{completeType}}'>完成</text>
+            <text class="shopComplete" bindtap='onclickManage' hidden='{{manageType}}'>管理</text>
+        </view>
+        
+        <view class='shopcartList' wx:for="{{shopCarListData}}" wx:key="{{index}}">
+            <view class="siType" wx:if="{{!item.available}}">{{item.status==2?"已下架":"已售罄"}}</view>
+            <view class='shopList'>
+            <!-- 禁用 -->
+                 <icon class='falseIco cle8e8 iconfont iconweixuanzhong' wx:if="{{!item.available && completeType}}" data-index="{{index}}" data-prodNum="{{item.prodNum}}" data-currentPrice="{{item.currentPrice}}"></icon>
+                <!-- 未选中 -->
+                <icon  wx:else class='falseIco iconfont iconweixuanzhong' bindtap='onclickFalseIco' hidden='{{item.choose}}' data-index="{{index}}" data-prodNum="{{item.prodNum}}" data-currentPrice="{{item.currentPrice}}"></icon>
+                <!-- 选中 -->
+                <icon class='trueIco wx:else iconfont iconxuanzhong' bindtap='onclicktrueIco' hidden='{{!item.choose}}' data-index="{{index}}" data-prodNum="{{item.prodNum}}" data-currentPrice="{{item.currentPrice}}"></icon>
+
+                
+                  <!-- 上架 -->
+                  <image wx:if="{{item.available}}" data-index="{{index}}"  class='shopImg' src='{{item.headImageUrl}}?x-oss-process=style/xcxBalanceMesPic' bindtap='gotoDetail' data-prodCode="{{item.prodCode}}"></image>
+                  <!-- 下架 -->
+                  <image wx:else class='shopImg' data-index="{{index}}"  src='{{item.headImageUrl}}?x-oss-process=style/xcxBalanceMesPic' data-prodCode="{{item.prodCode}}"></image>
+                  
+                  <view class='shopRight'>
+                    <!-- 上架 -->
+                    <view  wx:if="{{item.available}}" data-index="{{index}}" bindtap='gotoDetail' data-prodCode="{{item.prodCode}}" >
+                      <view class='shoprName ellips'>{{item.prodName}}</view>
+                      <view class='shopNum'>
+                      </view>
+                    </view>
+                    <!-- 下架 -->
+                    <view wx:else data-prodCode="{{item.prodCode}}" >
+                      <view class='shoprName ellips'>{{item.prodName}}</view>
+                      <view class='shopNum'>
+                      </view>
+                    </view>
+
+
+                      <view class='shopPrice'>
+                          <text class="spIco">￥</text>
+                          <text class='spNum'>{{item.currentPrice}}</text>
+                          <view class='shopNums' wx:if="{{!item.available}}">
+                            <text class='cutNum' data-procode='{{item.prodCode}}' data-prodNum="{{item.prodNum}}">-</text>
+        
+                            <input class="cl999" disabled="disabled" data-procode='{{item.prodCode}}' type='number' value='{{item.prodNum}}' />
+                            <text class='addNum' data-procode='{{item.prodCode}}' data-prodNum="{{item.prodNum}}">+</text>
+                          </view>
+
+                          <view class='shopNums' wx:else>
+                            <text class='cutNum' bindtap='onclickCut' data-currentPrice="{{item.currentPrice}}" data-procode='{{item.prodCode}}'  data-index="{{index}}" data-prodNum="{{item.prodNum}}">-</text>
+                            <input  bindblur="bindKeyInput" data-index="{{index}}"  data-prodnum="{{item.prodNum}}"  data-currentPrice="{{item.currentPrice}}" data-procode='{{item.prodCode}}' type='number' data-index="{{index}}" value='{{item.prodNum}}' />
+                            <text class='addNum' bindtap='onclickAdd' data-index="{{index}}" data-currentPrice="{{item.currentPrice}}"  data-procode='{{item.prodCode}}' data-prodNum="{{item.prodNum}}">+</text>
+                            <!-- 库存不足时显示 -->
+                            <text class="shopNums__tips" wx:if="{{item.prodNum > item.currentProductNum }}">可售库存:{{item.currentProductNum}}</text>
+                          </view>
+
+
+                      </view>
+                </view>
+            </view>
+
+           
+            
+        </view>
+
+    </view>
+    <!-- 底部 -->
+    <view class='shopFooter' wx:if="{{shopCarListData.length > 0}}">
+        <icon class='shopAll iconfont iconweixuanzhong'  hidden='{{shopallType}}' bindtap='onclickShopall'></icon>
+        <icon class='shopAlltrue iconfont iconxuanzhong' hidden='{{shopalltrueType}}' bindtap='onclickShopallTrue'></icon>
+        <text class='allChoose'>全选</text>
+        <view class='deleteBtn' hidden='{{deleteType}}' bindtap='onclickDelete'>删除</view>
+        <view class='deleteBtn' hidden="{{goBalaneType}}"  wx:if="{{allMoney>0}}" bindtap='onckickBalan'>去结算</view>
+        <view class='deleteBtn bgccc' wx:if="{{allMoney==0}}" hidden="{{allMoneyType}}" bindtap='onckickBalan'>去结算</view>
+        <text class='allNum' hidden='{{balanType}}'>合计：{{allMoney}}</text>
+    </view>
+
+    <!-- 去首页逛逛 -->
+    <view class="backIndex" wx:if="{{shopCarListData.length == 0}}">
+        <view class="backIndexBtn" bindtap="onPushToHome">去逛逛<icon class="iconyoujiantou iconfont"></icon></view>
+    </view>
+</view>
+
+<!-- 没有商品时的占位图 -->
+<kc-placeholder-image wx:if="{{shopCarListData.length == 0}}" imageClassName="iconfont iconzanwushangpin" title="暂无商品" />
+<kc-author-modal show="{{needAuthor}}"/>

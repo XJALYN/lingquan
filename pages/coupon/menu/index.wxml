@@ -1,0 +1,18 @@
+<template name="menu">
+      <view class="filter">
+      <view class="filter__item" bindtap='onSwitchFilter' data-index='0'>
+        <view class="filter__item__title {{filterIndex==0?'filter__item__title--active':''}}">未使用({{notUsedCouponNum}})</view>
+        <view class="filter__item__line {{filterIndex==0?'filter__item__line--active':''}}"></view>
+      </view>
+
+      <view class="filter__item"  bindtap='onSwitchFilter' data-index='1'>
+        <view class="filter__item__title {{filterIndex==1?'filter__item__title--active':''}}">已使用({{usedCouponNum}})</view>
+        <view class="filter__item__line {{filterIndex==1?'filter__item__line--active':''}}"></view>
+      </view>
+
+      <view class="filter__item" bindtap='onSwitchFilter' data-index='{{filterIndex==2?"3":"2"}}'>
+        <view class="filter__item__title {{filterIndex==2?'filter__item__title--active':''}}">已过期({{inDatedCouponNum}})</view>
+        <view class="filter__item__line {{(filterIndex==2||filterIndex==3)?'filter__item__line--active':''}}"></view>
+      </view>
+    </view>
+</template>

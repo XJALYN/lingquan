@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "kc-member-upgrade": "../../components/memberUpgrade/index"
+  }
+}

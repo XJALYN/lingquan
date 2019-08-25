@@ -1,0 +1,15 @@
+<!--pages/unionAuthor/unionAuthor.wxml-->
+<view class="author__bg">
+<view class="author__content">
+ <view class="author__content__title">【免费拿好物】请求使用您的【鲲美会】授权登录</view>
+  <view class="author__content__middle">
+    <image class="author__content__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/auth_free_icon_shadow.png"></image>
+   <view class="author__content__guanlian iconfont iconguanlian"></view>
+   <image class="author__content__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/author_kmh_icon_shadow.png"></image>
+  </view>
+  <view class="author__content__slogan">会花钱，会赚钱，会更美</view>
+</view>
+  <!-- {{openSetting?"openSetting":"getUserInfo"}} -->
+  <button class="author__submit"  open-type='getUserInfo' bindgetuserinfo='bindgetuserinfo' plain style='border:none;background: #F61B6D;color: white;'>授权登录</button>
+<view class="author__desc">[鲲美会]申请获得您的微信授权</view>
+</view>

@@ -1,0 +1,2 @@
+/* pages/myIntegral/myIntegral.wxss */
+@import "./cell/index";

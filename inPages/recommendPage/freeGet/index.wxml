@@ -1,0 +1,26 @@
+<template name="freeGet">
+  <view class="free-get">
+  <view class="free-get__top">
+  <view class="free-get__title">会员0元拿</view>
+   <view class="free-get__subtitle" bindtap='onLaunchMiniProgram'>查看更多</view>
+   <view class="free-get__icon iconfont iconyoujiantou"></view>
+  </view>
+  <scroll-view class="free-get__list" scroll-x="{{true}}">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+   <view class="free-get__list__item" bindtap='onLaunchMiniProgram'>
+      <image class="free-get__item__image" src="{{item.imageUrl}}?x-oss-process=style/secondMainPic" mode='aspectFill' lazy-load></image>
+      <view class="free-get__item__title">{{item.prodName}}</view>
+      <view class="free-get__item__bottom">
+        <image class="free-get__item__bottom__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeV.png" lazy-load></image>
+        <view class="free-get__item__bottom__price1"><text>¥</text>{{item.vipPrice}}</view>
+        <view class="free-get__item__bottom__price2">¥{{item.standardRetailPrice}}</view>
+        <view class="free-get__item__bottom__right">
+        已被领取<text class="free-get__item__number">{{item.takeNum}}</text>件
+        </view>
+      </view>
+   </view>
+  </block>
+
+  </scroll-view> 
+  </view>
+</template>

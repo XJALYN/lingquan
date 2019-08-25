@@ -1,0 +1,22 @@
+/* pages/logisticsInfor/logisticsInfor.wxss */
+.logInfor{padding: 20rpx 32rpx;height: auto;overflow: hidden;}
+.logiMes{border-radius: 10rpx;padding: 30rpx 0;height: auto;overflow: hidden;background-color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

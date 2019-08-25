@@ -1,0 +1,45 @@
+<template name="header">
+
+<view class="header">
+<!-- 头部 -->
+  <view class="header__top">
+    <image class="header__top__avatar" src="{{headImgUrl}}"></image>
+    <text class="header__top__name">{{nickName}}</text>
+    
+    <image class="header__top__rank-icon" wx:if="{{memberCardLevel==4}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineGeneral.png"></image>
+    <image class="header__top__rank-icon" wx:if="{{memberCardLevel==3}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineSeason.png"></image>
+    <image class="header__top__rank-icon" wx:if="{{memberCardLevel==2}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineYear.png"></image>
+    <image class="header__top__rank-icon" wx:if="{{memberCardLevel==1}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineVipMember.png"></image>
+    <view style='flex:1'></view>
+    <view class="header__top__setting-icon iconfont iconshezhi" bindtap='onPushToSetting'></view>
+  </view>
+<!-- 中部 -->
+  <view class="header__mid">
+    <view class="header__mid__item" catchtap='onPushToMyIntegral'>
+      <view class="header__mid__item__value">{{memberIntegral}}</view>
+      <view class="header__mid__item__title">积分</view>
+    </view>
+    <view class="header__mid__item__line" ></view>
+    <view class="header__mid__item" catchtap='onPushToMyBalance'>
+      <view class="header__mid__item__value">{{memberRemainder}}</view>
+      <view class="header__mid__item__title">余额</view>
+    </view>
+  </view>
+  <!--下部 -->
+  <view class="header__bottom">
+    <view class="header__bottom__top">
+     <image class="header__bottom__top__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineV.png"></image>
+     <view class="header__bottom__top__title">开会员全场成本价</view>
+     <view class="header__bottom__top__btn" catchtap="onPushToMember">
+       <view class="header__bottom__top__title_1" catchtap="onPushToMember">会员中心</view>
+       <!-- <view class="header__bottom__top__arrow iconfont iconyoujiantou"></view> -->
+     </view>
+    </view>
+    <!--  -->
+    <view class="header__bottom__footer">会花钱、会赚钱、会更美</view> 
+  
+ </view>
+
+</view>
+
+</template>

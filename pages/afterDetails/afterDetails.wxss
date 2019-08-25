@@ -1,0 +1,129 @@
+/* pages/afterDetails/afterDetails.wxss */
+
+.afterDetail {
+  padding: 20rpx 32rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.afterType {
+  padding: 30rpx 30rpx 40rpx 30rpx;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.atLi {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 20rpx 0 0 0;
+}
+
+.atLi text:nth-child(1) {
+  font-size: 28rpx;
+  color: #999;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.atLi text:nth-child(2) {
+  font-size: 28rpx;
+  color: #333;
+  float: left;
+}
+
+.atLi text:nth-child(3) {
+  font-size: 28rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+
+.atLi text:nth-child(4) {
+  font-size: 28rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.atLi text:nth-child(6) {
+  font-size: 28rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+
+.atlc {
+  color: #f61b6d !important;
+  font-size: 28rpx;
+  float: left;
+}
+
+.atlc2 {
+  color: #333 !important;
+  font-size: 28rpx;
+  float: left;
+}
+
+.atShopLi {
+  padding: 20rpx 0rpx 0 30rpx;
+  height: 160rpx;
+  position: relative;
+}
+
+.atShopLi image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+}
+
+.asMes {
+  padding: 0rpx 0 0 155rpx;
+  height: auto;
+  overflow: hidden;
+  width: 315rpx;
+  float: left;
+}
+
+.asMes text {
+  font-size: 24rpx;
+  line-height: 35rpx;
+}
+
+.asPrice {
+  height: auto;
+  overflow: hidden;
+  float: right;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.asPrice text:nth-child(1) {
+  font-size: 24rpx;
+  color: #f61b6d;
+  display: block;
+}
+
+.asPrice text:nth-child(2) {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+  margin-top: 80rpx;
+}
+
+.mart20 {
+  margin-top: 10rpx;
+}
+
+/* 添加订单跳转链接 */
+.afterType .checkDetail{
+  position: absolute;
+  right: 60rpx;
+  font-size: 28rpx;
+  color: #F61B6D;
+}

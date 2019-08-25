@@ -1,0 +1,33 @@
+<template name="yourSales">
+  <view class="your-sales">
+  <!-- 顶部 -->
+  <view class="your-sales__top">
+  <view class="your-sales__title">你的专享</view>
+   <!-- <view class="your-sales__subtitle">查看更多</view>
+   <view class="your-sales__icon iconfont iconyoujiantou"></view> -->
+  </view>
+  <!-- list -->
+  <view class="your-sales__list">
+   <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="your-sales__list__item" data-prodcode='{{item.prodCode}}' catchtap='onPushToCommodityDetail'>
+       <image class="your-sales__item__image" src="{{item.imageUrl}}?x-oss-process=style/firstMainPic" mode='aspectFill' lazy-load></image>
+       <view class="your-sales__item__right">
+         <view class="your-sales__item__right__title text-clamp">{{item.prodName}}</view>
+
+       </view>
+       <view class='your-sales__list__item__price'>
+         <image wx:if="{{vipLevel==4}}"  class="your-sales__list__item__price__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/home_v1.png" lazy-load></image>
+         <image wx:if="{{vipLevel==3}}"  class="your-sales__list__item__price__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/home_v2.png" lazy-load></image>
+         <image wx:if="{{vipLevel==2}}" class="your-sales__list__item__price__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/home_v3.png" lazy-load></image>
+         <image wx:if="{{vipLevel==1}}"  class="your-sales__list__item__price__icon-1" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/home_v4.png" lazy-load></image>
+
+         <view class="your-sales__list__item__price__value"><text>¥</text>{{item.vipPrice}}</view>
+         <view class="your-sales__list__item__bid__price">¥{{item.standardRetailPrice}}</view>
+       </view>
+       
+    </view>
+ </block>
+ 
+  </view>
+  </view>
+</template>

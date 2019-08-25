@@ -1,0 +1,19 @@
+<template name="baseEquity">
+  <view class="base-equity">
+   <view class="base-equity__header">
+     <view class="base-equity__header__icon iconfont iconzuo" style="padding-left:13rpx;"></view>
+     <view class="base-equity__header__title">基本权益</view>
+     <view class="base-equity__header__icon iconfont iconyou"></view>
+   </view>
+    <view class="base-equity__list">
+      <view class="base-equity__list__item" wx:for="{{list}}" wx:key="{{index}}">
+        <image class="base-equity__list__item__icon" src="{{item.basicRightsImgurl}}" lazy-load></image>
+        <!-- base-equity__list__item__title--active -->
+          <view class="base-equity__list__item__title {{item.binded?'base-equity__list__item__title--active':''}}">{{item.basicRightsName}}</view>
+          <view class="base-equity__list__item__value {{item.binded?'base-equity__list__item__title--active':''}}">{{item.basicRightsDesc}}</view>
+          
+      </view>
+    </view>
+  </view>
+  <view style="height:160rpx;"></view>
+</template>

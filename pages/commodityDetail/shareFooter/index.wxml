@@ -1,0 +1,44 @@
+<!--components/shareFooter/shareFotter.wxml-->
+<template name="shareFooter">
+  <view class="mask" hidden="{{shareFooterType}}" bindtap="onclickClose">
+    <view class="shareFooter animated slideInUp">
+        <view class="sfHead" bindtap="onclickClose">
+          <view class="sfWord">分享</view>
+          <view class="sfhIco iconfont iconguanbi"></view>
+        </view>
+        <view class="sfMes">
+                <share-button class="sfmLi" product="{{productParam}}" type="3" bind:error="on_error" >
+                <view class="sfmLiIco">
+                  <view class="tjhwq iconfont iconhaowuquan"></view>
+              </view>
+              <text class="pt20">推荐好物圈</text>
+              <icon></icon>
+                </share-button>
+            <!-- <view class="sfmLi" plain style="border:none;background:rgba(0,169,178,0);">
+              <view class="sfmLiIco" bindtap="onclickCom">
+                  <view class="tjhwq iconfont iconhaowuquan"></view>
+              </view>
+              <text class="pt20">推荐好物圈</text>
+              <icon></icon>
+            </view> -->
+            <button open-type='share' class="sfmLi" plain style="border:none;background:rgba(0,169,178,0);">
+              <view class="sfmLiIco">
+                  <view class="fxghy iconfont iconweixin1"></view>
+              </view>
+              <text>分享给好友</text>
+              <icon></icon>
+            </button>
+            <button class="sfmLi" plain style="border:none;background:rgba(0,169,178,0);" bindtap="onclickFriend" >
+              <view class="sfmLiIco" >
+                  <image class="fxpyq" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/fxpyq.png"></image>
+              </view>
+              <text>生成分享海报</text>
+            </button>
+            <view class="aa"></view>
+            <view class="sfHint">好物推荐，和大家一起分享你发现的好物</view>
+        </view>
+    </view>
+  </view>
+   <!-- 分享朋友圈组件 -->
+    <kc-share-monent src="{{shareUrl}}" wx:if="{{showShareMonent}}" bindhidden="onClickHddenMonent"></kc-share-monent>
+</template>

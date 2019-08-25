@@ -1,0 +1,36 @@
+  <template name="service">
+    <!-- 鲲美会服务评价 -->
+  <view class="service">
+    <view class="service__header">
+      <image class="service__header__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/logo_new.jpg"></image>
+      <view class="service__header__right">
+        <view class="service__header__right__title">鲲美会服务评价</view>
+        <view class="service__header__right__desc">评价大于200元的订单可获得积分（订单完成3个月内有效)</view>
+      </view>
+    </view>
+
+    <!-- 商品符合度 -->
+    <view class="service__cell">
+      <view class="service__celll__title">商品符合度</view>
+      <kc-rater value="{{conformity}}" index="{{1}}" bindchange="onServiceRate"/>
+    </view>
+     <view class="service__cell">
+      <view class="service__celll__title">服务态度</view>
+      <kc-rater value="{{attitude}}"  index="{{2}}" bindchange="onServiceRate"/>
+    </view>
+     <view class="service__cell">
+      <view class="service__celll__title">物流发货速度</view>
+      <kc-rater value="{{logistics}}" index="{{3}}" bindchange="onServiceRate"/>
+    </view>
+     <view class="service__cell">
+      <view class="service__celll__title">配送员服务</view>
+      <kc-rater value="{{delivery}}"  index="{{4}}" bindchange="onServiceRate"/>
+    </view>
+
+    <!-- 提交 -->
+    <view class="btn-submit">提交</view>
+    <view class="btn-tip">评价,晒图都能获取积分耶!</view>
+    <view class="rule-link" bindtap="onPushToRule">详细奖励规则</view>
+  </view> 
+  </template>
+  

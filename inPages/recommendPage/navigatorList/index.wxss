@@ -1,0 +1,24 @@
+.navigator-list{
+  margin-top: 0rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 34rpx;
+  padding-right: 54rpx;
+  justify-content: space-between;
+}
+.navigator__item{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.navigator__item__icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+.navigator__item__title{
+ color: #333333;
+ font-size: 24rpx;
+ margin-top: 19rpx;
+ height: 33rpx;
+ line-height: 33rpx;
+}

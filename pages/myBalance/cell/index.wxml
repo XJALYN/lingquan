@@ -1,0 +1,26 @@
+<template name="cell">
+<view class="cell">
+  <image class="cell__icon" wx:if="{{businessType==1}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_0.png"></image>
+  <image class="cell__icon" wx:if="{{businessType==2}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_1.png"></image>
+  <image class="cell__icon" wx:if="{{businessType==3}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_2.png"></image>
+  <image class="cell__icon" wx:if="{{businessType==4}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_3.png"></image>
+
+  <image class="cell__icon" wx:if="{{businessType==5}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_4.png"></image>
+
+  <!-- 退款返还 -->
+  <image class="cell__icon" wx:if="{{businessType==6}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_3.png"></image>
+
+  <!-- 绑手机送余额 -->
+  <image class="cell__icon" wx:if="{{businessType==7}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_7.png"></image>
+  <view class="cell__mid">
+  
+
+    <view class="cell__title">{{remainderDesc}}</view>
+    <view class="cell__time">{{createTime}}</view>
+  </view>
+  <!-- 目前除了购物消费为负值,其余均为正值 -->
+  <view class="cell__right">
+    {{diffrentValue>0?"+":""}}{{diffrentValue}}
+  </view>
+</view>
+</template>

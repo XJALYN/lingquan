@@ -1,0 +1,8 @@
+<!--subPage/subPage/qixi/qixi.wxml-->
+<!-- <image class="qixi" mode="widthFix" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/qixi_bg.png"></image> -->
+<view class="qixi">
+<view class="list">
+  <view class="list__item" wx:for="{{list}}" wx:key="{{index}}" data-prodcode="{{item}}" bindtap="onPushToGoodsDetail"></view>
+</view>
+</view>
+

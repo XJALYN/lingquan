@@ -1,0 +1,58 @@
+<!--pages/livePlayer/livePlayer.wxml-->
+<view class="page">
+  <live-player src="" mode="live" autoplay bindstatechange="onStateChange" binderror="error" class="live-player" />
+  <cover-view class="mask">
+    <cover-view class="user">
+      <cover-image class="user__image" src='{{anchorPortrait}}'></cover-image>
+      <cover-view class="user__right">
+        <cover-view class="user__title">{{roomName}} | {{liveAddress}}</cover-view>
+        <cover-view class="user__num">{{audienceSize}}观看</cover-view>
+      </cover-view>
+    </cover-view>
+    <!-- 推送商品 -->
+  </cover-view>
+
+
+    <cover-view class="goods">
+      <cover-image class="goods__delete" src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/live_delete.png'> </cover-image>
+      <cover-view class="goods__title">
+        视频中的商品
+      </cover-view>
+      <cover-view class="goods__left">
+        <cover-image class="goods__left__icon">
+        </cover-image>
+        <cover-view class="goods__left__info">
+          <cover-view class="goods__left__info__name">
+            商品的名称
+          </cover-view>
+          <cover-view class="goods__left__info__bottom">
+            <cover-view class="goods__left__info__bottom__price">
+              ¥156
+            </cover-view>
+            <cover-view class="goods__left__info__bottom__bid-price">
+              ¥213
+            </cover-view>
+            <cover-image class="goods__left__info__bottom__enter-icon" src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/live_arrow.png'>
+            </cover-image>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+    <!-- 推送弹幕 -->
+      <cover-view class="danmu-list">
+      <cover-view class="danmu-cell" wx:for="{{[1,1,1,1,1]}}" wx:key="{{index}}">
+        <cover-view class="danmu-cell__name">用户昵称</cover-view>
+        <cover-view class="danmu-cell__text">弹幕展示</cover-view>
+      </cover-view>
+    </cover-view>
+  
+  <!-- 底部 -->
+  <cover-view class="footer">
+    <cover-image class="footer__icon" src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/live_goods_icon.png'></cover-image>
+    <cover-view style='flex:1'></cover-view>
+    <cover-image class="footer__transpond" src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/live_share.png'></cover-image>
+    <cover-image class="footer__like" src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/live_like.png'></cover-image>
+  </cover-view>
+
+  <input class="footer__input" auto-focus='true' placeholder='跟主播聊点什么'></input>
+</view>

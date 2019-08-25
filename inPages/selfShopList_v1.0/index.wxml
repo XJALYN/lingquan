@@ -1,0 +1,21 @@
+<!--components/selfShopList/index.wxml-->
+<view class='selfShopList animated fadeIn'>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+     <view class='ssList' bindtap='ongoCommDetail' data-prodcode = "{{item.prodCode}}">
+      <view class='sslMes'>
+          <image src='{{item.imageUrl}}?x-oss-process=style/firstMainPic' mode='aspectFill'></image>
+          <view class="sslPrice__status" wx:if="{{item.status == 3}}">已售罄</view>
+          <view class='sslName text-clamp'>{{item.prodName}}</view>
+          <view class='sslPrice'>
+            <view class='sslPrice__title1'>¥</view>
+            <view class='sslPrice__title2'>{{item.vipPrice}}</view>
+            <view class='sslPrice__title3'>¥{{item.standardRetailPrice}}</view>
+          </view>
+      </view>
+    </view>
+    </block> 
+</view>
+
+<kc-placeholder-image wx:if="{{list.length==0}}" title="我们正在搬运好物中" imageClassName="iconfont iconzanwushangpin"></kc-placeholder-image>
+
+<kc-footer-loading noMore="{{noMore}}" wx:if="{{list.length > 10}}"/>

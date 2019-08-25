@@ -1,0 +1,5 @@
+/* pages/shopCenter/shopCenter.wxss */
+@import "./search/index";
+@import "./rightContent/index";
+@import "./leftMenu/index";
+@import "./brandList/index";

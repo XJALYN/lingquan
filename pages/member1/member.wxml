@@ -1,0 +1,94 @@
+<!--pages/member/member.wxml-->
+<import src="./header/index" />
+<import src="./mainEquity/index" />
+<import src="./baseEquity/index" />
+<import src="./help/index" />
+<import src="./limitCardSuccess/index" />
+
+<view class="animated fadeIn">
+  <template is="header" data="{{list,vipIndex,listIndex}}"/>
+
+  <swiper current='{{listIndex}}' bindchange='onSwiperChange' class="content-swiper" >
+   <block wx:for="{{list}}" wx:key="{{index}}">
+     <swiper-item >
+       <scroll-view class="content-swiper__item" scroll-y>
+        <template is="mainEquity" data="{{list:item.cardCoreRights,vipIndex,currentMemberCardId}}" />
+        <!-- <template is="help" /> -->
+       <template is="baseEquity" data="{{list:item.cardBasicRights,vipIndex,currentMemberCardId}}" />
+       </scroll-view>
+   </swiper-item>
+   </block>
+ 
+  
+  </swiper>
+
+
+  <!-- 季卡会员 -->
+  <view class="btn-pay btn-pay-bg1" wx:if="{{vipLevel > 3 && listIndex==1}}" catchtap='onUpgradeQuarterCard'>
+    <view class="discount-bubble" wx:if="{{list[listIndex].savePriceDesc != ''}}">
+   <view class="discount-bubble__text" >{{list[listIndex].savePriceDesc}}</view>
+   <view class="discount-bubble__arrow"></view>
+  </view>
+     <text class="btn-pay_text1">限时折扣:</text>
+     <text class="btn-pay_text2">¥</text>
+     <text class="btn-pay_text3">{{list[listIndex].shouldPayMoney}}</text>
+     <text class="btn-pay_text8">原价:</text>
+     <text class="btn-pay_text9">{{list[listIndex].membercardTagPrice}}</text>
+     <view class="btn-pay_text4">立即开通</view>
+     <text class="btn-pay_text5">成为季卡会员</text>
+     <!-- 绑定手机 -->
+     <button class="btn-bind-phone" wx:if="{{!bindPhone}}" open-type='getPhoneNumber' bindgetphonenumber='onBindPhone' catchtap='onTapBindPhoneBtn' data-index='1'></button>
+   </view>
+   
+   <!-- 升级了季卡会员的情况下 升级年卡需要的条件 -->
+  
+   <view class="btn-pay btn-pay-bg1" wx:if="{{vipLevel == 3 && listIndex==1}}" catchtap='onUpgradeYearCard'>
+    <view class="discount-bubble" wx:if="{{list[listIndex].savePriceDesc != ''}}">
+   <view class="discount-bubble__text">{{list[listIndex].savePriceDesc}}</view>
+   <view class="discount-bubble__arrow"></view>
+  </view>
+     <text class="btn-pay_text1">补差价:</text>
+     <text class="btn-pay_text2">¥</text>
+     <text class="btn-pay_text3">{{list[listIndex].shouldPayMoney}}</text>
+     <text class="btn-pay_text8">原价:</text>
+     <text class="btn-pay_text9">{{list[listIndex].membercardTagPrice}}</text>
+     <text class="btn-pay_text4">立即提升</text>
+     <text class="btn-pay_text5">成为年卡会员</text>
+     <!-- 绑定手机 -->
+     <button class="btn-bind-phone" wx:if="{{!bindPhone}}" open-type='getPhoneNumber' bindgetphonenumber='onBindPhone' catchtap='onTapBindPhoneBtn' data-index='2'></button>
+   </view>
+   
+
+  <!-- 年卡会员  -->
+  <view class="btn-pay btn-pay-bg2" wx:if="{{vipLevel > 2 && listIndex==2}}" catchtap='onUpgradeYearCard'>
+      <view class="discount-bubble" wx:if="{{list[listIndex].savePriceDesc != ''}}">
+   <view class="discount-bubble__text">{{list[listIndex].savePriceDesc}}</view>
+   <view class="discount-bubble__arrow"></view>
+  </view>
+     <text class="btn-pay_text1">限时折扣:</text>
+     <text class="btn-pay_text2">¥</text>
+     <text class="btn-pay_text6 ">{{list[listIndex].shouldPayMoney}}</text>
+     <text class="btn-pay_text8">原价:</text>
+     <text class="btn-pay_text9">{{list[listIndex].membercardTagPrice}}</text>
+     <text class="btn-pay_text7">立即开通</text>
+     <text class="btn-pay_text5">成为年卡会员</text>
+     <!-- 绑定手机 -->
+     <button class="btn-bind-phone" wx:if="{{!bindPhone}}" open-type='getPhoneNumber' bindgetphonenumber='onBindPhone' catchtap='onTapBindPhoneBtn' data-index='2'></button>
+   </view>
+
+  <!-- 黑卡会员 -->
+  <view class="btn-pay-limit" wx:if="{{vipLevel > 1 && listIndex==3}}" catchtap='onUpgradeLimitCard'>
+    <view class="btn-pay-limit__text">
+      按活动限时领取
+    </view>
+  </view>
+
+  <!-- 升级黑卡成功提示弹窗 -->
+  <template is="limitCard" wx:if="{{showLimitCardSuccess}}" />
+</view>
+
+<!-- 用户授权弹窗 -->
+<kc-author-modal show="{{needAuthor}}"/>
+
+<!-- 福袋图标 -->
+<image wx:if="{{vipLevel != 4 && vipLevel != -1}}" class="welfare-icon animated swing infinite" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_welfare.png" catchtap="onPushToLuckyBag"> </image>

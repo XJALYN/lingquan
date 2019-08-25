@@ -1,0 +1,91 @@
+/* pages/newUserWelfare/newUserWelfare.wxss */
+.bg_image{
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  height: 1030rpx;
+  width: 100%;
+   background:url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/new_user_welfare_002.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.content-header{
+  height: 40rpx;
+  width: 490rpx;
+  margin-left: 130rpx;
+}
+swiper-item{
+  width: 305rpx;
+  height: 264rpx;
+  
+}
+.banner{
+  margin-top: 69rpx;
+  width: 100%;
+  height: 264rpx;
+}
+.arrow__left{
+  position: absolute;
+  left: 40rpx;
+  top: 164rpx;
+  font-size: 73rpx;
+  color: rgba(240, 93, 155, 1);
+  width: 38rpx;
+  height: 73rpx;
+  line-height: 73rpx;
+}
+.arrow__right{
+  position: absolute;
+  right: 40rpx;
+  top: 164rpx;
+  font-size: 73rpx;
+  color: rgba(240, 93, 155, 1);
+  width: 38rpx;
+  height: 73rpx;
+  line-height: 73rpx;
+}
+
+.banner__image{
+  width: 305rpx;
+  height: 264rpx;
+  transition: ease all 0.5s;
+}
+
+.slog-image{
+  margin-top: 38rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  width: calc(100% - 64rpx);
+  height: 70rpx;
+}
+.vip-goods-image{
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  width: calc(100% - 64rpx);
+  height: 413rpx;
+}
+
+.title{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgba(82, 68, 72, 1);
+  font-weight: bold;
+}
+.title text{
+ color: rgba(240, 93, 155, 1);
+}
+.title__tip{
+  color: rgba(171, 157, 161, 1);
+  font-size: 20rpx;
+}

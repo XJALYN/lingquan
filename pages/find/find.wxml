@@ -1,0 +1,11 @@
+<!--pages/find/find.wxml-->
+<import src="./menu/index" />
+<view>
+  <template is="menu"  data="{{menuList,menuIndex}}"/>
+  <kc-find wx:if="{{menuIndex==0}}" list="{{discoveryListData}}" clickLikeData="{{clickLikeData}}"  bindSupport='onclickSupport'/>
+  <kc-dou-yin wx:if="{{menuIndex==1}}" dylist="{{dyListData}}" bindaddshoppingcart="onShopCarAdd"/>
+  <kc-recommend wx:if="{{menuIndex==2}}" zclist="{{zcListData}}" clickZcData="{{clickZcData}}"  bindZc='onclickZc'/>
+  <kc-footer-loading noMore="{{noMore}}" />
+   <kc-author-modal show="{{needAuthor}}"/>
+</view>
+

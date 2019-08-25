@@ -1,0 +1,158 @@
+<import src="./shareFooter/index.wxml" />
+<import src="./sayList/index" />
+<import src="./specList/index" />
+<import src="./zhengpinAlert/index.wxml" />
+
+
+<view class='commodityDetail' hidden="{{commodityDetailType}}">
+  <view class="page-section page-section-spacing swiper">
+    <view class='cdBannerLine'></view>
+    <swiper class='comDswiper' bindchange="swiperChange" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" current='current'>
+      <block wx:for="{{kmhProductDetailData.images}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}?x-oss-process=style/xcxDetailPic" class="slide-image" width="355" height="150" bindtap='onPreviewImages' data-list='{{kmhProductDetailData.images}}' data-index="{{current}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="imageCount">{{current+1}}/{{kmhProductDetailData.images.length}}</view>
+  </view>
+
+  <view class='commTwo'>
+    <text class='text-clamp'>{{kmhProductDetailData.prodName}}</text>
+    <view class='commShare' bindtap="onclickShare">
+      <icon class='iconfont iconfenxiang'></icon>
+      <text>分享</text>
+    </view>
+    <view wx:if="{{kmhProductDetailData.currentCommission !== null}}">
+      <view class='shareCommission'>可获{{kmhProductDetailData.currentCommission}}元佣金</view>
+    </view>
+  </view>
+
+  <view class='commThree'>
+    <view class='commMes'>
+      <image src='{{kmhProductDetailData.memberGradeImageUrl}}' lazy-load></image>
+      <view class='commPrice'>
+        <text class='compOne'>￥</text>
+        <text class='compTwo'>{{kmhProductDetailData.currentPrice}}</text>
+        <text class='compThree'>￥{{kmhProductDetailData.retailPrice}}</text>
+      </view>
+    </view>
+  
+  </view>
+  <!-- upperLevel 表示升级到哪个等级 -->
+    <view class="vipGuide" bindtap="onPushToMember" wx:if="{{kmhProductDetailData.upperLevel == 3||kmhProductDetailData.upperLevel==2}}">
+      <view class="vipGuide-left">
+        <image class="vipGuide-left__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/goodsDetail_jika.png" wx:if="{{kmhProductDetailData.upperLevel==3}}"></image>
+        <image class="vipGuide-left__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/goodsDetail_nianka.png" wx:if="{{kmhProductDetailData.upperLevel==2}}"></image>
+        <view class="vipGuide-left__value">现开通{{kmhProductDetailData.upperLevel == 3?'季卡':'年卡'}}会员,立省¥{{kmhProductDetailData.reduceMoney}}</view>
+      </view>
+      <view class="vipGuide-right">
+        <view class="vipGuide-right__title">立即开卡</view>
+        <view class="vipGuide-right__icon iconfont iconyoujiantou"></view>
+      </view>
+    </view>
+
+  <view class='commFour'>
+    <view class='commFleft'>
+      <view class='commVipList' wx:for="{{kmhProductDetailData.priceCompareList}}" wx:key="{{index}}">
+        <image src='{{item.imageUrl}}' lazy-load></image>
+        <text class='vipName'>{{item.name}}：</text>
+        <text class='vipPrice'>￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 大牌说 -->
+  <template is="sayList" data="{{list:showMoreSayList?kmhProductDetailData.comments:kmhProductDetailData.omitComments,showMoreSayList}}" />
+  <view class='commSix' wx:if="{{kmhProductDetailData.suitables.length>0}}">
+    <view class='comFname'>适合人群</view>
+    <view class='commsMes' wx:for="{{kmhProductDetailData.suitables}}">
+      <image src='{{item.headImageUrl}}' lazy-load></image>
+      <text>{{item.crowdName}}</text>
+    </view>
+  </view>
+
+  <!-- 添加正品保证弹出框 -->
+  <view class="comBg"  bindtap="openAlert">
+       <image src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/bg.png"></image>
+  </view>
+
+  <view class="showKMH" hidden="{{!showKMH}}">
+    <view class="showKMHBg">
+    <image src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/1212.png"></image>
+      <view class="showKMHBtn" bindtap='onHideKMH'>好哒</view>
+    </view>
+  </view>
+
+   <!-- 添加正品保证弹出框 -->
+  <view class='commSeven' wx:if="{{kmhProductDetailData.chars.length>0}}">
+    <view class='comFname'>商品特性</view>
+    <view wx:for="{{kmhProductDetailData.chars}}" style='background-color: {{item.backgroundColor}};color:{{item.fontColor}};' class='commsBtn' wx:key="{{index}}">{{item.name}}</view>
+  </view>
+  <view class='commEight'>
+    <view class='comFname'>图文详情</view>
+    <view class='comEmes'>
+      <image wx:for="{{kmhProductDetailData.descs}}" src="{{item}}?x-oss-process=style/xcxComEmesPic" mode='widthFix' wx:key="{{index}}"></image>
+    </view>
+  </view>
+
+  <view class='commFooter' wx:if="{{kmhProductDetailData.status==1}}">
+    <navigator class='goIndex' bindtap='onclickIndex'>
+      <icon class='iconfont iconshouye'></icon>
+      <text>首页</text>
+    </navigator>
+    <view class='goKshop' bindtap='onclickShop'>
+      <view class='gkNum' hidden="{{shopCarCountByUserIdType}}">{{shopCarCountByUserIdData.prodCount}}</view>
+      <icon class='iconfont icongouwuche'></icon>
+      <text class='gkTxt'>购物车</text>
+    </view>
+
+    <view class='goBuys' bindtap='onShowSpecList' data-subChannelNo="{{kmhProductDetailData.subChannelNo}}" data-prodcode="{{kmhProductDetailData.prodCode}}" data-columncode="{{kmhProductDetailData.columnCode}}" data-shareMemberId="{{kmhProductDetailData.shareMemberId}}" data-choosetype="buy">立即购买</view>
+
+    <view class='goAdd' bindtap='onShowSpecList' data-prodcode="{{kmhProductDetailData.prodCode}}" data-choosetype="addCart">加入购物车</view>
+
+  </view>
+  <view class="noMes" wx:else>
+    <view class="noHint">{{kmhProductDetailData.status==3?"商品已售罄":"商品已下架"}}</view>
+    <view class='commFooter'>
+      <!-- <view class='commFooter' wx:else> -->
+      <navigator class='goIndex' bindtap='onclickIndex'>
+        <icon class='iconfont iconshouye'></icon>
+        <text>首页</text>
+      </navigator>
+      <view class='goKshop' bindtap='onclickShop'>
+        <view class='gkNum' hidden="{{shopCarCountByUserIdType}}">{{shopCarCountByUserIdData.prodCount}}</view>
+        <icon class='iconfont icongouwuche'></icon>
+        <text class='gkTxt'>购物车</text>
+      </view>
+
+      <view class='goBuys opThree' data-subChannelNo="{{kmhProductDetailData.subChannelNo}}" data-prodcode="{{kmhProductDetailData.prodCode}}" data-columncode="{{kmhProductDetailData.columnCode}}" data-shareMemberId="{{kmhProductDetailData.shareMemberId}}">立即购买</view>
+
+      <view class='goAdd opThree' data-prodcode="{{kmhProductDetailData.prodCode}}">加入购物车</view>
+    </view>
+  </view>
+</view>
+
+<view class="concat-btn">
+  <view class="concat-btn__image iconfont iconkefu"></view>
+  <view class="concat-btn__title">客服</view>
+  <button class="concat-btn__button" plain style="border:none" open-type='contact'></button>
+</view>
+
+<view class="concat-btn concat-btn__top" bindtap='onScrollTop'>
+  <view class="concat-btn__image2 iconfont iconzhiding" style='font-size:27rpx;'></view>
+  <view class="concat-btn__title">顶部</view>
+</view>
+
+<!-- 正品弹框 -->
+<template is="zhengpinAlert" data="{{zhengpinAlertType}}" />
+<!-- 分享弹框 -->
+<template is="shareFooter" data="{{shareFooterType,showShareMonent,shareUrl,productParam}}" />
+
+<!-- 用户授权弹窗 -->
+<kc-author-modal show="{{needAuthor}}" />
+
+<!-- 加入购物环境 -->
+<image class="add-move-animte animted fadeInUp" wx:if="{{addMoveAnimte}}" src="{{kmhProductDetailData.images[0]}}"></image>
+
+<!-- 选择规格弹窗 -->
+<template is="specList" wx:if="{{showSpecList}}" data="{{kmhProductDetailData,prodNum:prodNum}}" />

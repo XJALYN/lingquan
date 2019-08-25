@@ -1,0 +1,46 @@
+<!--pages/home/home.wxml-->
+
+<import src="./search/index.wxml" />
+<import src="./menu/index.wxml" />
+<view >
+  <template is="search" />
+  <template is="menu" data="{{menuList,menuIndex,scrollIntoView,scrollTop}}" />
+  <!-- 推荐页面 -->
+  <kc-recommend-page data="{{homePage}}" hideOneMinute="{{hideOneMinute}}" wx:if="{{menuList[menuIndex].value==0 && homePage}}" bindoneminute ="onTapOneMinute"/>
+
+ <!-- 一分钟了解鲲美会 -->
+  <kc-about-kmh wx:if="{{menuList[menuIndex].value==1}}"/>
+
+  <!-- 直播 -->
+  <kc-self-live-list wx:if="{{menuList[menuIndex].value==2}}" list="{{liveRoomList}}"/>
+
+ 
+  
+  <!-- 发现 -->
+  <kc-find wx:if="{{menuList[menuIndex].value==3}}" list="{{discoveryListData}}" clickLikeData="{{clickLikeData}}"  bindSupport='onclickSupport'/>
+
+  <!-- 抖音爆款 -->
+  <kc-dou-yin wx:if="{{menuList[menuIndex].value==4}}" dylist="{{dyListData}}" bindaddshoppingcart = "onShopCarAdd"/>
+
+  <!-- 种草 -->
+  <kc-recommend wx:if="{{menuList[menuIndex].value==5}}" zclist="{{zcListData}}" clickZcData="{{clickZcData}}"  bindZc='onclickZc'/>
+
+   <!-- 商家自营 -->
+  <kc-self-shop-list noMore="{{noMore}}" wx:if="{{menuList[menuIndex].value==6&&hwzyData}}"  data="{{hwzyData}}"/>
+
+  <!-- 临期商品 -->
+  <kc-date-goods-list wx:if="{{menuList[menuIndex].value==7}}" list="{{neardDateGoodsList}}" noMore="{{noMore}}" bindaddshoppingcart = "onShopCarAdd"/>
+</view>
+<!-- 授权弹窗 -->
+<kc-author-modal show="{{needAuthor}}"/>
+
+<kc-footer-loading noMore="{{noMore}}" wx:if="{{menuList[menuIndex].value==3||menuList[menuIndex].value==4||menuList[menuIndex].value==5}}"/>
+
+<!-- 引导添加小程序 -->
+<kc-guide-add-grogram wx:if="{{showGuideAddProgram}}" bindhide="onHideGuideAddProgram"/>
+
+<!-- 四重礼 -->
+<kc-new-user-welfare show="{{showNewUserWelfare}}"/>
+
+<kc-qixi-alert show="{{showQixiAlert}}"/>
+

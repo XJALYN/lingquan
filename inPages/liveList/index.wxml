@@ -1,0 +1,13 @@
+<!--inPages/liveList/index.wxml-->
+<import src="./cell/index" />
+<view class="animated fadeIn">
+<block wx:for="{{list}}" wx:key="{{index}}">
+<template is="cell" data="{{item}}"/>
+</block>
+<view class="cell-no">
+ <image class="cell-no__image"></image>
+ <view class="cell-no__title">更多直播正在路上</view>
+</view>
+</view>
+
+

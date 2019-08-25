@@ -1,0 +1,25 @@
+<template name="recommend">
+ <view class="recommend">
+
+   <!-- 顶部 -->
+   <view class="recommend__top">
+   <view class="recommend__title">种草日记</view>
+   <view class="recommend__subtitle" catchtap='onPushToFind' data-menuindex='2'>查看更多</view>
+   <view class="recommend__icon iconfont iconyoujiantou"></view>
+  </view>
+
+  <view class="recommend__list" scroll-x="{{true}}">
+  <block  wx:for="{{list}}" wx:key="{{index}}">
+    <view class="recommend__list__item" catchtap="onPushToWxWeb" data-url = "{{item.link}}">
+      <image class="recommend__list__item__bg" src="{{item.bannerUrl}}?x-oss-process=style/recommendPic" lazy-load></image>
+      <view class="recommend__list__item__name">{{item.createTime}}</view>
+      <view class="recommend__list__item__title text-clamp-1">{{item.title}}</view>
+      <view class="recommend__list__item__subtitle">{{item.praiseNum}}人正在种草</view>
+    </view>
+  </block>
+
+
+   
+  </view>
+ </view>
+</template>

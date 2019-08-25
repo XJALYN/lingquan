@@ -1,0 +1,26 @@
+<template name="sayList">
+  <view class="say-list" wx:if="{{list.length !== 0}}">
+    <view class="say-list__title">大牌说</view>
+    <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="say-list__cell" >
+      <image class="say-list__cell__icon" src="{{item.headImageUrl}}" lazy-load></image>
+      <view class="say-list__cell__mid">
+        <view class="say-list__cell__mid__top">
+        <view class="say-list__cell__mid__name">{{item.nickname}}</view>
+        <view class="say-list__cell__mid__show" bindtap='onSayFold' data-index='{{index}}'>{{item.fold?"展开":"收起"}}</view>
+        </view>
+        
+        <view class="say-list__cell__mid__text {{item.fold?'text-clamp':''}}">{{item.descs}}</view>
+        <view class="say-list__cell__mid__from">{{item.formPlatform}}</view>
+      </view>
+    </view>
+    <view class="say-list__cell__line" wx:if="{{index < list.length - 1}}"></view>
+    </block>
+    
+
+    <view class="say-list__more" wx:if="{{!showMoreSayList}}" bindtap='onShowMoreSayList'>
+     <text class="say-list__more__title">查看更多</text>
+     <view class="say-list__more__arrow iconfont iconxiangxia"></view>
+    </view>
+  </view>
+</template>

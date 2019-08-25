@@ -1,0 +1,30 @@
+<!--packageA/pages/rateGoods/rateGoods.wxml-->
+
+
+<import src="./cell/index" />
+<import src="./service/index" />
+<import src="./slogan/index" />
+
+<block wx:for="{{goodsList}}" wx:key="{{index}}">
+  <template is="cell" data="{{index,...item}}"/>
+</block>
+
+
+<!-- 匿名发布 -->
+<view class="anonymous">
+  <view class="anonymous__icon iconfont iconxingzhuangjiehe"></view>
+  <text class="anonymous__title">匿名发布</text>
+</view>
+
+<template is="service" data="{{...service}}"/>
+
+<template is="slogan" />
+
+
+
+
+
+
+
+
+  

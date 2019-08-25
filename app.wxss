@@ -1,0 +1,59 @@
+/**app.wxss**/
+@import "./common/animate/animate.wxss";
+@import "./iconfont.wxss";
+
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.color_gray{
+ color:#333;
+}
+.background-color__main{
+ background: #333;
+}
+
+.main_bg_color{
+  background-color: #F61B6D;
+  background: #F61B6D;
+}
+
+page{background-color: #F5F5F5;}
+
+
+.main_font_color {
+  color: rgb(211,228,27);
+}
+
+.main_bg_color {
+  background-color: #F61B6D;
+  background: #F61B6D;
+}
+
+.text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.text-clamp-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.ellips{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ellips_clip{white-space:nowrap;overflow:hidden;text-overflow:clip;}
+.ellips_line3{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;}
+
+
+

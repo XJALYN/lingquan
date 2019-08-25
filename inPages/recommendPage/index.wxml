@@ -1,0 +1,41 @@
+<!--components/recommendPage/index.wxml-->
+
+<import src="./firstRebate/index" />
+<import src="./freeGet/index" />
+<import src="./navigatorList/index" />
+<import src="./bannerList/index" />
+
+<import src="./recommend/index" />
+<import src="./vipCard/index" />
+<import src="./yourSales/index"/>
+
+<import src="./oneMinute/index" />
+<import src="./find/index" />
+
+<view class="animated fadeIn">
+  <!-- vip展示 -->
+  <template is="vipCard" wx:if="{{data.user}}" data="{{user:data.user}}"/>
+
+  <!-- 导航 -->
+  <template is="navigatorList" wx:if="{{data.user}}"/>
+  <!-- 一分钟 -->
+  <template is="oneMinute" wx:if="{{!hideOneMinute}}" />
+
+  <!-- 首单必反 -->
+  <template is="firstRebate" wx:if="{{data.firstOrderList.length > 0}}" data="{{list:data.firstOrderList}}"/>
+  <!-- 免费拿 -->
+  <template is="freeGet" wx:if="{{data.vipTakeFreeList.length > 0}}" data="{{list:data.vipTakeFreeList}}"/>
+  <!-- 你的专享 -->
+  <template is="yourSales" wx:if="{{data.privilege.privilegeList.length > 0}}"  data="{{list:data.privilege.privilegeList,vipLevel:data.privilege.vipLevel}}"/>
+
+  <!-- banner list -->
+  <template is="bannerList" wx:if="{{data.bannerList.length > 0}}" data="{{bannerList:data.bannerList,bannerIndex}}" />
+   <!-- 发现达人 -->
+   <template is="find" wx:if="{{data.philosopherDtos.length >0 }}" data="{{list:data.philosopherDtos}}"/>
+  
+  <!-- 精品推荐 -->
+  <template is="recommend" wx:if="{{data.grassPlantingDiaryList.length >0}}" data="{{list:data.grassPlantingDiaryList}}"/>
+</view>
+
+<kc-member-upgrade show="{{showMemberUpgrade}}"/>
+

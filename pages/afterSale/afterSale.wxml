@@ -1,0 +1,10 @@
+<!--pages/afterSale/afterSale.wxml-->
+<import src="./cell/index" />
+<block wx:for="{{list}}" wx:key="{{index}}">
+<template is="cell" data="{{...item}}"/>
+</block>
+
+<kc-placeholder-image wx:if="{{list.length == 0}}" imageClassName="iconfont iconwurenhejilu" title="暂无售后信息" />
+
+<kc-footer-loading wx:if="{{list.length >= 5}}" noMore="{{noMore}}"/>
+

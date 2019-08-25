@@ -1,0 +1,6 @@
+<!--components/page/index.wxml-->
+<view>
+ <slot></slot>
+   <!-- 微信授权弹窗 -->
+  <kc-author-modal show="{{needAuthor}}" type="0"/> 
+</view>

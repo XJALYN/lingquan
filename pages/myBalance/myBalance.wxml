@@ -1,0 +1,12 @@
+<!--pages/myBalance/myBalance.wxml-->
+<import src="./cell/index" />
+
+<template is="cell" wx:for="{{list}}" wx:key="{{index}}" data="{{...item}}"/>
+
+
+
+<kc-footer-loading wx:if="{{list.length >= 10}}" noMore="{{noMore}}"/>
+
+<kc-placeholder-image imageClassName="iconfont iconwurenhejilu" wx:if="{{list.length == 0}}" title="暂无任何记录" />
+
+<kc-author-modal show="{{needAuthor}}"/>

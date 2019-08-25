@@ -1,0 +1,200 @@
+.spec-mask{
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
+ bottom: 0;
+ background: rgba(0,0,0,0.5);
+ z-index: 3;
+
+}
+.spec{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1032rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  z-index: 4;
+}
+.spec__header{
+  margin-top: 30rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width:calc(100% - 64rpx);
+  display: flex;
+  justify-items: flex-end;
+
+}
+.spec__header__icon{
+ width: 210rpx;
+ height: 210rpx;
+}
+.spec__header__right{
+ margin-left: 30rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+}
+
+.spec__header__right__price{
+ color: rgba(246, 27, 109, 1);
+}
+.spec__header__right__price text:nth-child(1){
+ font-size: 28rpx;
+}
+.spec__header__right__price text:nth-child(2){
+  font-size: 40rpx;
+}
+.spec__header__right__num{
+  font-size: 24rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+  margin-top: 16rpx;
+}
+.spec__header__right__num text:nth-child(1){
+  color: rgba(153, 153, 153, 1);
+}
+.spec__header__right__num text:nth-child(2){
+  color: rgba(246, 27, 109, 1);
+}
+.spec__header__right__num text:nth-child(3){
+  color: rgba(153, 153, 153, 1);
+}
+.spec__buy__num{
+  margin-top: 45rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  display: flex;
+  align-items: center;
+}
+.spec__buy__num__title{
+  font-size: 28rpx;
+  color: rgba(19, 20, 21, 1);
+  flex: 1;
+  font-weight: bold;
+}
+.spec__buy__num__desc{
+ font-size: 24rpx;
+ color: rgba(153, 153, 153, 1);
+}
+.spec__buy__num__value{
+  font-size: 24rpx;
+ color: rgba(246, 27, 109, 1);
+}
+
+.spec__buy__num__plus{
+ height: 50rpx;
+ width: 50rpx;
+ border-top: 1px solid rgba(153, 153, 153, 1);
+ border-bottom: 1px solid rgba(153, 153, 153, 1);
+ border-left: 1px solid rgba(153, 153, 153, 1);
+ border-top-left-radius: 25rpx;
+ border-bottom-left-radius: 25rpx;
+ box-sizing: border-box;
+ text-align: center;
+ line-height: 50rpx;
+ margin-left: 10rpx;
+ color: rgba(51, 51, 51, 1);
+ font-size: 28rpx;
+}
+.spec__buy__num__input{
+ width: 76rpx;
+ height: 50rpx;
+ border: 1px solid rgba(153, 153, 153, 1);
+ font-size: 24rpx;
+ box-sizing: border-box;
+ text-align: center;
+ line-height: 48rpx;
+}
+.spec__buy__num__invalid{
+ color: rgba(153, 153, 153, 1);
+}
+.spec__buy__num__add{
+  font-size: 28rpx;
+ height: 50rpx;
+ width: 50rpx;
+ border-top: 1px solid rgba(153, 153, 153, 1);
+ border-bottom: 1px solid rgba(153, 153, 153, 1);
+ border-right: 1px solid rgba(153, 153, 153, 1);
+ border-top-right-radius: 25rpx;
+ border-bottom-right-radius: 25rpx;
+ box-sizing: border-box;
+ text-align: center;
+ line-height: 48rpx;
+ color: rgba(51, 51, 51, 1);
+}
+
+.spec__btn{
+  position: absolute;
+  bottom: 40rpx;
+  left: 32rpx;
+  right: 32rpx;
+  width: calc(100% - 64rpx);
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  background-color: rgba(246, 27, 109, 1);
+  color: white;
+  border-radius: 50rpx;
+}
+
+.spec__rule{
+  margin-top: 60rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  display: flex;
+  flex-direction: column;
+
+}
+.spec__rule__title{
+  color: #131415;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.spec__rule__list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.spec__rule__list__item{
+  margin-top: 30rpx;
+width:130rpx;
+height:54rpx;
+background:rgba(242,242,242,1);
+border-radius:27px;
+text-align: center;
+line-height: 54rpx;
+margin-right: 32rpx;
+font-size: 24rpx;
+box-sizing: border-box;
+}
+.spec__rule__list__item--active{
+ background: #FEE8F0;
+ border: 1px solid #F61B6D;
+ color: #F61B6D;
+}
+.spec__rule__list__item--normal{
+ color: #333333;
+ border: 1px solid rgba(242,242,242,1);
+}
+.spec__rule__list__item--disabled{
+ background-color: #F2F2F2;
+ color: #D8D8D8;
+ border: 1px solid #F2F2F2;
+}
+
+.spec__list{
+  height: calc(100% - 300rpx);
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}

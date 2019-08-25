@@ -1,0 +1,29 @@
+/* subPage/subPage/qixi/qixi.wxss */
+.qixi{
+    width: 100%;
+   background: url(https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/qixi_bg.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 5825rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.list{
+box-sizing: border-box;
+  margin-top: 926rpx;
+  padding-left: 32rpx;
+  padding-right: 12rpx;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+
+.list__item{
+  margin-top: 0;
+  width: 333rpx;
+  height: 497rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}

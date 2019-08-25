@@ -1,0 +1,12 @@
+<!--components/authorAlert/index.wxml-->
+<view class="author__bg">
+<view class="author__content">
+  <image class="author__content__icon" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/icon2.png"></image>
+  <view class="author__content__title">邻圈</view>
+  <view class="author__content__slogan">发现您身边有趣的故事</view>
+  <!-- {{openSetting?"openSetting":"getUserInfo"}} -->
+  <button class="author__submit background-color__main" open-type='getUserInfo' bindgetuserinfo='bindgetuserinfo' plain style='border:none;background: black;color: white;'>授权登录</button>
+<view class="author__desc">[邻圈]申请获得您的微信授权</view>
+
+</view>
+</view>

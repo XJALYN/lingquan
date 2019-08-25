@@ -1,0 +1,14 @@
+<!--pages/addressList/addressList.wxml-->
+<import src="./addressCell/index" />
+
+<view>
+<kc-placeholder-image wx:if="{{list.length==0}}" imageClassName="iconfont iconzanwushouhuodizhi" title="暂无收货地址"/>
+ <block wx:for="{{list}}" wx:key="{{index}}">
+   <template is="addressCell" data="{{...item,address:item}}"/>
+ </block>
+
+ <view class="submit-btn main_bg_color" bindtap="onPushToAddressAdd" hover-class="submit-btn-hover"> 新增收货地址</view>
+ <kc-author-modal show="{{needAuthor}}"/>
+</view>
+
+

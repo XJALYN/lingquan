@@ -1,0 +1,63 @@
+<!--inPages/aboutKmh/index.wxml-->
+<view class="aboutKmh">
+
+  <view class="akBor">
+    <image class="aboutbeatu" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/aboutbeatu.png"></image>
+    <view class="akBorder">
+      <view class="akName">
+        <text>一分钟认识鲲美会</text>
+        <view class="akIco"></view>
+      </view>
+      <view class="akVideo">
+        <video src="http://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/kmh1920.mp4"   controls objectFit="fill" poster="http://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/home_video_bg.jpg"></video>
+      </view>
+      <view class="akMes">
+        <text>hi~</text>
+        <view class="akMes_clear">
+          当你网购护肤彩妆品时，较关心的是什么呢？
+          <view class="akMes_clear">真假？品牌？物流？售后？价格？</view>
+          <view class="akMes_clear">哇呜！好麻烦！</view>
+        </view>
+
+        <view>
+          <view class="akMes_clear">怎么办？来鲲美会！</view>
+          <view class="akMes_clear">
+            <text>专业“会员服务制”美妆个护电商平台。</text>
+          </view>
+          <view class="akMes_clear">致力让自家会员，用超可爱的价，入手合适更自己的心仪好物！</view>
+          <view class="akMes_clear">不仅要让会员“会花钱”，还要“能赚钱”！</view>
+        </view>
+
+        <view>
+          在这里，会员优享专属折扣价，每年预计可为您省下三五千的美妆个护费用。
+          <view class="akMes_clear">
+            <text>开卡大礼、首单全免、0元试用、现金券、免邮券、生日券等等各种福利，任你拿。</text>
+          </view>
+        </view>
+
+
+
+        <view>
+          在这里，每一位会员都是“会赚钱”的美妆达人。 每一次分享，都在充实会员的小金库。
+        </view>
+
+        <view class="akMes_clear">
+          货源，也是我们的一个大优势噢！
+          <view class="akMes_clear">靠谱、量足、质优，大部分商品由品牌方直接供货！</view>
+        </view>
+
+        <view class="akMes_clear">
+          我们的爸爸--鲲驰集团，进口美妆世界的大佬，现已与170多个，分别来自15个国家的知名品牌达成深度合作，也是资生堂、汉高、狮王、卡西欧等国际型品牌的代理商。
+          <view class="akMes_clear">热门的、小众的、难抢到的货，我们时常能轻松拿到！</view>
+
+        </view>
+
+        <view>
+          <text>来鲲美会，一起变身“会花钱、会赚钱、会更美”的美少女吧！</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+

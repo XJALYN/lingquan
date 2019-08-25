@@ -1,0 +1,116 @@
+{
+  "pages": [
+    "pages/myPushlishJobs/myPushlishJobs",
+    "pages/merchant/merchant",
+    "pages/merchantRegister/merchantRegister",
+    "pages/index/index",
+     "pages/jobDetail/jobDetail",
+    "pages/find/find",
+    "pages/home/home",
+    "pages/unionAuthor/unionAuthor",
+    "pages/author/author",
+    "pages/luckyBag/luckyBag",
+    "pages/newUserWelfare/newUserWelfare",
+    "pages/refundNode/refundNode",
+    "pages/giftCardRecharge/giftCardRecharge",
+    "pages/aboutKmh/aboutKmh",
+    "pages/afterDetails/afterDetails",
+    "pages/afterSaleApplay/afterSaleApplay",
+    "pages/myIntegral/myIntegral",
+    "pages/myBalance/myBalance",
+    "pages/afterSale/afterSale",
+    "pages/coupon/coupon",
+    "pages/shareMoneyList/shareMoneyList",
+    "pages/logisticsInfor/logisticsInfor",
+    "pages/logisticsTracking/logisticsTracking",
+    "pages/orderDetail/orderDetail",
+    "pages/weixin/weixin",
+    "pages/goodsSearch/goodsSearch",
+    "pages/livePlayer/livePlayer",
+    "pages/electronicInvoice/electronicInvoice",
+    "pages/shoppingCart/shoppingCart",
+    
+    "pages/find1/find",
+    "pages/member/member",
+    "pages/member1/member",
+    "pages/userCenter/userCenter",
+    "pages/orderList/orderList",
+    "pages/addressList/addressList",
+    "pages/addressAdd/addressAdd",
+    "pages/addressEdit/addressEdit",
+    
+    "pages/setting/setting",
+    "pages/addressChoiceList/addressChoiceList",
+    "pages/commodityDetail/commodityDetail",
+    "pages/balanceMes/balanceMes",
+    "pages/search/search",
+    "pages/vipBuyRecord/vipBuyRecord",
+    "pages/shopCenter/shopCenter",
+    "components/shareFooter/shareFotter",
+    "pages/webview/webview"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/qixi/qixi",
+        "pages/rateGoods/rateGoods",
+        "pages/goodsRateList/goodsRateList"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "all",
+      "packages": [
+        "packageA"
+      ]
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  },
+  "tabBar": {
+    "color": "#cbcbcb",
+    "selectedColor": "#020202",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/common/images/home.png",
+        "selectedIconPath": "/common/images/home_press.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "/common/images/me.png",
+        "selectedIconPath": "/common/images/me_press.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "kc-author-modal": "/components/authorAlert/index",
+    "kc-auth-phone": "/components/authorPhone/index",
+    "kc-placeholder-image": "/components/placeholderImage/index",
+    "kc-footer-loading": "/components/footerLoading/index",
+    "kc-modal": "/components/modal/index",
+    "page": "/components/page/index",
+    "kc-form": "/components/form/index",
+    "kc-back-home":"/components/backhome/index",
+    "kc-author-userinfo": "/components/authorUserInfo/index",
+    "kc-rater": "/components/rater/index",
+    "kc-navigation-bar":"/components/navigationBar/index",
+    "kc-banner":"/components/banner/index",
+    "kc-job-cell":"/components/jobCell/index",
+    "kc-job-list":"/components/jobList/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx6106b6dfe9370a7c"
+  ]
+
+}

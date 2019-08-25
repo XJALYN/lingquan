@@ -1,0 +1,23 @@
+<template name="recommendGoodsList">
+   <!-- 猜你喜欢 -->
+  <view class="goodsList-header" wx:if="{{list.length > 0}}">
+   <view class="goodsList-header__line"></view>
+    <view class="goodsList-header__text">猜你喜欢</view>
+   <view class="goodsList-header__line"></view>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class="goods-list">
+    <view class="goods-list__item" wx:for="{{list}}" wx:key="{{index}}" bindtap='onPushToGoodsDetail' data-prodcode='{{item.prodCode}}'>
+     <image class="goods-list__item__icon" src="{{item.imageUrl}}?x-oss-process=style/secondMainPic"></image>
+     <view class="goods-list__item__status" wx:if="{{item.status==3}}">已售罄</view>
+     <view class="goods-list__item__title text-clamp">{{item.prodName}}</view>
+     <view class="goods-list__item__footer">
+       <view class="goods-list__item__footer__units">¥</view>
+       <view class="goods-list__item__footer__price">{{item.vipPrice}}</view>
+       <view class="goods-list__item__footer__number">已售{{item.soldNum}}件</view>
+     </view>
+    </view>
+  </view>
+
+</template>

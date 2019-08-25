@@ -1,0 +1,212 @@
+<!--pages/balanceMes/balanceMes.wxml-->
+
+<view class='balanceMes'>
+<wxs module="formate" src="../../utils/format.wxs"/>
+
+  <!-- 结算页地址相关 -->
+  <view class='balanceOne'>
+      <view class='hasAdress' bindtap='onChangeAddress' hidden="{{hasAdressTypes}}">
+          <view class='haIco'><icon class='iconfont icondizhi'></icon></view>
+          <view class='balanOmes'>
+            <text class='baoName'>{{addressData.contact}} {{addressData.phone}}</text>
+            <text class='baoAdress ellips'>{{addressData.province}}{{addressData.city}} {{addressData.area}} {{addressData.detail}}</text>
+          </view>
+          <icon class='balanceNext iconfont iconyoujiantou'></icon>
+      </view>
+
+      <view class='noAdress' bindtap='perfect'  hidden="{{noAdressTypes}}" >
+          <text>+添加收货地址</text>
+          <icon></icon>
+      </view>
+  </view>
+
+  <!-- 充值手机号 -->
+  <!-- <view class="telephone-charge">
+   <view class="telephone-charge__header">
+     <view class="telephone-charge__icon iconfont iconchongzhi"></view>
+     <view class="telephone-charge__title">充值手机号</view>
+   </view>
+   <view class="telephone-charge__content">
+     <input class="telephone-charge__content__phone" placeholder="请输入手机号码" placeholder-class="telephone-charge__content__phone--placehold" type="number" maxlength="13" bindinput="onInputPhone" value="{{formatRechargePhone}}"></input>
+     <view wx:if="{{showPhoneClear}}" class="telephone-charge__content__icon iconfont iconqingchu" bindtap="onClearPhone"></view>
+   </view>
+  </view> -->
+
+  <view class='balanceTwo'>
+    
+     <view class='balantName'>
+        <view class='shopIco iconfont iconziying1'></view>
+        <text>鲲美自营</text>
+     </view>
+     <view class='balantDetail'>
+        <view class='balantCount' wx:for="{{orderSettleData.prodList}}" wx:key="{{index}}">
+            <image src='{{item.prodUrl}}?x-oss-process=style/xcxBalanceMesPic'></image>
+            <view class='balantMes'>
+                <text class='balantmName text-clamp'>{{item.prodName}}</text>
+                <!-- <text class='balantmType'>颜色分类：{{item.specification}}{{item.model}}</text> -->
+            </view>
+            <view class='balantNum'>
+                <text>￥{{item.price}}</text>
+                <text>x{{item.prodNum}}</text>
+            </view>
+        </view>
+        <view wx:if="{{orderType != 3}}" class='balantFreight' bindtap="onclickChooseMes">
+            <text>选择优惠券</text>
+            <icon class='iconfont iconyoujiantou'></icon>
+            <text>{{chooseMoney}}</text>
+        </view>
+       <view class='balantFreight' wx:if="{{orderType == 3}}">
+            <text>活动优惠</text>
+            <text></text>
+            <text></text>
+            <text>-￥{{helpDeduction}}</text>
+        </view>
+
+        <view class='balantFreight'>
+            <text>运费</text>
+            <text>￥{{freightData}}</text>
+        </view>
+        <view wx:if="{{orderType != 3}}" class='balantFreight' bindtap="onclickExemption">
+            <text>包邮券</text>
+            <icon class='iconfont iconyoujiantou'></icon>
+            <text>{{chooseMail}}</text>
+        </view>
+        <view class='balantFreight' bindtap="onSelectBalance">
+            <text>余额抵扣</text>
+            <icon class='iconfont iconyoujiantou'></icon>
+            <text>{{chooseBalance}}</text>
+        </view>
+        <view class='balantLeave'>
+            <text>买家留言</text>
+              <input placeholder='选填，请与商家协商一致' placeholder-class='placehold' bindinput='onInputbuyerNote'></input>
+        </view>
+        <view class='balantPrice'>
+            <text>{{totalPrice}}</text>
+            <text></text>
+            <text>合计：</text>
+        </view>
+     </view>
+
+  </view>
+  
+  <view bindtap='clickGoBalance' class='balanceThree'>
+      <text>发票</text>
+      <icon class='iconfont iconyoujiantou'></icon>
+      <view class="balanName ellips">{{taxName}}</view>
+  </view>
+
+  <view class='balanceFour'>
+     <text class='balanceFname'>支付方式</text>
+     <view class='balanceFtype'>
+        <icon class='iconfont iconweixin'></icon>
+        <text>微信支付</text>
+     </view>
+  </view>
+  <view class="blank80"></view>
+  <kc-form>
+  <view class="subModule">
+   <view class='balanceSubmit' bindtap='submitOrder'>提交订单</view> 
+  </view>
+ </kc-form>
+</view>
+
+<!-- 选择优惠卷弹框 -->
+<view class="mask" hidden="{{chooseMesType}}"></view>
+<view class="chooseMes animated slideInUp" hidden="{{chooseMesType}}">
+    <view class="cmName">
+      选择优惠券
+      <text bindtap="sureBtn">完成</text>
+    </view>
+    <view class="cmList">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio "  wx:for="{{settlementData.couponInfoForFullDeductionDto.couponInfoDtoList}}" wx:key="{{index}}">
+              <radio size="34" wx:if="{{item.available==true}}" color="#F61B6D" value="{{index}}" checked="{{index==selectedCoupon.deductionIndex}}"/>
+              <radio wx:elif="{{item.available==false}}"  disabled="true" size="34" color="#F61B6D" value="{{index}}" />
+              <view class="cmlRoll" wx:if="{{item.available==true}}">
+                  <view class="cmrMes">
+                    <view class="cmrPrice">
+                        <text>¥</text>
+                        <text>{{item.couponAmount}}</text>
+                    </view> 
+                    <view class="cmrDetail">满{{item.fullAmount}}立减</view>
+                  </view>
+                  <view class="cmrRight">
+                       <text>满减券</text>
+                        <text>有效期至 {{item.indate}}</text>
+                        <view>{{item.noUse}}</view>
+                  </view>
+              </view>
+
+              <view class="cmlRoll noUser" wx:elif="{{item.available==false}}">
+                  <view class="cmrMes">
+                    <view class="cmrPrice">
+                        <text>¥</text>
+                        <text>{{item.couponAmount}}</text>
+                    </view> 
+                    <view class="cmrDetail">满{{item.fullAmount}}立减</view>
+                  </view>
+                  <view class="cmrRight">
+                       <text>满减券</text>
+                        <text>有效期至 {{item.indate}}</text>
+                        <view>{{item.noUse}}</view>
+                  </view>
+              </view>
+            </label>
+          </radio-group>
+    </view> 
+    
+
+
+</view>
+<!-- 选择包邮卷 -->
+<view class="mask" hidden="{{exemptionType}}"></view>
+<view class="chooseMes animated slideInUp" hidden="{{exemptionType}}">
+    <view class="cmName">
+      选择包邮券
+      <text bindtap="exemptionBtn">完成</text>
+    </view>
+
+    <view class="cmList">
+          <radio-group class="radio-group" bindchange="exemptionChange">
+            <label class="radio " wx:for="{{settlementData.couponInfoForExpressDto.couponInfoDtoList}}" wx:key="{{index}}">
+              <radio size="34" color="#F61B6D" value="{{index}}" checked="{{index==selectedCoupon.expressIndex}}"/>
+              <view class="cmlRoll">
+                  <view class="cmrMes">
+                    <view class="cmrName">
+                        包邮
+                    </view> 
+                  </view>
+                  <view class="cmrRights">
+                        <text>包邮券</text>
+                        <text>会员专享，免运费</text>
+                        <text>有效期至 {{item.indate}}</text>
+                        <view>{{item.noUse}}</view>
+                  </view>
+              </view>
+            </label>
+          </radio-group>
+    </view> 
+</view>
+
+<!-- 选择用户余额弹窗 -->
+<view class="mask" hidden="{{!showSelecteBalanceAlert}}"></view>
+<view class="chooseMes blance_content animated slideInUp" hidden="{{!showSelecteBalanceAlert}}">
+    <view class="cmName">
+      余额抵扣
+      <text bindtap="onHideBalanceAlert">完成</text>
+    </view>
+
+    <view class="balance" bindtap='onChangeSelectedBalance'>
+       <view class="balance__icon__selecte iconfont iconxuanzhong"  wx:if="{{selectedBalance}}"></view>
+       <view class="balance__icon"  wx:if="{{!selectedBalance}}"></view>
+       <view class="balance__title">使用余额</view>
+       <view class="balance__value">¥{{memberRemainder}}</view>   
+    </view> 
+</view>
+
+
+<kc-author-modal show="{{needAuthor}}"/>
+
+
+
+

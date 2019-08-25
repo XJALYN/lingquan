@@ -1,0 +1,7 @@
+<!--components/memberUpgrade/index.wxml-->
+<view class="author__bg" wx:if="{{show}}">
+<view class="author__content" bindtap='onPushToMember'>
+ 
+    <view class="bth-close iconfont iconguanbi" catchtap='onHidden'></view>
+</view>
+</view>

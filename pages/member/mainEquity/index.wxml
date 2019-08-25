@@ -1,0 +1,19 @@
+<template name="mainEquity">
+  <view class="main-equity">
+   <view class="main-equity__header">
+     <view class="main-equity__header__icon iconfont iconzuo" style="padding-left:17rpx;"></view>
+     <view class="main-equity__header__title">核心权益</view>
+     <view class="main-equity__header__icon iconfont iconyou"></view>
+   </view>
+    <view class="main-equity__list">
+      <view class="main-equity__list__item" wx:for="{{list}}" wx:key="{{index}}">
+        <image class="main-equity__list__item__icon" src="{{item.coreRightsImgurl}}" lazy-load></image>
+        <view class="main-equity__list__item__right">
+        <!-- main-equity__list__item__right__title--active -->
+          <view class="main-equity__list__item__right__title {{item.binded?'base-equity__list__item__title--active':''}}">{{item.coreRightsName}}</view>
+          <view class="main-equity__list__item__right__value">{{item.coreRightsDesc}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

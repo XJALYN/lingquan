@@ -1,0 +1,47 @@
+
+.filter{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.filter__item{
+  flex:1;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+
+.filter__item__title{
+  margin-top: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #666666;
+  font-size: 28rpx;
+}
+.filter__item__title--active{
+  color: #F7498A;
+}
+
+.filter__item__line{
+  margin-top: 16rpx;
+  width: 0rpx;
+  height: 8rpx;
+  transition: ease 0.2s all;
+}
+
+.filter__item__line--active{
+ background-color: #F7498A;
+ width: 56rpx;
+}
+

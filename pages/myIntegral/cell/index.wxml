@@ -1,0 +1,12 @@
+<template name="cell">
+<view class="cell">
+  <image class="cell__icon" src="{{item.memberCardIcon}}"></image>
+  <view class="cell__mid">
+    <view class="cell__title">{{actionDesc}}</view>
+    <view class="cell__time">{{createTime}}</view>
+  </view>
+  <view class="cell__right">
+    {{diffrentValue}}
+  </view>
+</view>
+</template>

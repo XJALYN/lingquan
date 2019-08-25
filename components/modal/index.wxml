@@ -1,0 +1,12 @@
+<!--components/modal/index.wxml-->
+<view class="modal" wx:if="{{show}}">
+<view class="modal-main">
+<view class="modal-content">
+<view class="modal-title">免费领好物规则</view>
+<view class="modal-text"><text>1.会员可以参与“免费领好物”;\r\n2.会员发起领好物后，可分享邀请好友帮忙助力砍价;\r\n3.助力满相应商品金额后，即可免费获得。工作人员会在7个工作日内统一发货;\r\n4.好物商品为免费赠送，不支持退货等;\r\n5.活动最终解释权归平台所有；</text></view>
+ 
+  
+</view>
+<view class="modal-close icon font_family icon-guanbi" catchtap='onHide'></view>
+</view>
+</view>

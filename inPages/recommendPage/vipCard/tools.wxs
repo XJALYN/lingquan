@@ -1,0 +1,17 @@
+
+ var formatCarNum = function (value){
+   var carNum = "" + value
+   var result = ""
+   for (var i = 0; i < carNum.length;i++){
+     if(i==3||i==7){
+       result += carNum[i]
+       result += " "
+     }else{
+       result += carNum[i]
+     }
+   }
+   return result
+ }
+ module.exports = {
+   formatCarNum: formatCarNum
+ }

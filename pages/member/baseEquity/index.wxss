@@ -1,0 +1,79 @@
+.base-equity{
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  border-radius: 10rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+}
+.base-equity__header{
+  margin-top: 31rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.base-equity__header__icon{
+  width: 60rpx;
+  height: 32rpx;
+  line-height:40rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.base-equity__header__title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-left:8rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  padding-top: 6rpx;
+}
+.base-equity__list{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.base-equity__list .base-equity__list__item:last-child{
+  border-bottom: none;
+  
+}
+.base-equity__list__item{
+  width: 624rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110rpx;
+  border-bottom: 2rpx #e8e8e8 dashed;
+}
+.base-equity__list__item__icon{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 45rpx;
+}
+
+.base-equity__list__item__title{
+  margin-left: 18rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #8C8B8E;
+  flex:1;
+}
+.base-equity__list__item__title--active{
+  color: #333333;
+}
+
+.base-equity__list__item__value{
+  /* height: 28rpx; */
+  font-size: 24rpx;
+  /* margin-top: 6rpx; */
+  color: #999999;
+  flex:1;
+  text-align: right;
+  max-width: 338rpx;
+}

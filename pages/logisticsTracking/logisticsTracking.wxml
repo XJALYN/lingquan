@@ -1,0 +1,57 @@
+<!--pages/logisticsTracking/logisticsTracking.wxml-->
+<view class='logTrack' wx:if="{{loaded}}">
+  <view class='ltType'>
+    <view class='ltIco'>
+      <view class='iconfont icondaishouhuo'></view>
+      <text>{{checkoutOrdertraceData.orderStateText}}</text>
+    </view>
+    <view class='ltList'>
+      <text>订单编号：</text>
+      <text>{{checkoutOrdertraceData.checkoutOrderCode}}</text>
+    </view>
+    <view class='ltList'>
+      <text>下单时间：</text>
+      <text>{{checkoutOrdertraceData.orderDate}}</text>
+    </view>
+    <view class='ltList'>
+      <text>物流公司：</text>
+      <text>{{checkoutOrdertraceData.logisticsName}}</text>
+    </view>
+    <view class='ltList'>
+      <text>运单号码：</text>
+      <text>{{checkoutOrdertraceData.logisticsNum}}</text>
+    </view>
+  </view>
+  <view class='ltAdress'>
+    <view class='ltaIco'>
+      <view class='iconfont icondizhi'></view>
+    </view>
+    <view class='ltaMes'>
+      <view>
+        <text>{{checkoutOrdertraceData.consigneeName}}</text>
+        <text>{{checkoutOrdertraceData.consigneePhone}}</text>
+      </view>
+      <view>{{checkoutOrdertraceData.consigneeDetailAddress}}</view>
+    </view>
+  </view>
+
+  <view class='loginList'>
+
+    <view class='loginLi' wx:for="{{checkoutOrdertraceData.licLogisticList}}">
+      <view class='lliLeft'>
+        <view class='llTime'>
+          <text>{{item.timeTop}}</text>
+          <text>{{item.timeTail}}</text>
+        </view>
+        <view class='llDico'></view>
+        <icon></icon>
+      </view>
+      <view class='lliRight'>
+        <text class='llrType'>{{item.status}}</text>
+        <rich-text nodes="{{item.context}}"></rich-text>
+      </view>
+    </view>
+
+
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/giftCardRecharge/giftCardRecharge.wxml-->
+<import src="./recordList/index" />
+<import src="./errorTip/index" />
+<view class="page">
+<view class="cell {{isCardNoEmpty||isCardNoError?'cell__input--error':''}}">
+ <view class="cell__icon iconfont iconkahao"></view>
+ <input class="cell__input" placeholder='请输入礼品卡卡号' bindinput='onInputCardNum' value='{{cardNo}}' bindfocus="onClearCheck" bindblur="onCheckCardNo"></input>
+</view>
+
+<view class="cell {{isCardPassEmpty||isCardPassError?'cell__input--error':''}}">
+ <view class="cell__icon iconfont iconmima"></view>
+ <input class="cell__input" placeholder='请输入礼品卡密码' bindinput='onInputCardPass' value='{{cardPass}}' bindfocus="onClearCheck" bindblur="onCheckCardPass"></input>
+</view>
+
+<template is="errorTip" wx:if="{{isCardNoEmpty}}"   data="{{title:'卡号不能为空'}}" />
+<template is="errorTip" wx:if="{{isCardPassEmpty}}" data="{{title:'密码不能为空'}}" />
+<template is="errorTip" wx:if="{{isCardNoError}}"   data="{{title:'卡号输入错误'}}" />
+<template is="errorTip" wx:if="{{isCardPassError}}" data="{{title:'密码输入错误'}}" />
+<template is="errorTip" wx:if="{{isCardHasBind}}"   data="{{title:'卡号已绑定'}}" />
+
+<view class="btn-sumit" bindtap='onSubmit'>确认</view>
+<view class="btn-sumit__tip">礼品卡绑定成功后卡内金额将自动进入账户余额，可在我的-余额查看</view>
+
+<view class="record-header">
+ <view class="record-line"></view>
+ <view class="record-title">绑卡记录</view>
+ <view class="record-line"></view>
+</view>
+
+<!-- 暂无绑卡记录 -->
+<view class="record-no" wx:if="{{list.length == 0}}">
+  <view class="record-no__image iconfont iconzanwubangkajilu"></view>
+  <view class="recorde-no__title">暂无绑卡记录</view>
+</view>
+
+<template is="recordList" data="{{list}}"/>
+
+</view>
+
+<kc-footer-loading wx:if="{{list.length > 10}}" noMore="{{noMore}}"/>
+

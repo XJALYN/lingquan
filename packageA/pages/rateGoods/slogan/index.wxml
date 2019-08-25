@@ -1,0 +1,9 @@
+<template name="slogan">
+  <view class="slogan">
+    <image class="slogan__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/logo_new.jpg"></image>
+    <view class="slogan__right">
+     <view class="slogan__right__title">鲲美会</view>
+     <view class="slogan__right__desc">发现美，会更美</view>
+    </view>
+  </view>
+</template>

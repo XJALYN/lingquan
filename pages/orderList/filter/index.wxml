@@ -1,0 +1,10 @@
+<template name="filter">
+<view class="filter-list">
+  <block wx:for="{{filters}}" wx:key="{{index}}">
+    <view class="filter-list__item {{index==filterIndex?'filter-list__item--active':''}}" bindtap='onChangeFilter' data-index="{{index}}">
+    <view class="filter__item__title">{{item.name}}</view>
+    <view class="filter__item__line {{index==filterIndex?'filter__item__line--active':''}}"></view>
+    </view>
+  </block>
+</view>
+</template>

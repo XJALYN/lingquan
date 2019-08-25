@@ -1,0 +1,304 @@
+/* pages/shoppingCart/shoppingCart.wxss */
+
+.shoppingCart {
+  padding: 30rpx;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 120rpx;
+}
+
+.shoppingTitle {
+  font-weight: bold;
+}
+
+.shopcartMes {
+  padding: 0;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.shopName {
+  padding: 30rpx 20rpx 25rpx 20rpx;
+  height: auto;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.shopName view {
+  color: #f61b6d;
+  display: block;
+  float: left;
+  margin: 9rpx 9rpx 0 0;
+  font-size: 35rpx;
+}
+
+.shopName text:nth-child(2) {
+  float: left;
+  font-size: 28rpx;
+  color: #333;
+  padding-top: 9rpx;
+}
+
+.shopComplete {
+  float: right;
+  color: #333;
+  font-size: 28rpx;
+  padding-top: 5rpx;
+}
+
+radio-group  radio {
+  transform: scale(0.6);
+}
+
+.shopcartList {
+  padding: 0rpx 20rpx;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.shopList {
+  height: auto;
+  overflow: hidden;
+  padding: 20rpx 0rpx 30rpx 0;
+}
+
+/* .shopcartMes .shopcartList:last-child .shopList{border-bottom: none;} */
+
+.falseIco {
+  display: block;
+  float: left;
+  margin: 52rpx 15rpx 63rpx 0;
+  font-size: 33rpx;
+  color: #999;
+  border-radius: 17rpx;
+}
+
+.trueIco {
+  display: block;
+  float: left;
+  margin: 52rpx 15rpx 63rpx 0;
+  font-size: 33rpx;
+  color: #f61b6d;
+  border-radius: 17rpx;
+}
+
+.shopImg {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  float: left;
+  border-radius: 10rpx;
+}
+
+.shopRight {
+  width: 405rpx;
+  height: auto;
+  overflow: hidden;
+  float: right;
+}
+
+.shoprName {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.shopNum {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 20rpx 0;
+  height: 35rpx;
+}
+
+.shopNum text {
+  float: left;
+  font-size: 22rpx;
+  color: #999;
+  margin-right: 60rpx;
+}
+
+.shopPrice {
+  width: 100%;
+  height: auto;
+}
+
+.spIco {
+  float: left;
+  font-size: 24rpx;
+  color: #f61b6d;
+  font-weight: bold;
+  padding-top: 5rpx;
+}
+
+.spNum {
+  float: left;
+  font-size: 28rpx;
+  color: #f61b6d;
+  font-weight: bold;
+}
+
+.shopNums {
+  width: 190rpx;
+  height: 48rpx;
+  border: 1rpx solid #999;
+  border-radius: 25rpx;
+  float: right;
+  position: relative;
+  overflow: visible;
+}
+
+.shopNums .shopNums__tips {
+  position: absolute;
+  top: -40rpx;
+  left: 0;
+  right: 0;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  color: #f61b6d;
+  z-index: 0;
+}
+
+.cutNum {
+  display: block;
+  width: 50rpx;
+  height: 48rpx;
+  float: left;
+  border-right: 1rpx solid #999;
+  text-align: center;
+  line-height: 48rpx;
+  color: #999;
+}
+
+.shopNums input {
+  display: block;
+  width: 84rpx;
+  height: 48rpx;
+  float: left;
+  border-right: 1rpx solid #999;
+  text-align: center;
+  line-height: 48rpx;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.addNum {
+  display: block;
+  width: 50rpx;
+  height: 48rpx;
+  float: left;
+  text-align: center;
+  line-height: 48rpx;
+  color: #999;
+}
+
+.shopFooter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  z-index: 10;
+  background-color: #fff;
+  border-top: 1rpx solid #e8e8e8;
+}
+
+.shopAll {
+  display: block;
+  font-size: 33rpx;
+  color: #999;
+  border-radius: 17rpx;
+  float: left;
+  margin: 15rpx 16rpx 30rpx 30rpx;
+}
+
+.shopAlltrue {
+  display: block;
+  font-size: 33rpx;
+  color: #f61b6d;
+  border-radius: 17rpx;
+  float: left;
+  margin: 15rpx 16rpx 30rpx 30rpx;
+}
+
+.allChoose {
+  float: left;
+  font-size: 28rpx;
+  color: #333;
+  padding: 30rpx 0;
+}
+
+.deleteBtn {
+  width: 260rpx;
+  height: 100rpx;
+  background-color: #f61b6d;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  float: right;
+  border-radius: 2rpx;
+}
+
+.allNum {
+  float: right;
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.bgccc {
+  background-color: #999 !important;
+}
+
+.cle8e8 {
+  color: #e8e8e8 !important;
+}
+
+.cl999 {
+  color: #999 !important;
+}
+
+.siType {
+  width: 160rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 67rpx;
+  bottom: 27rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10rpx 10rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+/* 去首页逛逛 */
+.backIndex{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 270rpx;
+}
+.backIndex .backIndexBtn{
+  margin: 0 auto;
+  font-size: 28rpx;
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #fff;
+  border-radius:50rpx;
+  background-color: #F61B6D;
+}
+.iconyoujiantou.iconfont{
+  font-size: 24rpx;
+}

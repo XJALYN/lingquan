@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "kc-placeholder-image": "../../components/placeholderImage/index",
+    "kc-footer-loading":"../../components/footerLoading/index"
+  }
+}

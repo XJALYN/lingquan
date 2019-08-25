@@ -1,0 +1,15 @@
+<template name="cell">
+  <view class="cell" catchtap='onPushToLivePlayer' data-item='{{item}}'>
+    <image class="cell__image" src="{{item.roomBg}}"></image>
+    <view class="cell__footer">
+      <view class="cell__footer__title">{{item.anchorName}}</view>
+      <text class="cell__footer__num">{{item.audienceSize}}</text>
+      <text class="cell__footer__status">正在围观</text>
+    </view>
+    <view class="cell__live" >
+      <view class="cell__live__dot" wx:if="{{item.liveState}}"></view>
+      <view class="cell__live__text" wx:if="{{item.liveState}}">直播中</view>
+      <view class="cell__live__text" wx:if="{{!item.liveState}}">直播中</view>
+    </view>
+  </view>
+</template>

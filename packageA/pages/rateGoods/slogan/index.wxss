@@ -1,0 +1,28 @@
+.slogan{
+ margin-top: 50rpx;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-bottom: 57rpx;
+
+}
+.slogan__icon{
+ width: 70rpx;
+ height: 70rpx;
+ border-radius: 10rpx;
+}
+.slogan__right{
+ margin-left: 10rpx;
+ display: flex;
+ flex-direction: column;
+}
+.slogan__right__title{
+ color: rgba(246, 27, 109, 1);
+}
+.slogan__right__desc{
+  margin-top: 2rpx;
+  color: rgba(153, 153, 153, 1);
+  font-size: 20rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}

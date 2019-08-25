@@ -1,0 +1,40 @@
+/* components/selfShopList/index.wxss */
+@import "../../app.wxss";
+@import "./bannerList/index";
+@import "./navigatorList/index";
+@import "./freeGet/index";
+@import "./classifyList/index";
+@import "./brandList/index";
+@import "./recommendGoodsList/index";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

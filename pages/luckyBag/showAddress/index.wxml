@@ -1,0 +1,20 @@
+<template name="addressCell">
+
+    <view
+      class="address-cell"
+    >
+      <view class="address__top">
+        <view class="address__name">{{contact}}</view>
+        <view class="address__phone">{{phone}}</view>
+      </view>
+      <view class="address__detail">{{province+city+area+detail}}</view>
+       <view class="address__line"></view>
+      <view class="address__bottom">
+        
+      <button plain style="border:none;padding:0 0;color:#F61B6D;font-size:24rpx;margin-left:0;" open-type="contact">若需修改地址,请尽快联系客服</button>
+      
+      </view>
+     
+    </view>
+
+</template>

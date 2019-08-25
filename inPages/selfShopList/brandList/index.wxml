@@ -1,0 +1,22 @@
+<template name="brandList">
+ <view class="brand-list">
+ <view class="brand-list__header"></view>
+ <swiper class="brand-list__swiper" bindchange='onBrandChange'>
+  <swiper-item wx:for="{{list}}" wx:key="{{index}}" wx:for-item="brandList" wx:for-index="i" wx:key="{{i}}">
+    <view class="brand-list__item__list">
+      <view class="brand-list__item__cell" wx:for="{{brandList}}" wx:key="{{index}}" data-brandcode="{{item.brandCode}}" data-type="1" bindtap="onPushToSearch">
+        <image class="brand-list__item__cell__icon" src="{{item.brandImgUrl}}"></image>
+        <view  class="brand-list__item__cell__title">{{item.brandName}}</view>
+      </view>
+    </view>
+  </swiper-item>  
+ </swiper>
+
+ <view class="brand-list__dot__list">
+ <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="brand-list__dot__list__item {{index==brandIndex?'brand-list__dot__list__item--active':''}}"></view>
+ </block>
+ </view>
+
+ </view>
+</template>

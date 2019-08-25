@@ -1,0 +1,16 @@
+<!--pages/addressAdd/addressAdd.wxml-->
+<import src="./cell/index" />
+<import src="./addressSelectCell/index" />
+<import src="./showAddress/index" />
+<view class="content" wx:if="{{!hasRecord}}">
+  <template is="cell" data="{{title:'收件人',placehold:'收件人姓名(必填)',input:'onInputName',type:'text',maxLength:10}}"/>
+  <template is="cell" data="{{title:'电话',placehold:'手机号码(必填)',input:'onInputPhone',type:'number',maxLength:11}}"/>
+  <template is="addressSelectCell" data="{{title:'所在地区',value:params.province+params.city+params.area,placehold:'选择收货地址(必填)',input:'onInputRegion'}}"/>
+  <template is="cell" data="{{title:'详细地址',placehold:'例:街道名称、小区名称、门牌号(必填)',input:'onInputAddress',type:'text'}}"/>
+  <template is="cell" data="{{title:'邮政编码',placehold:'收货地区邮政编码(选填)',input:'onInputPostCode',type:'number',maxLength:6,hideLine:true}}"/>
+ </view>
+
+ <view class="tip" wx:if="{{!hasRecord}}">填写地址完成后不能更改，工作人员会在7个工作日内为您发货</view>
+  <button wx:if="{{!hasRecord}}" class="submit-btn main_bg_color" plain bindtap="onAddressAdd" style='border-style:none;background:#F61B6D;color:white' loading='{{loading}}'   hover-class='submit-btn__hover'>完成</button>
+
+ <template wx:if="{{hasRecord}}" is="addressCell" data="{{...addressInfo}}"/>

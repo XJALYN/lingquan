@@ -1,0 +1,27 @@
+<!--pages/refundNode/refundNode.wxml-->
+<view class="content">
+<picker range='{{list}}' range-key='logisticsName' bindchange='onSelectedLogistics'>
+  <view class="cell">
+    <view class="cell__title">物流公司</view>
+    <view class="cell__value" wx:if="{{index==-1}}" style="color:#d8d8d8">请选择快递公司</view>
+    <view class="cell__value" wx:else>{{list[index].logisticsName}}</view>
+    <view class="cell__arrow iconfont iconyoujiantou"></view>
+  </view>
+</picker>
+
+  <view class="cell__line"></view>
+  <view class="cell">
+    <view class="cell__title">物流单号</view>
+    <input class="cell__value--input" type="text" placeholder-style="color:#d8d8d8" bindinput='onInputLogisticsNum' placeholder='请输入物流运单号'></input>
+
+  </view>
+  <view class="cell__line"></view>
+  <view class="cell">
+    <view class="cell__title">物流费用</view>
+    <input class="cell__value--input" type="digit"  placeholder-style="color:#d8d8d8" bindinput='onInputMoney' placeholder='请输入金额(元)'></input>
+  </view>
+</view>
+<view class="btn-submit" bindtap='onSubmit'>提交</view>
+
+<kc-author-modal show="{{needAuthor}}"/>
+

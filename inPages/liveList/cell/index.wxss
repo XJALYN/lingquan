@@ -1,0 +1,60 @@
+.cell{
+  margin-top:45rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  position: relative;
+}
+.cell__image{
+ width: 686rpx;
+ height: 335rpx;
+ background: #eee;
+ border-radius: 10rpx;
+}
+.cell__footer{
+ margin-top: 27rpx;
+ display: flex;
+ width: 100%;
+ align-items: center;
+}
+.cell__footer__title{
+ color: #333333;
+ font-size: 36rpx;
+ flex:1;
+ margin-left: 8rpx;
+ font-weight: 500;
+}
+.cell__footer__num{
+ color: #F61B6D;
+ font-size: 24rpx;
+}
+.cell__footer__status{
+ color: #333333;
+ font-size: 24rpx;
+}
+.cell__live{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 140rpx;
+  height: 50rpx;
+  display: flex;
+  border-radius: 25rpx;
+  border: 4rpx solid white;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.cell__live__dot{
+ width: 16rpx;
+ height: 16rpx;
+ background-color: #F61B6D;
+ border-radius: 50%;
+}
+.cell__live__text{
+  margin-left: 8rpx;
+ color: white;
+ font-size: 24rpx;
+ font-weight: bold;
+}

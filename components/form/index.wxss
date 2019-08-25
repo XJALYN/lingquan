@@ -1,0 +1,14 @@
+/* components/form/index.wxss */
+.glrBtn{
+  overflow:visible;
+  padding: 0 0 ;
+  font-size: inherit;
+  width: fit-content;
+  text-align: left;
+}
+.form{
+  padding: 0 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: fit-content;
+}

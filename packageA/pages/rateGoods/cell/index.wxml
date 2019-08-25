@@ -1,0 +1,40 @@
+<template name="cell">
+<view class="cell">
+
+
+<view class="cell-header">
+ <image class="cell-header__icon"></image>
+ <view class="cell-header__title">商品评分</view>
+ <view class="cell-header__rater">
+   <kc-rater value="{{rate}}" index="{{index}}" bindchange="onGoodsStarChange"/>
+ </view>
+ 
+</view>
+
+<view class="cell-content">
+ <textarea class="cell-content__input" placeholder="评价大于20元的商品,且超过10个字有机会获得积分哦~" placeholder-class="cell-content__input-placeholder"></textarea>
+ <view class="cell-content__tip">0/500</view>
+</view>
+
+<view class="cell-images__title" bindta>添加视频/图片 (2/9)</view>
+
+<view class="cell-images-placeholder" bindtap="onSelectedImage" data-index="{{index}}">
+  <view class="cell-images-placeholder__icon iconfont icontianjiatupian"></view>
+  <view class="cell-images-placeholder__title">添加图片/视频有机会获得积分</view>
+</view>
+<view class="cell-images">
+  <view class="cell-images__list">
+    <view class="cell-images__list__item" wx:for="{{[1,2,3,4,5]}}">
+      <image class="cell-image__list__item__image"></image>
+      <image class="cell-image__list__item__image__delete iconfont iconqingchu"></image>
+    </view>
+     
+     <!-- 添加图片 -->
+    <view class="cell-images__list__item__add">
+      <image class="cell-images__list__item__add__icon iconfont icontianjiatupian"></image>
+      <view class="cell-images__list__item__add__title">添加图片/视频</view>
+    </view>
+  </view>
+</view>
+</view>
+</template>

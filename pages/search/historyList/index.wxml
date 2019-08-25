@@ -1,0 +1,15 @@
+<template name="historyList">
+<view class="history-list">
+  <view class="history-list__top">
+    <view class="history-list__top__icon iconfont iconlishisousuo"></view>
+    <view class="history-list__top__title">历史搜索</view>
+    <view class="history-list__top__delete iconfont iconshanchu" bindtap='onDeleteHistorySearchCache'></view>
+  </view>
+  <view class="history-list__list">
+     <block wx:for="{{list}}" wx:key="{{index}}">
+        <view class="history-list__list__item text-clamp-1" data-text='{{item}}' catchtap='onTapHistorySearchText'>{{item}}</view>
+     </block>
+  </view>
+</view>
+
+</template>

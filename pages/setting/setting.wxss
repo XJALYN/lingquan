@@ -1,0 +1,64 @@
+/* pages/setting/setting.wxss */
+.cell__address{
+  margin-top: 14rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+.cell__address__title{
+ font-size: 28rpx;
+ color: #000000;
+ margin-left: 35rpx;
+ flex:1;
+}
+.cell__address__arraw{
+  width: 10rpx;
+  height: 19rpx;
+  color: #999;
+  font-size: 19rpx;
+  line-height: 19rpx;
+  margin-right: 29rpx;
+}
+.list{
+  margin-top: 15rpx;
+}
+.list__item{
+   height: 100rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+  
+}
+
+.list__item__title{
+ font-size: 28rpx;
+ color: #000000;
+ margin-left: 35rpx;
+ flex:1;
+ text-align: left;
+}
+.list__item__arraw{
+  width: 10rpx;
+  height: 19rpx;
+  color: #999;
+  font-size: 19rpx;
+  line-height: 19rpx;
+  margin-right: 29rpx;
+}
+.list__line{
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  background-color: #EBEBEB;
+}
+
+.version{
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  font-size: 26rpx;
+  color: #ddd;
+  text-align: center;
+}

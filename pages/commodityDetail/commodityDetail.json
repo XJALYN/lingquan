@@ -1,0 +1,9 @@
+{
+ "usingComponents": {
+   "kc-share-monent":"../../components/shareMoments/index",
+   "share-button": "plugin://goodsSharePlugin/share-button"
+ },
+  "navigationBarTitleText": "商品详情",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

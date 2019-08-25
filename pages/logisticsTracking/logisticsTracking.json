@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "物流跟踪",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

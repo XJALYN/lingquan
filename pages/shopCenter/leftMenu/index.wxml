@@ -1,0 +1,15 @@
+<template name="leftMenu">
+  <scroll-view class="left-menu">
+    <view class="left-menu__item {{leftIndex==0?'left-menu__item--active':''}}" data-index="0" bindtap='onChangeLeftMenu'>
+      <view class="left-menu__item__title">品牌推荐</view>
+      <view class="left-menu__item__line--left {{leftIndex==0?'left-menu__item__line--left--active':''}}"></view>
+    </view>
+    <block wx:for="{{mainList}}" wx:key="{{index}}">
+    <view class="left-menu__item {{leftIndex==index+1?'left-menu__item--active':''}}" data-index="{{index+1}}" bindtap='onChangeLeftMenu'>
+      <view class="left-menu__item">{{item.categoryName}}</view>
+      <view class="left-menu__item__line--left {{leftIndex==index+1?'left-menu__item__line--left--active':''}}"></view>
+    </view>
+    </block>
+
+  </scroll-view>
+</template>

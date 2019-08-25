@@ -1,0 +1,84 @@
+<!--pages/afterDetails/afterDetails.wxml-->
+<view class="afterDetail">
+    <view class="afterType">
+      <view class="atLi">
+          <text>退款类型:</text>
+          <text>{{getRefundRecordData.refundTypeText}}</text>
+      </view>
+      <view class="atLi">
+          <text>退款状态:</text>
+          <text>{{getRefundRecordData.refundRecordStateText}}</text>
+      </view>
+      
+      <view class="atLi">
+          <text>同意退款金额:</text>
+          <text class="atlc2" wx:if="{{getRefundRecordData.refundMoney}}">微信</text>
+          <text class="atlc" wx:if="{{getRefundRecordData.refundMoney}}"> ¥{{getRefundRecordData.refundMoney}}</text>
+          <text class="atlc2" wx:if="{{getRefundRecordData.refundMoney&&getRefundRecordData.refundRemainder}}"> + </text>
+          <text class="atlc2" wx:if="{{getRefundRecordData.refundRemainder}}">余额</text>
+          <text class="atlc" wx:if="{{getRefundRecordData.refundRemainder}}"> ¥{{getRefundRecordData.refundRemainder}}</text>
+      </view>
+      <view class="atLi">
+          <text>商家退款说明:</text>
+          <text>{{getRefundRecordData.sellerRefundRemark?getRefundRecordData.sellerRefundRemark:"无"}}</text>
+      </view>
+    </view>
+
+
+    <view class="afterType">
+      <view class="atLi">
+          <text>订单号:</text>
+          <text>{{getRefundRecordData.checkoutOrderCode}}</text>
+          <text class="checkDetail" bindtap="onPushToOrderDetail">查看订单</text>
+      </view>
+      <view class="atLi">
+          <text>退款单号:</text>
+          <text>{{getRefundRecordData.refundRecordCode}}</text>
+      </view>
+<view class="atLi">
+          <text>申请退款金额:</text>
+          <text>¥{{getRefundRecordData.requestRefundMoney}}</text>
+      </view>
+
+      <view class="atLi">
+          <text>申请时间:</text>
+          <text wx:if="{{getRefundRecordData.createTime}}">{{getRefundRecordData.createTime}}</text>
+      </view>
+      <view class="atLi">
+          <text>申请退款时间:</text>
+          <text wx:if="{{getRefundRecordData.createTime}}">{{getRefundRecordData.createTime}}</text>
+      </view>
+      <view class="atLi">
+          <text>退款商品:</text>
+      </view>
+
+      <view class="atShopLi" wx:for="{{getRefundRecordData.refundRecordItems}}">
+          <image src="{{item.imageUrl}}?x-oss-process=style/xcxBalanceMesPic"></image>
+          <view class="asMes">
+              <text class="text-clamp">{{item.prodName}}</text>
+          </view>
+          <view class="asPrice">
+              <text>￥{{item.prodPaymentPrice}}</text>
+              <text>x{{item.refundQuantity}}</text>
+          </view>
+      </view>
+
+      <view class="atLi mart20">
+          <text>买家退款说明:</text>
+          <text>{{getRefundRecordData.buyerRefundRemark?getRefundRecordData.buyerRefundRemark:"无"}}</text>  
+      </view>
+      <block wx:if="{{getRefundRecordData.refundType==2}}">
+  <view class="atLi">
+          <text>退货物流公司:</text>
+          <text>{{getRefundRecordData.logisticsInfoDto.expressCompanyName?getRefundRecordData.logisticsInfoDto.expressCompanyName:"无"}}</text>
+      </view>
+      <view class="atLi">
+          <text>退货物流单号:</text>
+          <text>{{getRefundRecordData.logisticsInfoDto.deliveryOrderCode?getRefundRecordData.logisticsInfoDto.deliveryOrderCode:"无"}}</text>
+      </view>
+      </block>
+    
+
+    </view>
+</view>
+

@@ -1,0 +1,8 @@
+<!--components/rater/index.wxml-->
+<view class="rater">
+ <view class="rater__star iconfont iconpingfen {{value > 0? 'rater__star--active':''}}"  data-value="1" bindtap="onChange"></view>
+ <view class="rater__star iconfont iconpingfen {{value > 1? 'rater__star--active':''}}" data-value="2" bindtap="onChange"></view>
+ <view class="rater__star iconfont iconpingfen {{value > 2? 'rater__star--active':''}}" data-value="3" bindtap="onChange"></view>
+ <view class="rater__star iconfont iconpingfen {{value > 3? 'rater__star--active':''}}" data-value="4" bindtap="onChange"></view>
+ <view class="rater__star iconfont iconpingfen {{value > 4? 'rater__star--active':''}}" data-value="5" bindtap="onChange"></view>
+</view>

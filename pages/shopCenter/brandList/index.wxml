@@ -1,0 +1,14 @@
+<template name="brandList">
+   <view class="brand-list">
+  <view class="brand-list-title">品牌</view>
+  <view class="brand-list__list">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+  <view class="brand-list__list__item" catchtap='onPushToSearch' data-type='1' data-brandcode="{{item.brandCode}}">
+        <image class="brand-list__list__item__icon" src="{{item.brandImgUrl}}"></image>
+    <view class="brand-list__list__item__title">{{item.brandName}}</view>
+   </view>
+  </block>
+ 
+  </view>
+ </view>
+</template>

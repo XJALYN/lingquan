@@ -1,0 +1,13 @@
+<template name="search">
+<view class="search">
+ <view class="search-left">
+    <view class="search__icon iconfont iconxiaosousuo"></view>
+    <input class="search__input" placeholder='请输入搜索关键词' bindinput='onInputSearchText' bindfocus='onInputFocus' value='{{searchText}}' placeholder-class="search__input--placeholder"></input>
+    <view wx:if="{{searchText !=''}}" bindtap='onDeleteSearchText' class="search__delete iconfont iconqingchu"></view>
+ </view>
+ <view class="search__right" catchtap='onTapSearchBtn'>
+   搜索
+ </view>
+</view>
+
+</template>

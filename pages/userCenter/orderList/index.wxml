@@ -1,0 +1,70 @@
+<template name="orderList">
+
+  <view class="order-content__list">
+    <!-- 待付款 -->
+    <view class="order-content__list__item" data-index='1' bindtap='onPushToOrderList'>
+      <kc-form>
+        <view class="order-content__list__item__icon iconfont iconweifukuan">
+          <view class="order-content__list__item__num" wx:if="{{noPaymentNum > 0}}">{{noPaymentNum}}</view>
+        </view>
+      </kc-form>
+      <kc-form>
+        <view class="order-content__list__item__title">
+          待付款
+        </view>
+      </kc-form>
+    </view>
+    <view class="order-content__list__item" data-index='2' catchtap='onPushToOrderList'>
+      <kc-form>
+        <view class="order-content__list__item__icon iconfont icondaifahuo">
+          <view class="order-content__list__item__num" wx:if="{{noDeliverGoodsNum}}">{{noDeliverGoodsNum}}</view>
+        </view>
+      </kc-form>
+      <kc-form>
+        <view class="order-content__list__item__title">
+          待发货
+        </view>
+      </kc-form>
+    </view>
+
+    <view class="order-content__list__item" data-index='3' catchtap='onPushToOrderList'>
+      <kc-form>
+
+        <view class="order-content__list__item__icon iconfont icondaishouhuo1">
+          <view class="order-content__list__item__num" wx:if="{{noReceivingGoodsNum > 0}}">{{noReceivingGoodsNum}}</view>
+        </view>
+      </kc-form>
+      <kc-form>
+        <view class="order-content__list__item__title">
+          待收货
+        </view>
+      </kc-form>
+    </view>
+
+    <view class="order-content__list__item" data-index='4' catchtap='onPushToOrderList'>
+    <kc-form>
+      <view class="order-content__list__item__icon iconfont iconyiwancheng">
+      </view>
+      </kc-form>
+      <kc-form>
+      <view class="order-content__list__item__title">
+        已完成
+      </view>
+      </kc-form>
+    </view>
+
+    <view class="order-content__list__item" catchtap='onPushToAfterSales'>
+    <kc-form>
+      <view class="order-content__list__item__icon iconfont icontuikuanshouhou" style="font-size:47rpx;">
+        <view class="order-content__list__item__num" wx:if="{{refundNum > 0}}">{{refundNum}}</view>
+      </view>
+      </kc-form>
+      <kc-form>
+      <view class="order-content__list__item__title">
+        退款/售后
+      </view>
+      </kc-form>
+    </view>
+  </view>
+
+</template>

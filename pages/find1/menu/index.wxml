@@ -1,0 +1,14 @@
+<template name="menu">
+<view class="menu" >
+
+<block wx:for="{{menuList}}" wx:key="kc-{{index}}">
+   <view  class="menu__item {{menuIndex==index?'menu__item--active':''}}" bindtap='onChangeMenu' data-index='{{index}}'>
+   {{item}}
+   <view wx:if="{{menuIndex==index}}" class="menu__item__line"></view>
+   </view>
+</block>
+ <view style='width:32rpx;display:inline-block;'></view>
+</view>
+  
+
+</template>

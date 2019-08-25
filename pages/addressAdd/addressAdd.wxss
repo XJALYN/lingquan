@@ -1,0 +1,26 @@
+/* pages/addressAdd/addressAdd.wxss */
+@import "./cell/index";
+@import "./addressSelectCell/index";
+.content{
+  margin-top: 30rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  background: white;
+  border-radius: 10rpx;
+  padding-bottom: 40rpx;
+}
+.submit-btn{
+  position: fixed;
+  bottom: 50rpx;
+  left: 40rpx;
+  right: 40rpx;
+  height: 100rpx;
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+}
+.submit-btn__hover{
+  opacity: 0.7;
+}

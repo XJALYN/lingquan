@@ -1,0 +1,25 @@
+/* packageA/pages/rateGoods/rateGoods.wxss */
+@import "./cell/index";
+@import "./service/index";
+@import "./slogan/index";
+.anonymous{
+  padding-top: 35rpx;
+  width: 100%;
+  padding-bottom: 40rpx;
+  display: flex;
+  padding-left: 32rpx;
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+}
+.anonymous__icon{
+  width: 38rpx;
+  height: 38rpx;
+  color: rgba(218, 214, 214, 1);
+  
+}
+.anonymous__title{
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 16rpx;
+}

@@ -1,0 +1,37 @@
+/* pages/electronicInvoice/electronicInvoice.wxss */
+.electronicInvoice{padding:30rpx;height: auto;overflow: hidden;}
+.eleOne{padding:20rpx 30rpx;height: auto;overflow: hidden;background-color: #fff;border-radius: 10rpx;font-size: 28rpx;}
+.eleoName{width: 100%;height: auto;overflow: hidden;}
+.eleonType{float: left;font-size: 28rpx;color: #999;margin-right:54rpx;padding: 0;height: 64rpx;line-height: 64rpx;margin:auto 0 auto 0;padding-top: 2rpx;}
+.eleOne  radio-group{
+  margin-left: -20rpx;
+}
+.eleonRadio{float: left;padding: 0 0;}
+radio-group  radio {transform:scale(0.6);}
+.section text{color:#383838;font-size:46rpx;}
+.eleonHint{width: 100%;height: auto;overflow: hidden;color:#F61B6D;font-size: 22rpx;padding: 10rpx 0;}
+
+.eleTwo{padding: 30rpx 30rpx 0 30rpx;margin-top: 17rpx;background-color: #fff;border-radius:10rpx;}
+.borb{border-bottom: 1rpx solid #E8E8E8;padding-bottom:15rpx;}
+.eleHeader{width: 100%;height: auto;overflow: hidden;padding:40rpx 0;}
+.eleHeader text{display: block;width: 150rpx;height: auto;overflow: hidden;float: left;font-size: 28rpx;color: #999;padding-top: 2rpx;}
+.eleHeader input{width:480rpx;height: 35rpx;float: left;font-size: 28rpx;color:#383838;}
+.placehold{font-size: 28rpx;color: #D8D8D8;border: none;}
+.eleNum{width: 100%;height: auto;overflow: hidden;padding:0rpx 0 40rpx 0;}
+.eleNum text{display: block;width: 150rpx;height: auto;overflow: hidden;float: left;font-size: 28rpx;color: #999;padding-top:2rpx;}
+.eleNum input{width:480rpx;height: 35rpx;float: left;font-size: 28rpx;color:#383838;}
+.eleThree{padding:30rpx;height: auto;overflow: hidden;font-size: 28rpx;color: #383838;}
+.eleFour{padding: 30rpx;height: auto;overflow: hidden;background-color: #fff;border-radius:10rpx;}
+.eleFour text{display: block;width: 150rpx;height: auto;overflow: hidden;float: left;font-size: 28rpx;color: #999;padding-top: 7rpx;}
+.eleFour input{width:480rpx;height: 35rpx;float: right;font-size: 28rpx;color:#383838;text-align: right;padding-top:5rpx;}
+.txtRight{text-align: right;}
+.eleSure{width:686rpx;height: 100rpx;border-radius: 50rpx;color:#fff;text-align: center;font-size: 28rpx;line-height: 100rpx;line-height: 100rpx;background-color:#F61B6D;margin-top: 280rpx;}
+
+
+
+
+
+
+
+
+

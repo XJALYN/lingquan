@@ -1,0 +1,17 @@
+<!--components/navigationBar/index.wxml-->
+<view class="navigation-bar">
+  <view class="navigation-bar__title" style="background:{{backgroundColor}};color:{{color}}">{{title}}</view>
+  <view class="navigation-bar__left" wx:if="{{showBack||showHome}}">
+      <view wx:if="{{showBack}}" class="navigation-bar__back iconfont fanhui" bindtap="onTapBack"></view>
+      <view wx:if="{{showHome}}" class="navigation-bar__home iconfont xiaochengxu-shouye" bindtap="onTapHome"></view>
+  </view>
+  
+  <picker mode="region" bindchange="onChangeAddress" wx:if="{{showLocation}}">
+    <view class="navigation-bar__location">
+   <view class="navigation-bar__location__icon iconfont dizhi"></view>
+   <view class="navigation-bar__location__title color_gray">{{country}}</view>
+  </view>
+  </picker>
+
+</view>
+<view class="navigation-bar-bg"></view>

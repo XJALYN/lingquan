@@ -1,0 +1,82 @@
+
+.banner-list{
+  margin-top: 46rpx;
+  height: 340rpx;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 366rpx;
+}
+
+.banner__item{
+  width: 630rpx;
+  height: 320rpx;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 4rpx 10rpx 10rpx rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
+}
+.banner-image{
+  width: 630rpx;
+  height: 320rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.banner__item__status{
+ position: absolute;
+ right: 32rpx;
+ top: 40rpx;
+ color: #606060;
+ font-size: 24rpx;
+}
+.banner__item__slogan{
+  position: absolute;
+ left: 32rpx;
+ bottom: 40rpx;
+ color: #606060;
+ font-size: 24rpx;
+}
+.banner__item__status__vip0{
+  color: #717782;
+}
+.banner__item__status__vip1{
+  color: #606060;
+}
+.banner__item__status__vip2{
+  color: #713E31;
+}
+.banner__item__status__vip3{
+  color: #E4D5AD;
+}
+
+
+
+.banner-list__dot__list{
+  margin-top: 0rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-list__dot__list__item{
+  width: 24rpx;
+  height: 4px;
+  background: #D6D6D6;
+  margin-right: 3rpx;
+  margin-left: 3rpx;
+  border-radius: 4rpx;
+}
+.banner-list__dot__list__item--active{
+  background: #333333;
+}

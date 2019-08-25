@@ -1,0 +1,6 @@
+<!--components/shareMoments/index.wxml-->
+<view class='shareMes' catchtap='onHidden'>
+    <!-- <image class='shareMent' src='/common/images/shareMent.png' ></image> -->
+    <image class='shareImage animated zoomIn' src='{{src}}?x-oss-process=style/xcxSharePic'></image>
+    <view class='smBtn' catchtap='onclickSaveImg'>保存至相册，分享到朋友圈</view>
+</view>

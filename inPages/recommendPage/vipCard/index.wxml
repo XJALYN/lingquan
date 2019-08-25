@@ -1,0 +1,40 @@
+<wxs src="./tools.wxs" module="tools" />
+<template name="vipCard">
+  <view class="vip-card">
+
+  <view class="vip-card__content">
+    <!-- 顶部 -->
+    <view class="vip-card__top">
+      <view class="vip-card__name">{{user.username}}</view>
+      <view class="vipClass">
+          <image wx:if="{{user.levelCode==4}}" style="width:134rpx;" src="http://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/ptCard.png" lazy-load></image>
+          <image wx:if="{{user.levelCode==3}}" style="width:134rpx;" src="http://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/jCard.png" lazy-load></image>
+          <image  wx:if="{{user.levelCode==2}}" style="width:134rpx;" src="http://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/nCard.png" lazy-load></image>
+          <image  wx:if="{{user.levelCode==1}}" style="width:154rpx;" src="http://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/xlCard.png" lazy-load></image>
+      </view>
+      <view class="vip-card__status" catchtap='onPushToMember' data-type='current'>会员特权</view>
+    </view>
+    <!-- 积分 -->
+    <view>
+        <view class="vip-card__mid">
+            <view class="vip-card__mid__title">积分</view>
+            <view class="vip-card__mid__value">{{user.credit}}</view>
+          </view>
+          <view class="vip-card__price">
+            <text>累计节省</text>
+            <text class="vip-card__price__value">￥</text>
+            <text>{{user.saveMoney}}</text>
+            </view>
+    </view>
+    
+    <!-- 卡号 -->
+    <view class="vip-card__bottom">
+      <view class="vip-card__bottom__num">{{tools.formatCarNum(user.cardNumber)}}</view>
+      <view class="vip-card__bottom__btn" wx:if="{{user.levelCode == 4}}" catchtap='onPushToMember' data-type='upgrade'>升级会员等级</view>
+      <view class="vip-card__bottom__btn" wx:if="{{user.levelCode == 3}}" catchtap='onPushToMember' data-type='year'>升级会员等级</view>
+      <view class="vip-card__bottom__btn" wx:if="{{user.levelCode == 2}}" catchtap='onPushToMember' data-type='limit'>升级会员等级</view>
+
+    </view>
+  </view>
+  </view>
+</template>

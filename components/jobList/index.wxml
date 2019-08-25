@@ -1,0 +1,7 @@
+<!--components/jobList/index.wxml-->
+<view class="job-list">
+<view class="job-header">高薪招聘</view>
+<kc-job-cell />
+<kc-job-cell />
+</view>
+

@@ -1,0 +1,61 @@
+<template name="goodsList">
+  <view class="goods-list">
+
+    <!-- 搜索 -->
+    <view class="goods-list__filter">
+      <view class="goods-list__filter__item" bindtap='onSwitchFilter' data-index='0'>
+        <view class="goods-list__filter__item__title">销量</view>
+        <view class="goods-list__filter__item__line {{filterIndex==0?'goods-list__filter__item__line--active':''}}"></view>
+      </view>
+
+      <view class="goods-list__filter__item"  bindtap='onSwitchFilter' data-index='1'>
+        <view class="goods-list__filter__item__title">最新</view>
+        <view class="goods-list__filter__item__line {{filterIndex==1?'goods-list__filter__item__line--active':''}}"></view>
+      </view>
+
+      <view class="goods-list__filter__item" bindtap='onSwitchFilter' data-index='{{filterIndex==2?"3":"2"}}'>
+        <view class="goods-list__filter__item__title">价格</view>
+        <view class="goods-list__filter__item__line"></view>
+        <image class="goods-list__filter__item__arrow" wx:if="{{filterIndex==0||filterIndex==1}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/red_normal.png" ></image>
+
+        <image class="goods-list__filter__item__arrow" wx:if="{{filterIndex==3}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/red_down.png" ></image>
+        <image class="goods-list__filter__item__arrow" wx:if="{{filterIndex==2}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/red_up.png"></image>
+      </view>
+    </view>
+
+
+    <!-- 商品列表 -->
+    <view class="goods-list-number">
+      <text class="goods-list-number__text">共找到</text>
+      <text class="goods-list-number__value">{{goodsTotal}}</text>
+      <text class="goods-list-number__text">件商品</text>
+    </view>
+
+    <!-- 商品列表展示 -->
+    <view class="goods-list__list">
+      <block wx:for="{{goodsList}}" wx:key="{{index}}">
+        <view class="goods-list__list__item" catchtap="onPushToGoodsDetail" data-prodcode='{{item.prodCode}}'>
+          <image class="goods-list__list__item__icon" src="{{item.imageUrl}}?x-oss-process=style/onPushToGoodsPic" mode='aspectFill'></image>
+           <view class="goods-list__list__item__date" wx:if="{{item.isClearance && item.status == 1}}">有效期: {{item.expireDate}}</view>
+           <view class="goods-list__list__item__date" wx:if="{{item.status == 3}}">已售罄</view>
+           
+          <view class="goods-list__list__item__title text-clamp">
+             <text class="goods-list__list__item__title__text1" wx:if="{{item.isClearance}}">临期</text>
+            <!-- <text class="goods-list__list__item__title__text2">包邮</text>  -->
+            <text class="goods-list__list__item__title__text3">{{item.prodName}}</text>
+            <!-- <text class="goods-list__list__item__title__text4">15ml</text> -->
+          </view>
+          <view class="goods-list__list__item__bootom">
+            <image class="goods-list__list__item__bottom__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeV.png"></image>
+            <view class="goods-list__list__item__bottom__price">¥{{item.vipPrice}}</view>
+            <view class="goods-list__list__item__bottom__big__price">¥{{item.standardRetailPrice}}</view>
+            <image class="goods-list__list__item__bottom__big__delete" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/shoppingCart.png" catchtap='onAddShoppingCart' catchtap='onShopCarAdd' data-prodcode='{{item.prodCode}}'></image>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <kc-placeholder-image wx:if="{{goodsList.length==0}}" imageClassName="iconfont iconwusousuojilu" title="没有搜索到您的商品"> </kc-placeholder-image>
+
+  </view>
+</template>

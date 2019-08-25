@@ -1,0 +1,34 @@
+<!--inPages/douYin/index.wxml-->
+<view class='douyin animated fadeIn'>
+ <swiper class='douyinBanner' indicator-dots="true" indicator-active-color="rgba(246, 27, 109, 1)" indicator-color="#fff" circular>
+ <swiper-item>
+ <image class='douyinBanner' src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/douyin.png?x-oss-process=style/douyinBanner'></image>
+ </swiper-item>
+  <swiper-item>
+ <image class='douyinBanner' src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/xiaohongshu_banner.jpg?x-oss-process=style/douyinBanner'></image>
+ </swiper-item>
+ </swiper>
+    
+
+ <view class='dyList'>
+    <view class='dylLi' wx:for="{{dylist}}" wx:key="{{index}}" bindtap='onclickComdetail' data-prodcode="{{item.prodCode}}">
+        <image class='dyLimg' src='{{item.imageUrl}}?x-oss-process=style/secondMainPic' lazy-load></image>
+            <view class='dllName'>
+              <view class='dllNmes text-clamp'>
+                 {{item.prodName}}
+                  <image class='dllIco' src='https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/hot.png' lazy-load></image>
+              </view>
+            </view>
+            <view class='dllPrice'>
+            <image class="goods-list__list__item__bottom__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeV.png" lazy-load></image>
+              <!-- <icon></icon> -->
+              <view class='dllpMes'>
+                  <text>¥</text>
+                  <text>{{item.vipPrice}}</text>
+              </view>
+              <text class='dllYprice'>¥{{item.standardRetailPrice}}</text>
+              <image class="goods-list__list__item__bottom__big__delete" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/shoppingCart.png" catchtap='onPushToAddShoppingCart' data-prodcode='{{item.prodCode}}' lazy-load></image>
+            </view>
+        </view>
+    </view>
+</view>

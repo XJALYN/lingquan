@@ -1,0 +1,22 @@
+<template name="firstRebate">
+  <view class="first-rebate">
+    <view class="first-rebate__top">
+      <view class="first-rebate__top__title">首单必返</view>
+      <view class="first-rebate__top__subtitle">限季卡及以上会员，首单全额返现</view>
+    </view>
+    <scroll-view class="first-rebate__list" scroll-x="{{true}}">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class="first-rebate__list__item" data-prodcode='{{item.prodCode}}' catchtap='onPushToCommodityDetailFromFisrt'>
+        <image class="first-rebate__list__item__corner__mark" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeNew.png" lazy-load></image>
+        <image class="first-rebate__list__item__image" src="{{item.imageUrl}}?x-oss-process=style/firstMainPic" mode='aspectFill' lazy-load></image>
+        <view class="first-rebate__list__item__title">{{item.prodName}}</view>
+        <view class="first-rebate__list__item__bottom">
+         <view class="first-rebate__list__item__price">¥</view>
+        <view class="first-rebate__list__item__price__value">{{item.vipPrice}}</view>
+        <view class="first-rebate__list__item__bid__price">全额返</view>
+        </view>
+      </view>
+    </block>
+    </scroll-view>
+  </view>
+</template>

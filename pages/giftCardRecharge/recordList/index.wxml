@@ -1,0 +1,17 @@
+<template name="recordList">
+<view class="record-list">
+  <view class="record-list__cell" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="record-list__cell__top">
+    <view class="record-list__cell__top__num">卡号{{item.giftCardNo}}</view>
+    <view class="record-list__cell__top__date">{{item.createTime}}</view>
+    </view>
+
+    <view class="record-list__cell__right">
+      <view class="record-list__cell__right__price">+{{item.giftMoney}}</view>
+      <view class="record-list__cell__right__status">绑卡成功</view>
+    </view>
+    
+
+  </view>
+</view>
+</template>

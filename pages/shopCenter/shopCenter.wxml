@@ -1,0 +1,14 @@
+<!--pages/shopCenter/shopCenter.wxml-->
+<import src="./search/index" />
+<import src="./leftMenu/index" />
+<import src="./rightContent/index" />
+<import src="./brandList/index" />
+
+<template is="search" />
+<template is="leftMenu" data="{{leftIndex,mainList}}"/>
+<!-- 品牌 -->
+<template wx:if="{{leftIndex==0}}" is="brandList" data="{{list:brandList}}" />
+<!-- 分类 -->
+<template wx:if="{{leftIndex>0}}" is="rightContent" data="{{list:categoryList}}"/>
+
+<kc-author-modal show="{{needAuthor}}"/>

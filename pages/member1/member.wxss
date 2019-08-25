@@ -1,0 +1,211 @@
+/* pages/member/member.wxss */
+@import "./header/index";
+@import "./mainEquity/index";
+@import "./baseEquity/index";
+@import "./help/index";
+@import "./limitCardSuccess/index";
+
+
+.content-swiper{
+  margin-top: 32rpx;
+  width: 100vw;
+  height: calc(100vh - 443rpx);
+  
+}
+
+.content-swiper__item{
+  width: 100vw;
+  height: calc(100vh - 443rpx);
+  overflow-y: scroll;
+  overflow:hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.btn-pay{
+  padding: 0 0;
+  position: fixed;
+  bottom: 40rpx;
+  left: 32rpx;
+  right: 32rpx;
+  height: 100rpx;
+  background-color: #333;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10rpx 10rpx rgba(0,0,0,0.2);
+}
+.btn-bind-phone{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  opacity: 0;
+}
+.btn-pay-bg1{
+  background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_btn_season.png");
+  background-size: 100% 100%;
+}
+.btn-pay-bg2{
+  background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/member_btn_year.png");
+  background-size: 100% 100%;
+}
+
+.btn-pay_text1{
+ color: #A6AEB7;
+ font-size: 24rpx;
+ margin-left: 62rpx;
+}
+.btn-pay_text2{
+  font-size: 24rpx;
+  color: #EDEDED;
+  margin-left: 6rpx;
+}
+.btn-pay_text3{
+    font-size: 40rpx;
+  color: #EDEDED;
+  margin-left: 2rpx;
+}
+.btn-pay_text4{
+  position: absolute;
+  right: 68rpx;
+  top: 12rpx;
+  color: #484848;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.btn-pay_text5{
+  position: absolute;
+  right: 74rpx;
+  bottom: 11rpx;
+  color: white;
+  font-size: 22rpx;
+}
+
+.btn-pay_text6{
+    font-size: 40rpx;
+ color:#E6CBC1;
+  margin-left: 2rpx;
+}
+.btn-pay_text7{
+  position: absolute;
+  right: 68rpx;
+  top: 12rpx;
+  color: #5F3421;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.btn-pay_text8{
+color: #A6AEB7;
+ font-size: 24rpx;
+ margin-left: 15rpx;
+}
+.btn-pay_text9{
+ color: #A6AEB7;
+ font-size: 24rpx;
+ text-decoration: line-through;
+}
+
+.btn-pay-limit{
+ position: fixed;
+  bottom: 40rpx;
+  left: 32rpx;
+  right: 32rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background:linear-gradient(90deg,rgba(56,64,80,1) 0%,rgba(35,43,54,1) 100%);
+}
+.btn-pay-limit__text{
+  border-radius: 50rpx;
+  width: 687rpx;
+  height: 100rpx;
+  text-align: center;
+font-weight:500;
+background:linear-gradient(360deg, rgba(222,179,128,1) 0%, rgba(228,216,178,1) 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+ box-shadow: 0 0 15rpx 10rpx rgba(0,0,0,0.1);
+ color:white;
+ line-height: 100rpx;
+}
+.discount-bubble{
+  left: 235rpx;
+  position: absolute;
+  height: 60rpx;
+  top: -62rpx;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.discount-bubble__text{
+  height: 50rpx;
+  line-height: 50rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background:linear-gradient(90deg,#FE454C 0%,#F61C6C 100%);
+  border-radius:28rpx;
+  color: white;
+  font-size: 24rpx;
+  
+}
+.discount-bubble__arrow{
+    width: 0;
+    height: 0;
+    border: 12rpx solid;
+    border-color: #FB325B rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+.welfare-icon{
+  position: fixed;
+  z-index: 10;
+  width: 128rpx;
+  height: 132rpx;
+  bottom: 156rpx;
+  right: 9rpx;
+}
+
+.animated{
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.swing {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom  center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

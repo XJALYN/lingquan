@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "kc-about-kmh": "../../inPages/aboutKmh/index"
+  },
+  "navigationBarTitleText": "关于鲲美会"
+}

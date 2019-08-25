@@ -1,0 +1,15 @@
+<!--pages/orderList/orderList.wxml-->
+<import src="./filter/index" />
+<import src="./cell/index" />
+<template is="filter" data="{{filters:filters,filterIndex}}"/>
+<view class="list">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+   <template is="cell" data="{{...item}}"/>
+  </block>
+</view>
+
+<kc-placeholder-image wx:if="{{list.length==0}}" imageClassName="iconfont iconwurenhejilu" title="暂无订单"/>
+<!-- 底部加载更多 -->
+<kc-footer-loading wx:if="{{list.length >= 2}}" noMore="{{noMore}}"/>
+<!-- 用户授权页面 -->
+<kc-author-modal show="{{needAuthor}}" type="0"/> 

@@ -1,0 +1,44 @@
+/* components/memberUpgrade/index.wxss */
+/* components/authorAlert/index.wxss */
+@import "../../app.wxss";
+.author__bg{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgba(0,0,0,0.6);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.author__content{
+  width: 535rpx;
+  position: relative;
+  background-color: white;
+  height: 740rpx;
+  border-radius:20rpx;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/newUserWelfare.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ 
+}
+.bth-close{
+  position: absolute;
+  bottom: -116rpx;
+  left: 50%;
+  width: 48rpx;
+  height: 48rpx;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 48rpx;
+  color: white;
+  border-radius: 50%;
+  border: 2rpx solid white;
+  font-size: 20rpx;
+}
+

@@ -1,0 +1,46 @@
+.cell{
+  margin-top: 20rpx;
+  margin-left: 32rpx;
+ width: 686rpx;
+ height: 160rpx;
+ display: flex;
+ background: white;
+  border-radius:10rpx;
+}
+.cell__icon{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background:url(https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_integral__icon.png);
+  background-size: 100% 100%;
+ background-repeat: no-repeat;
+
+}
+.cell__mid{
+ margin-left: 20rpx;
+ flex:1;
+}
+.cell__title{
+  margin-top: 39rpx;
+  color: #333333;
+  font-size: 30rpx;
+  font-weight: 500;
+
+}
+.cell__time{
+ margin-top: 8rpx;
+ font-size: 24rpx;
+ color: #999999;
+}
+.cell__right{
+ margin-right: 30rpx;
+font-weight: bold;
+ color: #F61B6D;
+ font-size: 30rpx;
+ height: 160rpx;
+ line-height: 160rpx;
+ text-align: right;
+}
+

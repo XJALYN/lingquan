@@ -1,0 +1,22 @@
+
+
+<template name="header">
+ <view class="header">
+ <picker mode="date" bindchange='onSelectedStartDate' value="{{startDate}}" start="2016-01-01">
+  <view class="date">
+   <view class="date__icon iconfont iconrili"></view>
+   <view class="date__title">{{startDate}}</view>
+  </view>
+  </picker>
+   <view class="header__text">至</view>
+  <picker mode="date" bindchange='onSelectedEndDate' value='{{endDate}}' start="2018-01-01">
+  <view class="date">
+   <view class="date__icon iconfont iconrili"></view>
+   <view class="date__title">{{endDate}}</view>
+  </view>
+ </picker>
+ <view style='flex:1'></view>
+ <view class="header__btn--search" bindtap='onSearch'>查询</view>
+  
+ </view>
+</template>

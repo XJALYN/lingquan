@@ -1,0 +1,63 @@
+/* pages/refundNode/refundNode.wxss */
+.content{
+  margin-top: 20rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: calc(100% - 64rpx);
+  background-color: white;
+  border-radius: 10rpx;
+}
+.cell{
+  height: 112rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.cell__title{
+  color: #999999;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  font-weight:bold;
+  padding-top: 10rpx;
+}
+.cell__value{
+color: #333;
+font-size: 30rpx;
+margin-left: 40rpx;
+flex:1;
+text-align: right;
+}
+.cell__arrow{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 4rpx;
+  font-size: 25rpx;
+  line-height: 25rpx;
+  text-align: center;
+  color: #999999;
+}
+.cell__value--input{
+  color: #333;
+font-size: 30rpx;
+margin-left: 40rpx;
+flex:1;
+padding-top: 10rpx;
+}
+.cell__line{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: calc(100% - 60rpx);
+  height:1rpx;
+  background-color: #E8E8E8;
+}
+.btn-submit{
+  margin-top: 100rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #F61B6D;
+  color: white;
+  border-radius: 50rpx;
+}

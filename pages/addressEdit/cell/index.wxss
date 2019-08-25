@@ -1,0 +1,33 @@
+.cell{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.cell__title{
+  margin-top: 45rpx;
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 40rpx;
+  font-weight: normal;
+}
+.cell__value{
+  margin-top: 24rpx;
+  margin-left: 40rpx;
+  
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+.cell__value__placehold{
+   font-size: 32rpx;
+   color: #CCCCCC;
+  
+}
+.cell__line{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  height: 2rpx;
+  background-color: #e8e8e8;
+}

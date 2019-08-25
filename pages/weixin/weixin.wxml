@@ -1,0 +1,2 @@
+<!--pages/weixin/weixin.wxml-->
+<web-view class='recommendLink' src='{{href}}'></web-view>

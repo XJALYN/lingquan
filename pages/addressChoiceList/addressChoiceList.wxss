@@ -1,0 +1,17 @@
+/* pages/addressList/addressList.wxss */
+@import "./addressCell/index";
+.submit-btn{
+  position: fixed;
+  bottom: 50rpx;
+  left: 40rpx;
+  right: 40rpx;
+  height: 100rpx;
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+}
+.submit-btn-hover{
+  opacity: 0.7;
+}

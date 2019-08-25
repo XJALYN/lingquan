@@ -1,0 +1,362 @@
+/* inPages/findGoods/index.wxss */
+@import "../../app.wxss";
+
+.findGoods {
+  margin-top: 20px;
+  padding: 30rpx 30rpx;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 50rpx;
+}
+
+.fgList {
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 17rpx;
+}
+
+.fgName {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.fgnHead {
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  float: left;
+  border-radius: 35rpx;
+}
+
+.fgInfo {
+  width: 300rx;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin-left: 16rpx;
+}
+
+.fgiName {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.fgiName text:nth-child(1) {
+  color: #343434;
+  font-size: 28rpx;
+  float: left;
+  margin-right: 16rpx;
+}
+
+.fgiName text:nth-child(2) {
+  color: #f61b6d;
+  font-size: 22rpx;
+  float: left;
+  border-radius: 19rpx;
+  margin-right: 16rpx;
+  background: rgba(228, 108, 148, 0.1);
+  display: block;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  padding: 0 16rpx;
+}
+
+.fgTime {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #959595;
+  font-size: 20rpx;
+  padding-top: 2rpx;
+}
+
+.fgSup {
+  width: 90rpx;
+  height: auto;
+  overflow: hidden;
+  float: right;
+}
+
+.fgSup text {
+  float: right;
+  font-size: 24rpx;
+  color: #343434;
+  margin-top: 19rpx;
+}
+
+.hasSupport {
+  display: block;
+  float: right;
+  margin-right: 5rpx;
+  font-size: 30rpx;
+  color: #f61b6d;
+}
+
+.noSupport {
+  display: block;
+  float: right;
+  margin-right: 5rpx;
+  font-size: 30rpx;
+  color: #f61b6d;
+}
+
+.fgImg {
+  padding: 30rpx 0;
+  height: auto;
+  overflow: hidden;
+}
+
+.fgImg image {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+
+.fgImg image:last-child {
+  margin-right: 0;
+}
+
+.fgMes {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.fgMes text:nth-child(1) {
+  padding-right: 50rpx;
+  height: auto;
+  overflow: hidden;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.fgMes text:nth-child(2) {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  color: #f61b6d;
+  font-size: 28rpx;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.fgDetail {
+  padding: 0rpx 15rpx 0 0;
+  height: auto;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+
+.fgDetail image {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.fgdMes {
+  padding: 15rpx 0 0rpx 0;
+  width: 440rpx;
+  height: auto;
+  overflow: hidden;
+  float: left;
+}
+
+.fgdmName {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.fgdPrice {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 6rpx 0;
+}
+
+.fgdPrice text:nth-child(1) {
+  font-size: 20rpx;
+  color: #f61b6d;
+  float: left;
+  padding-top: 10rpx;
+}
+
+.fgdPrice text:nth-child(2) {
+  font-size: 30rpx;
+  color: #f61b6d;
+  float: left;
+  font-weight: bold;
+}
+
+.fgdPrice view {
+  display: block;
+  float: right;
+  color: #f61b6d;
+  font-size: 28rpx;
+  margin-top: 2rpx;
+}
+
+.fgdPeople {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 30rpx 0 0 0;
+  height: 50rpx;
+}
+
+.fgdHead {
+  width: 325rpx;
+  height: auto;
+  position: relative;
+  float: left;
+}
+
+.fgdHead image {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  border-radius: 25rpx;
+}
+
+.fgdHead image:nth-child(1) {
+  background-color: #333;
+  left: 0;
+}
+
+.fgdHead image:nth-child(2) {
+  background-color: #999;
+  left: 20rpx;
+}
+
+.fgdHead image:nth-child(3) {
+  background-color: #333;
+  left: 35rpx;
+}
+
+.fgdHead image:nth-child(4) {
+  background-color: #999;
+  left: 55rpx;
+}
+
+.fgdHead image:nth-child(5) {
+  background-color: #333;
+  left: 70rpx;
+}
+
+.fgdHead image:nth-child(6) {
+  background-color: #999;
+  left: 85rpx;
+}
+
+.fgdHead image:nth-child(7) {
+  background-color: #333;
+  left: 95rpx;
+}
+
+.fgdHead image:nth-child(8) {
+  background-color: #999;
+  left: 105rpx;
+}
+
+.fgdHead image:nth-child(9) {
+  background-color: #333;
+  left: 110rpx;
+}
+
+.fgdHead image:nth-child(10) {
+  background-color: #999;
+  left: 135rpx;
+}
+
+.fgdPnum {
+  width: 300rpx;
+  height: auto;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+  float: right;
+}
+
+.fgdPnum text {
+  color: #e46c94;
+}
+
+.shareIco {
+  color: #f61b6d;
+  font-size: 40rpx;
+  float: right;
+  margin-top: 12rpx;
+}
+
+.shareBtn {
+  width: 80rpx;
+  height: 90rpx;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  right: -25rpx;
+  top: -25rpx;
+}
+
+.backHome{
+  position: fixed;
+  left: 0;
+  bottom: 100rpx;
+  width: 100%;
+}
+.backHomeBtn{
+  margin: 0 auto;
+  width: 458rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+  background: #F61B6D;
+  font-size: 28rpx;
+}
+.iconyoujiantou.iconfont{
+  font-size: 24rpx;
+}
+.contant{
+ margin-top: 30rpx;
+ font-size: 32rpx;
+
+}
+.phone{
+  margin-top: 20rpx;
+ font-size: 32rpx;
+
+}
+.phone text:first-child{
+  color: red;
+  text-decoration: underline;
+}
+.footer-title{
+  height: 100rpx;
+  text-align: center;
+  width: 100%;
+  line-height: 100rpx;
+  color: #888;
+  font-size: 30rpx;
+  
+}

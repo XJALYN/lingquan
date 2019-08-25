@@ -1,0 +1,54 @@
+.header{
+  display: flex;
+  height: 130rpx;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  background-color: white;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+}
+
+.date{
+  width: 246rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+  border-radius: 35rpx;
+}
+
+.date__icon{
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #F61B6D;
+}
+
+.date__title{
+ font-size: 20rpx;
+ color: #333333;
+ margin-left: 8rpx;
+}
+
+.header__text{
+ margin-left: 8rpx;
+ margin-right: 8rpx;
+ font-size: 24rpx;
+ color: #666666;
+}
+
+.header__btn--search{
+  background-color: #F61B6D;
+  color: white;
+  width: 138rpx;
+  line-height: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  margin-right: 32rpx;
+  border-radius: 35rpx;
+  font-size: 28rpx;
+}

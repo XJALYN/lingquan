@@ -1,0 +1,53 @@
+/* pages/logisticsTracking/logisticsTracking.wxss */
+.logTrack{padding:20rpx 32rpx;height:auto;overflow: hidden;}
+.ltType{padding: 30rpx;height: auto;overflow: hidden;background-color: #fff;border-radius: 10rpx;}
+.ltIco{width: 100%;height: auto;overflow: hidden;}
+.ltIco view{color:#F61B6D;font-size: 35rpx;float: left;margin:2rpx 20rpx 0 0; }
+.ltIco text{color:#F61B6D;font-size: 30rpx;float: left;font-weight: 600;}
+.ltList{width: 100%;height: auto;overflow: hidden;padding-top: 15rpx;}
+.ltList text:nth-child(1){float: left;color: #999;font-size: 28rpx;white-space: nowrap;}
+.ltList text:nth-child(2){float: left;color: #1C1C1C;font-size: 28rpx;}
+
+.ltAdress{padding:30rpx;height: auto;overflow: hidden;background-color: #fff;border-radius: 10rpx;margin-top: 20rpx;position: relative;}
+.ltaIco{width:80rpx;height: 80rpx;background-color: #F61B6D;border-radius: 40rpx;position: absolute;left:30rpx;top: 50%;margin-top: -40rpx;}
+.ltaIco view{font-size:40rx;color: #fff;text-align: center;line-height: 80rpx; }
+.ltaMes{width:515rpx;height: auto;overflow: hidden;float: right;}
+.ltaMes view{width: 100%;height: auto;overflow: hidden;font-size: 24rpx;color: #999;}
+.ltaMes view text{float: left;font-size:28rpx;color: #333;margin-right: 38rpx;padding-bottom:10rpx;font-weight: bold }
+
+.loginList{padding: 30rpx;height: auto;overflow: hidden;background-color: #fff;border-radius: 10rpx;margin-top: 20rpx;}
+.loginLi{width: 100%;height: auto;overflow:hidden;position: relative;margin-top: -12rpx;}
+
+.loginList .loginLi:last-child .lliLeft icon{display: none}
+.loginList .loginLi:first-child .llrType{color: #333;}
+.loginList .loginLi:first-child .lliRight view{color: #333;}
+
+
+.lliLeft{width:68rpx;height: auto;overflow: hidden;float: left;padding-left:72rpx;position:absolute;left: 0;top: 0;bottom: 0; }
+.llIco{width:48rpx;height: 48rpx;border-radius: 24rpx;background-color: #F61B6D;font-size: 24rpx;color: #fff;text-align: center;line-height: 48rpx;float: left;margin-left: 10rpx; }
+.lliLeft icon{display:block;width:2rpx;height:100%;background-color: #E6E6E6;margin-right: 35rpx;float: right;}
+.lliRight{width:485rpx;height: auto;overflow: hidden;float: right;font-size: 22rpx;color: #333;padding-left: 70rpx;padding-bottom:50rpx;}
+.llTime{width: 72rpx;height: 100%;margin-right:20rpx;position: absolute;left: 0;}
+.llTime text:nth-child(1){display: block;width: 100%;height: auto;overflow: hidden;font-size: 24rpx;color: #666;text-align: right;white-space: nowrap;}
+.llTime text:nth-child(2){display: block;width: 100%;height: auto;overflow: hidden;font-size: 20rpx;color: #999;text-align: right;}
+
+.llrType{width: 100%;padding-bottom: 15rpx;font-size: 28rpx;color: #999;display:block}
+.lliRight view:nth-child(2){font-size: 22rpx;color: #999;}
+
+.lliRight view:nth-child(2) text{font-size: 22rpx;color: #F61B6D;}
+.llIcod{color: #999999;font-size:45rpx;text-align: center}
+.llDico{display: block;width: 10rpx;height: 10rpx;background-color: #E6E6E6;border-radius: 5rpx;float: left;margin-left:28rpx; margin-top: 12rpx;}
+
+
+.lliRightTxt{color:#333 !important;}
+.llIcos{color: #F61B6D;font-size:45rpx;text-align: center}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<template name="specList">
+  <view class="spec-mask" bindtap="onHideSpecList">
+  </view>
+  <view class="spec animated slideInUp">
+       <!-- 头部 -->
+       <view class="spec__header">
+        <image class="spec__header__icon" src="{{kmhProductDetailData.images[0]}}"></image>
+        <view class="spec__header__right">
+          <view class="spec__header__right__price">
+          <text>¥</text><text>{{kmhProductDetailData.currentPrice}}</text>
+          </view>
+          <view class="spec__header__right__num">
+          <text>库存</text> <text> {{kmhProductDetailData.currentProductNum}} </text> <text>件</text>
+          </view>
+        </view>
+       </view>
+       <view class="spec__list">
+        <block wx:for="{{kmhProductDetailData.specificList}}" wx:key="{{index}}" >
+         <view class="spec__rule">
+          <view class="spec__rule__title">{{item.name}}</view>
+          <view class="spec__rule__list">
+          <block wx:for="{{item.valList}}" wx:key="{{index}}" wx:for-item="data" wx:for-index="i">
+           <view wx:if="{{item.activeValId==data.id}}" class="spec__rule__list__item spec__rule__list__item--active">{{data.val}}</view>
+            <view wx:elif="{{data.hasSku}}"  class="spec__rule__list__item spec__rule__list__item--normal" bindtap="onSelectedSku" data-sku="{{item.id+'#'+ data.id}}" data-i="{{index}}">{{data.val}}</view>
+            <view wx:else class="spec__rule__list__item spec__rule__list__item spec__rule__list__item--disabled">{{data.val}}</view>
+          </block>
+          </view>
+         </view>
+        </block>
+
+
+             <!-- 数量 -->
+       <view class="spec__buy__num">
+         <view class="spec__buy__num__title">购买数量</view>
+         <!-- <view class="spec__buy__num__desc">每人限购</view>
+         <view class="spec__buy__num__value">5</view>
+         <view class="spec__buy__num__desc">件</view> -->
+         <view class="spec__buy__num__plus" bindtap="onCutBuyCount">-</view>
+         <input class="spec__buy__num__input" bindblur="onInputBuyCount" value="{{prodNum}}"></input>
+         <view class="spec__buy__num__add" bindtap="onCutAddCount">+</view>
+       </view>
+
+        
+       
+       </view>
+
+       
+ <!-- 确认按钮 -->
+       <view class="spec__btn" bindtap="onClickBalance" data-subChannelNo="{{kmhProductDetailData.subChannelNo}}" data-prodcode="{{kmhProductDetailData.prodCode}}" data-columncode="{{kmhProductDetailData.columnCode}}" data-shareMemberId="{{kmhProductDetailData.shareMemberId}}">确定</view>
+  
+
+
+
+     
+
+    </view>
+</template>

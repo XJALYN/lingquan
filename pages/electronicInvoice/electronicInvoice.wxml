@@ -1,0 +1,52 @@
+<!--pages/electronicInvoice/electronicInvoice.wxml-->
+<view class='electronicInvoice'>
+
+    <view class='eleOne'>
+      <view class='eleoName'>
+          <text class='eleonType'>发票类型</text>
+          <view class="eleonRadio">
+            <view class="section section_gap">
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <radio color="#F61B6D" class="radio" wx:for-items="{{eleType}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                        <text>{{item.value}}</text>
+                    </radio>
+                </radio-group>
+            </view>
+        </view>
+      </view>
+      
+      <view class='eleonHint'>电子发票与纸质发票具有同等法律效力，支持报销入账</view>
+    </view>
+
+    <view class='eleTwo'>
+        <view class='eleoName borb'>
+          <text class='eleonType'>抬头类型</text>
+          <view class="eleonRadio">
+            <view class="section section_gap">
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <radio color="#F61B6D" class="radio" wx:for-items="{{peopleType}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                        <text>{{item.value}}</text>
+                    </radio>
+                </radio-group>
+            </view>
+        </view>
+      </view>
+      
+      <view class='eleHeader'>
+          <text>发票抬头</text>
+          <input placeholder='请您填写发票抬头' bindinput='hasInvoiceTitle' value="{{invoiceTitle}}" placeholder-class='placehold'></input>
+      </view>
+      <view class='eleNum' hidden="{{tfnType}}">
+          <text>税号</text>
+          <input bindinput='hasInvoiceTaxpayerCode' value="{{invoiceTaxpayerCode}}" placeholder='请填写纳税人识别号' placeholder-class='placehold'></input>
+      </view>
+    </view>
+
+    <view class='eleThree'>接收方式</view>
+    <view class='eleFour'>
+        <text>电子邮箱</text>
+        <input placeholder='请输入您的邮箱'  bindinput='hasEmail' placeholder-class='placehold txtRight'></input>
+    </view>
+    <view class='eleSure' bindtap='clickAddele'>确定</view>
+</view>
+<kc-author-modal show="{{needAuthor}}"/>

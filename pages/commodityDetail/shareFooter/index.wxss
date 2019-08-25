@@ -1,0 +1,60 @@
+/* components/shareFooter/shareFotter.wxss */
+.mask{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.3);z-index:11}
+.shareFooter{position:fixed;bottom: 0;left: 0;right: 0;height: 380rpx;background-color:#fff;z-index: 12;}
+.sfHead{padding:32rpx;height: auto;overflow: hidden;background-color:#F7F7F7;}
+.sfhIco{font-size:30rpx;color:#999999;float: right;display:block;text-align: right }
+.sfMes{padding:40rpx 32rpx;height: auto;overflow: hidden; }
+.sfmLi{width:225rpx;height: auto;overflow: hidden;float: left;position: relative;margin-bottom: 20rpx; }
+.sfmLiIco{width: 74rpx;height: 74rpx;border-radius: 37rpx;border: 1rpx solid #EFEFEF;margin: 0 auto;}
+.tjhwq{font-size:45rpx;color:#666666;display: block;margin: 0 auto;text-align: center;line-height: 74rpx; }
+.fxghy{font-size:45rpx;color:#68D133;display: block;margin: 0 auto;text-align: center;line-height: 74rpx;}
+.fxpyq{display: block;width:44rpx;height:44rpx;border-radius: 22rpx;margin:15rpx auto;  }
+.sfmLi text{display: block;width: 100%;height: auto;overflow: hidden;color: #666666;font-size: 24rpx;text-align: center;}
+.pt20{padding-top:15rpx;}
+.sfHint{background-color: #F0F0F0;padding: 15rpx 32rpx;height: auto;overflow: hidden;color:#999999;font-size: 22rpx;margin: 16rpx 0;border-radius:30rpx; }
+.sfmLi icon{display: block;width:2rpx;height:74rpx;background-color:#D8D8D8;position: absolute;right: 0;top:0rpx;   }
+.aa{width: 0;height: 0;border-width: 0 8px 8px;border-style: solid;border-color: transparent transparent #F0F0F0;position: absolute;bottom:78rpx;left:130rpx;}
+.sfWord{float: left;font-size: 32rpx}
+.animated{
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

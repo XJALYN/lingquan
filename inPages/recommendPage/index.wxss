@@ -1,0 +1,11 @@
+/* components/recommendPage/index.wxss */
+@import "../../app.wxss";
+@import "./firstRebate/index" ;
+@import "./freeGet/index";
+@import "./navigatorList/index";
+@import "./recommend/index";
+@import "./vipCard/index";
+@import "./yourSales/index";
+@import "./bannerList/index";
+@import "./oneMinute/index";
+@import "./find/index";

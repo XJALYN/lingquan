@@ -1,0 +1,24 @@
+<import src="../goodsCell/index"  />
+
+<template name="classifyList">
+  <view class="free-get">
+  <view class="free-get__top" style="background: url({{topBg}});background-size: 100% 100%;">
+  </view>
+  <block wx:for="{{list}}" wx:key="{{index}}" wx:for-item="categoryData" wx:for-index="i">
+  <image class="free-get__banner"  src="{{categoryData.category.categoryBanner}}" data-categorycode="{{categoryData.category.categoryCode}}" bindtap="onPushToSearch" data-type="2"></image>
+  <scroll-view class="free-get__list" scroll-x="{{true}}">
+  <block wx:for="{{categoryData.categoryProds}}" wx:key="{{index}}" >
+   <view class="free-get__list__item" bindtap='onPushToGoodsDetail' data-prodcode="{{item.prodCode}}">
+      <image class="free-get__item__image" src="{{item.imageUrl}}?x-oss-process=style/secondMainPic" mode='aspectFill' ></image>
+      <view class="free-get__item__title">{{item.prodName}}</view>
+      <view class="free-get__item__bottom">
+        <image class="free-get__item__bottom__icon" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/homeV.png" lazy-load></image>
+        <view class="free-get__item__bottom__price1"><text>¥</text>{{item.vipPrice}}</view>
+        <view class="free-get__item__bottom__price2">¥{{item.standardRetailPrice}}</view>
+      </view>
+   </view>
+  </block>
+  </scroll-view> 
+  </block>
+  </view>
+</template>

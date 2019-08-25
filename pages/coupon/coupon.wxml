@@ -1,0 +1,14 @@
+<!--pages/coupon/coupon.wxml-->
+<import src="./menu/index" />
+<import src="./cell/index" />
+ <template is="menu" data="{{...couponCounts,filterIndex}}"/>
+ <block wx:for="{{list}}" wx:key="{{index}}">
+   <template is="cell" data="{{...item}}"/>
+ </block>
+
+<kc-footer-loading wx:if="{{list.length >= 5}}" noMore="{{true}}"/>
+ <kc-placeholder-image imageClassName="iconfont iconzanwuquan" wx:if="{{list.length == 0}}" title="暂无优惠券" />
+
+ 
+
+

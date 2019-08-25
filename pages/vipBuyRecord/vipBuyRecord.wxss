@@ -1,0 +1,61 @@
+/* pages/vipBuyRecord/vipBuyRecord.wxss */
+.list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.cell{
+  margin-top: 20rpx;
+ width: 686rpx;
+ height: 160rpx;
+ display: flex;
+ background: white;
+ border-radius: 10rpx;
+}
+.cell__icon{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background: #eee;
+  border-radius: 50%;
+
+}
+.cell__mid{
+ margin-left: 20rpx;
+ flex:1;
+}
+.cell__title{
+  margin-top: 39rpx;
+  color: #333333;
+  font-size: 30rpx;
+  font-weight: 500;
+
+}
+.cell__time{
+ margin-top: 8rpx;
+ font-size: 24rpx;
+ color: #999999;
+}
+.cell__right{
+ margin-right: 30rpx;
+}
+.cell__status{
+ margin-top: 40rpx;
+ font-weight: bold;
+ color: #F61B6D;
+ font-size: 30rpx;
+ height: 50rpx;
+ line-height: 50rpx;
+ text-align: right;
+}
+.cell__status-text{
+ margin-top: 4rpx;
+ height: 33rpx;
+ line-height: 33rpx;
+ font-size: 24rpx;
+ color: #999999;
+ text-align: right;
+}

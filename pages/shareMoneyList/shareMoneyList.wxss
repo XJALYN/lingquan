@@ -1,0 +1,3 @@
+/* pages/shareMoneyList/shareMoneyList.wxss */
+@import "./header/index";
+@import "./cell/index";
