@@ -2,8 +2,9 @@ module.exports = {
   // 跳转到工具页面
   onPushToTools(e){
    let index = e.currentTarget.dataset.index
-   if(index==2){
-
+   if(index==0){
+     wx.$router.push("/pages/merchantRegister/merchantRegister")
+    
    }else if(index==5){
      wx.$router.push("/pages/giftCardRecharge/giftCardRecharge")
    }else{

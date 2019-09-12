@@ -3,13 +3,13 @@
 <view class='findGoods'>
     <view class='fgList' >
         <view class='fgName'>
-          <image class='fgnHead' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566738316509&di=b21285a3ee1c39bf7fab687eb08e3a4c&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fshejigao%2F20140519%2F20140518_6523d18ce9aa9c55f38b7A2UVsq8WQG1.jpg'></image>
+          <image class='fgnHead' src='{{newsData.sender.avatar_url}}'></image>
           <view class='fgInfo'>
               <view class='fgiName'>
-                <text>背景人才市场</text>
-                <text>已认证</text>
+                <text>{{newsData.sender.nick_name}}</text>
+                <text>{{newsData.sender.is_certified?'已认证':'未认证'}}</text>
               </view>
-              <view class='fgTime'>2018-12-23</view>
+              <view class='fgTime'>{{newsData.publish_time}}</view>
           </view>
           <button size='20' type="" class='shareBtn' open-type='share' plain style="border:none;color:white;">
               <view class='shareIco iconfont iconfenxiang'></view> 
@@ -18,16 +18,16 @@
         </view>
 
         <view class='fgImg' >
-           <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="{{index}}">
-             <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566738316507&di=fcbae4108fe8b0ffa566da858d7973ca&imgtype=0&src=http%3A%2F%2Fpic17.nipic.com%2F20111107%2F8617487_082045021317_2.jpg' catchtap='onPreviewImages' data-index="{{index}}" data-list="{{articleData.articleImgUrlList}}"></image>
+           <block wx:for="{{newsData.images}}" wx:key="{{index}}">
+             <image src='{{item.image_url}}' catchtap='onPreviewImages' data-index="{{index}}" data-list="{{articleData.articleImgUrlList}}"></image>
            </block>
             
         </view>
 
         <view class='fgMes'>
-            <text>近日，几张学生摆拍各式趣味造型的图片在武汉一高校火了起来，图片中的学生们笑容灿烂，在操场以及训练场等地摆出各具创意的姿势。而这一切不是为了发朋友圈，更不是课堂作业，而是武汉光谷职业学院播音主持班的早操签到打卡。</text>
+            <text>{{newsData.content}}</text>
         </view>
-        <view class="contant">联系人:张念念</view>
+        <view class="contant">联系人:{{newsData.contact_name}}</view>
         <view class="phone" bindtap="onCallPhone" data-phone="18817572718">联系方式:<text>18817572222</text></view>
     </view>
 

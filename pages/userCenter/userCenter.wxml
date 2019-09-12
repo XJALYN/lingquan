@@ -2,19 +2,19 @@
 <import src="./header/index" />
 <import src="./orderList/index" />
 
-<kc-author-userinfo bindsuccess="onAuthorSuccess" wx:if="{{userType != 2}}"/>
+<!-- <kc-author-userinfo bindsuccess="onAuthorSuccess" wx:if="{{userType != 2}}"/> -->
 <view class="animated fadeIn">
 <template is="header" data="{{...userInfo}}"/>
  <view class="content-top"></view>
 <view class="content">
  
-  <view class="order-content">
+  <!-- <view class="order-content">
    <view class="item" data-index='0' catchtap='onPushToOrderList'>
     <view class="item__title">我的订单</view>
     <view class="item__arrow iconfont iconyoujiantou"></view>
    </view>
    <template is="orderList" data="{{...orderStatusNums}}"/>
-  </view>
+  </view> -->
 
 
   <!-- 工具 -->
@@ -32,13 +32,13 @@
   <view class="more-list">
     <!-- 我的劵 -->
     <view class="more-list__item" bindtap='onPushToMyCoupon'>
-     <view class="more-list__item__title">我的券</view>
+     <view class="more-list__item__title">我的发布</view>
      <view class="more-list__item__arrow iconfont iconyoujiantou"></view>
     </view>
 
     <!-- 我的会员卡 -->
     <view class="more-list__item" bindtap='onPushToVipBuyRecord'>
-     <view class="more-list__item__title">我的会员卡</view>
+     <view class="more-list__item__title">我的收藏</view>
      <view class="more-list__item__arrow iconfont iconyoujiantou"></view>
     </view>
 

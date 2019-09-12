@@ -13,7 +13,7 @@ module.exports = {
   },
   advertisingBanners(){
     let t = {
-      "category_id": 0,
+     
     }
     wx.$methods.advertisingBanners(t).then(res=>{
       this.setData({

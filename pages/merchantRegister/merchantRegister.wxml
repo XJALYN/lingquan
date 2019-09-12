@@ -1,7 +1,6 @@
 <!--pages/addressAdd/addressAdd.wxml-->
 <import src="./cell/index" />
 <import src="./addressSelectCell/index" />
-<kc-navigation-bar title="商家注册"/>
 <view class="content">
   <template is="cell" data="{{title:'公司/商铺名称',placehold:'请输入公司/商铺名称(必填)',input:'onInputCompanyName',type:'text',maxLength:10}}"/>
   <view class="add-title">上传营业执照</view>
@@ -13,7 +12,6 @@
   <template is="cell" data="{{title:'电话',placehold:'手机号码(必填)',input:'onInputPhone',type:'number',maxLength:11}}"/>
   <template is="addressSelectCell" data="{{title:'所在地区',value:params.province+params.city+params.area,placehold:'选择收货地址(必填)',input:'onInputRegion'}}"/>
   <template is="cell" data="{{title:'详细地址',placehold:'例:街道名称、小区名称、门牌号(必填)',input:'onInputAddress',type:'text'}}"/>
-
 
  <cover-view class="submit-btn background-color__main" plain bindtap="onAddressAdd" style='border-style:none;background:#333;color:white' loading='{{loading}}'   hover-class='submit-btn__hover'>完成</cover-view>
 </view>

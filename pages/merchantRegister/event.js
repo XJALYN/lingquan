@@ -1,13 +1,13 @@
 module.exports = {
   // 
   onInputCompanyName(e){
-    this.data.params.companyName = e.detail.value
+    this.data.params.name= e.detail.value
   },
   onInputName(e){
-    this.data.params.contact = e.detail.value
+    this.data.params.contact_name = e.detail.value
   },
   onInputPhone(e){
-    this.data.params.phone = e.detail.value
+    this.data.params.contact_mobile = e.detail.value
    
   },
   onInputAddress(e){
@@ -26,7 +26,7 @@ module.exports = {
   },
   // 请输入主营业务
   onInputBusinessDescribe(e){
-    this.data.params.businessDescribe = e.detail.value
+    this.data.params.main_business = e.detail.value
   },
   onChooseImage(e){
    wx.chooseImage({

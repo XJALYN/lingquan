@@ -23,8 +23,9 @@ Component({
   methods: {
     // 跳转招聘详情页面
     onPushToJobDetail(e){
+      let id = e.currentTarget.dataset.id
       wx.navigateTo({
-        url: '/pages/jobDetail/jobDetail',
+        url: '/pages/jobDetail/jobDetail?id=' + id,
       })
     }
   }

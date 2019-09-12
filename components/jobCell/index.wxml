@@ -1,4 +1,4 @@
-    <view class='fgList' bindtap="onPushToJobDetail">
+    <view class='fgList' bindtap="onPushToJobDetail" data-id="{{data.id}}">
         <view class='fgName'>
           <image class='fgnHead' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2619617470,2494137875&fm=26&gp=0.jpg' lazy-load></image>
           <view class='fgInfo'>
@@ -11,7 +11,6 @@
           <view class='fgSup'>
             <text>{{data.liked_count}}</text>
             <icon class="hasSupport iconfont dianzan" bindtap='onclickNoSupport'></icon>
-            <!-- <icon class='noSupport iconfont weidianzan' data-index="{{index}}" bindtap='onclickSupport'></icon> -->
           </view>
         </view>
 

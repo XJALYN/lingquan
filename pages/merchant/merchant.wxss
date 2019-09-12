@@ -1,1 +1,15 @@
 /* pages/merchant/merchant.wxss */
+.text1{
+  font-size: 40rpx;
+  background: blue;
+  padding: 0 ;
+  column-count: 1;
+}
+
+.text2{
+  font-size: 20rpx;
+  background: red;
+  padding: 5rpx;
+  float: left;
+  margin-top: 10rpx;
+}

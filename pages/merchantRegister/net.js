@@ -1,14 +1,14 @@
 module.exports = {
-  addressAdd(){
+  certifyEnterprise(){
     this.setData({
       loading:true
     })
-    wx.$methods.addressAdd(this.data.params).then(res=>{
+    wx.$methods.certifyEnterprise(this.data.params).then(res=>{
       this.setData({
         loading: false
       })
       wx.showToast({
-        title: '添加地址成功',
+        title: '资质已提交审核',
       })
       setTimeout(res=>{
         wx.navigateBack({})

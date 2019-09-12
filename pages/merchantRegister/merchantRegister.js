@@ -11,16 +11,20 @@ Page({
     loading: false,
     check: false,
     params: {
-      "companyName":"",
-      "businessLicenseUrl":"",
-      "businessDescribe":"",
-      "area": "",
-      "province": "",
-      "city": "",
-      "contact": "",
-      "phone": "",
-      "postcode": "",
-      "detail": ""
+      "name": "",
+      "logoUrl": "",
+      "license_no": "",
+      "license_url": "",
+      "main_industry_category": "",
+      "main_business": "",
+      "contact_name": "",
+      "contact_mobile": "",
+      "address": {
+        "latitude": 0,
+        "longitude": 0,
+        "address": "",
+        "address_detail": ""
+      }
     },
 
   },

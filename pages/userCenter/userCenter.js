@@ -10,12 +10,13 @@ Page({
   data: {
    userInfo:{},
    list:[
-     { name: "我的发票", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineInvoice.png", openType:""},
-     { name: "我的试用", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineTrial.png", openType: "" },
-     { name: "客户服务", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineService.png", openType:"contact"},
-     { name: "AI诊肤", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineAi.png", openType: ""},
+     { name: "商家入住", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineInvoice.png", openType:""},
+     { name: "积分兑换", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineTrial.png", openType: "" },
+    
+     { name: "升级会员", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineAi.png", openType: ""},
      { name: "领券中心", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineTicketcenter.png", openType: "" },
-     { name: "礼品卡", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_4.png", openType: ""}
+     { name: "邀请返利", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_4.png", openType: ""},
+     { name: "客户服务", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineService.png", openType: "contact" },
    ],
     goodsList: [], // 商家自营
     noMore: false,

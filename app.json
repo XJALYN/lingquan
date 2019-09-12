@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/merchant/merchant",
     "pages/index/index",
     "pages/myPushlishJobs/myPushlishJobs",
-    "pages/merchant/merchant",
+   
     "pages/merchantRegister/merchantRegister",
     
      "pages/jobDetail/jobDetail",
@@ -70,8 +71,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
-    "navigationStyle":"custom"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#cbcbcb",

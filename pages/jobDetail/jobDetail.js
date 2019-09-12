@@ -8,21 +8,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shareArticleData:[],
-    articleParam:{ //发现详情
-      articleId:""
-    },
-    shareArticleParam:{ //发现详情分享
-      "articleId":null
-    }
+   newsData:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.articleParam.articleId = options.articleId
-    console.log("详情多少", options)
+    this.data.id = options.id
+    this.newsDetail()
 
   },
 
@@ -37,8 +31,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.articleDetail() //发现接口
-    // this.shareArticle()
   },
 
   /**
