@@ -53,7 +53,6 @@ const request = function(method, url, params = {}){
     if (data == null) {
       data = {}
     }
-    data.subChannelNo = config.subChannelNo
     let header = SignHeader(params, token)
     header.accessToken = token
     wx.request({
@@ -66,7 +65,7 @@ const request = function(method, url, params = {}){
         if (checkNetStatus(data)) {
           let res = data.data
           if (!handleLoginError(res)) {
-            if (res.code == 201) {
+            if (res.code == 0) {
               // 隐藏弹窗
               // hideAuthorModal()
               resolve(res)

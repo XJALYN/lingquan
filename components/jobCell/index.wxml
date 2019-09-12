@@ -3,41 +3,28 @@
           <image class='fgnHead' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2619617470,2494137875&fm=26&gp=0.jpg' lazy-load></image>
           <view class='fgInfo'>
               <view class='fgiName'>
-                <text>北京人才市场中心</text>
+                <text>{{data.contact_name}}</text>
                 <text>已认证</text>
               </view>
-              <view class='fgTime'>2019-10-23</view>
+              <view class='fgTime'>{{data.publish_time}}</view>
           </view>
           <view class='fgSup'>
-            <text>15</text>
+            <text>{{data.liked_count}}</text>
             <icon class="hasSupport iconfont dianzan" bindtap='onclickNoSupport'></icon>
             <!-- <icon class='noSupport iconfont weidianzan' data-index="{{index}}" bindtap='onclickSupport'></icon> -->
           </view>
         </view>
 
         <view class='fgImg' >
-          <block wx:for="{{[1,2,3]}}" wx:key="{{imageIndex}}" wx:for-item="image" wx:for-index="imageIndex">
-<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566733964436&di=feb1c9368540543f72102fde6ec16de2&imgtype=0&src=http%3A%2F%2Fimg.yanj.cn%2Fstore%2Fgoods%2F6403%2F6403_00d48975be213362e3a61ae286542521.png_max.png' wx:key="{{imageIndex}}" catchtap='onPreviewImages' data-index="{{imageIndex}}" data-list='{{item.articleImgUrlList}}' lazy-load></image>
+          <block wx:for="{{data.images}}" wx:key="{{imageIndex}}" wx:for-item="image" wx:for-index="imageIndex">
+<image src='{{image.thumb_image_url}}' wx:key="{{imageIndex}}" catchtap='onPreviewImages' data-index="{{imageIndex}}" data-list='{{item.articleImgUrlList}}' lazy-load></image>
           </block>
             
         </view>
 
         <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
-            <text class='ellips_line3'>记者从西安市人力资源和社会保障局获悉：2019西安海归人才暨博士硕士研究生专场招聘会8月25日在西安高新区丝路人才大市场举行。
-　　此次招聘会将有80家西安企业参加，涉及教育培训、航空航天、材料研发、能源电力、电子技术、汽车制造、建筑设计、经济金融、医疗医药、文化传播等10余个行业领域，涵盖机械、材料、新能源、计算机、电子、金融、法律、财务统计、市场营销、语言、文学、哲学等百余个专业类别。现场将提供2272个岗位，其中，要求学历为博士研究生的岗位有1274个、硕士研究生的岗位371个、本科学历的岗位627个。</text>
+            <text class='ellips_line3'>{{data.content}}</text>
             <text>查看</text>
-        </view>
-
-        <view class='fgDetail' bindtap='onclickComdetail' data-prodcode="{{item.prodCode}}" wx:if="{{item.prodCode}}">
-            <image src='{{item.prodImageUrl}}?x-oss-process=style/xcxBalanceMesPic' lazy-load></image>
-            <view class='fgdMes'>
-                <text class='fgdmName'>{{item.prodName}}</text>
-                <view class='fgdPrice'>
-                  <text>¥</text>
-                  <text>{{item.standardRetailPrice}}</text>
-                  <view class='iconfont icongouwuchexiao' size='20'></view>
-                </view>
-            </view>
         </view>
         
         <view class='fgdPeople'>
@@ -45,7 +32,7 @@
                <image wx:for="{{item.buyHeadImgUrlList}}" src='{{item}}' wx:key="{{index}}" lazy-load></image>
             </view>
             <view class='fgdPnum'>
-                已有<text>200</text>位用户浏览
+                已有<text>{{data.visited_count}}</text>位用户浏览
             </view>  
         </view>
     </view>

@@ -53,8 +53,6 @@ module.exports = {
             sourceUrl = pages[0].route + "?" + query.join("&")
           }
           var params = {
-            'channel': 2,
-            'sourceUrl': sourceUrl,
             'code': e.code,//e.code
           }
           console.log(params)
@@ -62,10 +60,8 @@ module.exports = {
           that.requestLogin(params).then(res => {
             wx.$db.isAuthorizing = false
             resolve(res)
-            if (res.code == "201") {
-              wx.$db.token = res.body.accessToken
-              wx.$db.userType = res.body.userType
-              wx.$db.unionId = res.body.unionId
+            if (res.code == 0) {
+              wx.$db.token = res.data.access_token
               console.log("静默授权",res)
               //  登录成功需要通知当前页面
               let pages = getCurrentPages()
@@ -106,7 +102,7 @@ module.exports = {
             return
           }
           var result = JSON.parse(res.data)
-          if (result.code == 201) {
+          if (result.code == 0) {
             resolve(result)
           } else {
             wx.$showToast(result.exception.message)

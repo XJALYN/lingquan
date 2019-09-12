@@ -1,7 +1,7 @@
 const random = require("../utils/util.js").random
 const MD5 = require("../utils/md5.js")
-const app_key = ""
-const app_secret = ""
+const app_key = "tbam89dtwt7j5w1co0j6wmyp8kaqi1gk"
+const app_secret = "4dwrq155wls0y87xolpessy1lv5agbmx9b6sbqgyext8b84np0evp789682e5q77"
 
 /**
  * desc  序列化编码
@@ -39,12 +39,12 @@ const createHeader = (params, token = '') => {
   const nonce = random(32)
   const sign = generateSign(params, timestamp, nonce)
   const header = {
-    client_type: "4",
+    client_type: "1",
     signature: sign,
     timestamp: timestamp,//10位
     "Content-type": "application/json",
     Authorization: "Bearer " + token,
-    app_key: app_key,
+    app_id: app_key,
     nonce: nonce
   }
   return header

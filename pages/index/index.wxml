@@ -2,6 +2,6 @@
 <kc-navigation-bar title="邻圈" bindchangeaddress="onChangeAddress" showLocation="true" country="{{currentCountry}}"/>
 <kc-banner list="{{bannerList}}"/>
 
-<kc-job-list />
+<kc-job-list list="{{newList}}"/>
 
 

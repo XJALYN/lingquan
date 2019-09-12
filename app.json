@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/myPushlishJobs/myPushlishJobs",
     "pages/merchant/merchant",
     "pages/merchantRegister/merchantRegister",
-    "pages/index/index",
+    
      "pages/jobDetail/jobDetail",
     "pages/find/find",
     "pages/home/home",
@@ -29,7 +30,6 @@
     "pages/livePlayer/livePlayer",
     "pages/electronicInvoice/electronicInvoice",
     "pages/shoppingCart/shoppingCart",
-    
     "pages/find1/find",
     "pages/member/member",
     "pages/member1/member",
@@ -46,7 +46,6 @@
     "pages/search/search",
     "pages/vipBuyRecord/vipBuyRecord",
     "pages/shopCenter/shopCenter",
-    "components/shareFooter/shareFotter",
     "pages/webview/webview"
   ],
   "subpackages": [

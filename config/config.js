@@ -1,7 +1,7 @@
 
-let devUrl = ""
-let qaUrl = ""
-let proUrl = ""
+let devUrl = "https://gateway.car3dad.cn/api/v1.0"
+let qaUrl = "https://gateway.car3dad.cn/api/v1.0"
+let proUrl = "https://gateway.car3dad.cn/api/v1.0"
 
 module.exports = {
   baseUrl: proUrl,
