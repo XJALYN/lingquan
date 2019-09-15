@@ -1,6 +1,7 @@
 // pages/addressAdd/addressAdd.js
 const event = require("./event.js")
 const net = require("./net.js")
+
 Page({
   ...event,
   ...net,
@@ -35,7 +36,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+  
   },
 
   /**

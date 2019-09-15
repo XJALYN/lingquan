@@ -223,7 +223,7 @@ module.exports = {
 
     return new Promise(function (resolve, reject){
       wx.uploadFile({
-        url: url, 
+        url: config.baseUrl + url, 
         filePath: filePath,
         name: 'file',
         header: header,
@@ -234,8 +234,6 @@ module.exports = {
             let res = JSON.parse(data.data) 
             if (!handleLoginError(res)) {
               if (res.code == 0) {
-                console.log("----")
-               
                 resolve(res)
               } else {
                 wx.$showToast(res.exception.message)

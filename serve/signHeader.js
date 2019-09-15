@@ -10,17 +10,54 @@ const app_secret = "4dwrq155wls0y87xolpessy1lv5agbmx9b6sbqgyext8b84np0evp789682e
  *      3.全部转换为小写
  */ 
 const serializeParams = (t = {}) => {
+  if (typeof t == "string") {
+    return t
+  }
+  if(typeof t != 'object'){
+   return t
+  }
+
   const keys = Object.keys(t)
-  const sortKeys = keys.sort(($1, $2) => { return $1 > $2 })
+  
+  const sortKeys = keys.sort(($1, $2) => { 
+    return $1.localeCompare($2)
+    })
   let result = ''
   sortKeys.map(key => {
     let value = t[key]
     if (value instanceof Array) {
       value = value.join(',')
     }
+    if (typeof value == 'undefined') {
+  
+    } else if(isEmptyObject(value)) {
+      value = ""
+    } else if (Array.isArray(value)) {
+        var tmp = ''
+        value.forEach(function (v, key, arr) {
+          tmp += serializeParams(v)
+          if (key < value.length - 1) {
+            tmp += ','
+          }
+        })
+        value = tmp
+      }else{
+       value = serializeParams(value)
+      }
+    
+
+    
     result += `${key}${value}`
+   
   })
   return result.toLocaleLowerCase()
+}
+
+function isEmptyObject(obj) {
+  if (JSON.stringify(obj) === '{}') {
+    return true // 如果为空,返回false
+  }
+  return false // 如果不为空，则会执行到这一步，返回true
 }
 
 /**
@@ -28,6 +65,7 @@ const serializeParams = (t = {}) => {
  */
 const generateSign = (params, timestamp, nonce) => {
   const paramsSerializeString = serializeParams(params)
+  console.log(paramsSerializeString)
   return MD5(app_key + app_secret + timestamp + nonce + paramsSerializeString)
 }
 

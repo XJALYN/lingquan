@@ -1,15 +1,7 @@
 module.exports = {
   // 跳转到工具页面
   onPushToTools(e){
-   let index = e.currentTarget.dataset.index
-   if(index==0){
-     wx.$router.push("/pages/merchantRegister/merchantRegister")
-    
-   }else if(index==5){
-     wx.$router.push("/pages/giftCardRecharge/giftCardRecharge")
-   }else{
-     wx.$showToast("敬请期待!")
-   }
+    wx.$showToast("敬请期待!")
   },
 
   onPushToSetting(e){
@@ -40,31 +32,22 @@ module.exports = {
   onPushToMyCoupon(){
     wx.$router.push('/pages/coupon/coupon')
   },
+
   // 我的积分页面
   onPushToMyIntegral(){
     wx.$router.push("/pages/myIntegral/myIntegral")
   },
+
   // 我的余额
   onPushToMyBalance(){
     wx.$router.push("/pages/myBalance/myBalance")
   },
-  // 售后列表
-  onPushToAfterSales(){
-    wx.$router.push("/pages/afterSale/afterSale")
+
+  onPushToPath(e){
+     wx.$router.push(e.currentTarget.dataset.path)
   },
-  // 获取商品详情
-  onPushToGoodsDetail(e){
-    let prodCode = e.currentTarget.dataset.prodcode
-    wx.$router.push("/pages/commodityDetail/commodityDetail", { prodCode })
-  },
-  // 进入领福袋页面
-  onPushToLuckyBag() {
-    wx.navigateTo({
-      url: '/pages/luckyBag/luckyBag',
-    })
-  },
+
   onAuthorSuccess(){
-    this.getUserInfo()
-    console.log("授权成功")
+    this.usersProfile()
   }
 }

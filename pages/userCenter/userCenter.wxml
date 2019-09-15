@@ -2,7 +2,7 @@
 <import src="./header/index" />
 <import src="./orderList/index" />
 
-<!-- <kc-author-userinfo bindsuccess="onAuthorSuccess" wx:if="{{userType != 2}}"/> -->
+<kc-author-userinfo bindsuccess="onAuthorSuccess" wx:if="{{needAuthorUserInfo}}"/>
 <view class="animated fadeIn">
 <template is="header" data="{{...userInfo}}"/>
  <view class="content-top"></view>
@@ -15,6 +15,17 @@
    </view>
    <template is="orderList" data="{{...orderStatusNums}}"/>
   </view> -->
+
+  <!-- 工具 -->
+  <view class="tools" wx:if="{{userInfo.certified_status==2}}">
+    <view class="tools__title">商家工具</view>
+    <view class="tools__list">
+      <button class="tools__list__item" wx:for="{{shopTools}}" wx:key="{{index}}" plain style='border:none;padding:0 0' open-type='{{item.openType}}' bindtap='onPushToPath' data-path='{{item.path}}'>
+        <image class="tools__list__item__icon" src="{{item.src}}"></image>
+        <view class="tools__list__item__title">{{item.name}}</view>
+      </button>
+    </view>
+  </view>
 
 
   <!-- 工具 -->
@@ -43,8 +54,8 @@
     </view>
 
     <!-- 我的分享金 -->
-    <view class="more-list__item" bindtap='onPushToShareMoney'>
-     <view class="more-list__item__title">我的分享金</view>
+    <view class="more-list__item" bindtap='onPushToPath' data-path="/pages/merchantRegister/merchantRegister">
+     <view class="more-list__item__title">商家入驻</view>
      <view class="more-list__item__arrow iconfont iconyoujiantou"></view>
     </view>
   </view>

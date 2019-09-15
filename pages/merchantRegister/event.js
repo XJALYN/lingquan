@@ -1,3 +1,5 @@
+const addressToGeoCode = require("../../utils/location.js").addressToGeoCode
+
 module.exports = {
   // 
   onInputCompanyName(e){
@@ -11,7 +13,7 @@ module.exports = {
    
   },
   onInputAddress(e){
-    this.data.params.detail = e.detail.value
+    this.data.params.address.address_detail = e.detail.value
   },
   onInputPostCode(e){
     this.data.params.postcode = e.detail.value
@@ -19,9 +21,7 @@ module.exports = {
   onInputRegion(e){
     let list = e.detail.value
     this.setData({
-      'params.province': list[0],
-      'params.city':list[1],
-      'params.area':list[2]
+      'params.address.address': list.join(',')
     })
   },
   // 请输入主营业务
@@ -32,8 +32,27 @@ module.exports = {
    wx.chooseImage({
      count:1,
      success:(res)=>{
-
+       let t = {
+         filePath: res.tempFilePaths[0]
+       }
+       console.log(res)
+       wx.showLoading({
+         title: '上传中...',
+         duration:10000
+       })
+       wx.$methods.fileUpload(t).then(res=>{
+         wx.hideLoading()
+         this.setData({
+           'params.license_url': res.data.absolute_url
+         })
+         console.log(res)
+       }).catch(err=>{
+         wx.hideLoading()
+       })
      },
+     fail:err=>{
+       
+     }
    })
   },
 
@@ -44,47 +63,57 @@ module.exports = {
       check:this.check(true)
     })
     if (this.data.check) {
-      this.addressAdd()
+      addressToGeoCode({ address: this.data.params.address.address}).then(res => {
+        this.data.params.address.latitude = +res.latitude
+        this.data.params.address.longitude = +res.longitude
+        this.certifyEnterprise()
+      })
+
+      
     }
    
   },
   check(showToast=false){
     let  {
-      area,
-      province,
-      city,
-      contact,
-      phone,
-      postcode,
-      detail
+      main_business,
+      main_industry_category,
+      logoUrl,
+      contact_name,
+      contact_mobile,
+      license_url,
+      license_no,
+      name,
+      address
     } = this.data.params
-    if (!contact){
+    if (!name){
       if (showToast){
-        wx.$showToast('收件人未填写')
-      }
-      return false
-    }
-    if (!/1[0-9]{10}/.test(phone)){
-      if (showToast) {
-        wx.$showToast('请输入11位手机号码')
+        wx.$showToast('联系人未填写')
       }
       return false
     }
 
-    if (!province){
+    if (!license_url) {
+      if (showToast) {
+        wx.$showToast('请上传营业执照')
+      }
+      return false
+    }
+
+    if (!/1[0-9]{10}/.test(contact_mobile)){
+      if (showToast) {
+        wx.$showToast('请检查联系人手机')
+      }
+      return false
+    }
+
+    if (!address){
       if (showToast) {
         wx.$showToast('请选择省市区')
       }
       return false
     }
-    if (postcode&&postcode.length != 6){
-      if (showToast) {
-        wx.$showToast('邮政编码格式不正确')
-      }
-      return false
-      
-    }
-    if (!detail){
+
+    if (!address.address_detail){
       if (showToast) {
         wx.$showToast('详情地址未填写')
       }

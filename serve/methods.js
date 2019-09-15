@@ -1,6 +1,7 @@
 var Api = require("api")
 const Post = require("request").post
 const Get = require("request").get
+const Upload = require("request").upload
 const PostUsingAuthor = require("request").postUsingAuthor
 
 
@@ -12,6 +13,11 @@ const PostUsingAuthor = require("request").postUsingAuthor
 const login = (params = {}) => {
   return Post(Api.login, params)
 }
+
+const authorWxInfo = (params = {}) => {
+  return Post(Api.authorWxInfo, params)
+}
+
 /**
  * 新闻列表
  * params {code:'微信授权code'}
@@ -43,6 +49,14 @@ const certifyEnterprise = (params = {}) => {
   return Post(Api.certifyEnterprise,params)
 }
 
+const usersProfile = (params = {}) => {
+  return Post(Api.usersProfile,params)
+}
+
+const fileUpload = (params = {}) => {
+  return Upload(Api.fileUpload, params.filePath,params)
+}
+
 
 
 module.exports = {
@@ -50,6 +64,10 @@ module.exports = {
   newList,
   advertisingBanners,
   newsDetail,
-  certifyEnterprise
+  certifyEnterprise,
+  usersProfile,
+  authorWxInfo,
+  fileUpload,
+  
 }
 

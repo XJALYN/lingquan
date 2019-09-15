@@ -39,18 +39,13 @@ Component({
               success:res=>{
                 let t = {
                   code:e.code,
-                  ivStr: res.iv,
-                  channel:2,
-                  encryptedData:res.encryptedData
+                  iv: res.iv,
+                  referrer: 0,
+                  encrypted_data:res.encryptedData
                 }
-                wx.$methods.authorLogin(t).then(res=>{
+                wx.$methods.authorWxInfo(t).then(res=>{
                    wx.hideLoading()
-                   wx.$db.userType = res.body.userType
-                   wx.$db.token = res.body.accessToken
-                   wx.$db.unionId = res.body.unionId
-                   console.log("修改用户信息", res)
-                   this.triggerEvent('success')
-                   wx.setStorageSync("home:newUserWelfare", true)
+                   this.triggerEvent("success")
                 })
               }
             })

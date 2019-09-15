@@ -2,11 +2,10 @@
   position: fixed;
   top: -1px;
   left: -1px;
- width: 100%;
- height: calc(100vh - 100rpx);
- display: flex;
- flex-direction: column;
-
+  width: 100%;
+  height: calc(100vh - 100rpx);
+  display: flex;
+  flex-direction: column;
  border: 1px solid rgba(0,0,0,0);
  z-index: -1;
  background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineBgs.png");

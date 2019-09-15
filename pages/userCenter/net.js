@@ -1,8 +1,8 @@
 module.exports = {
-  getUserInfo(){
-    wx.$methods.getUserInfo({}).then(res=>{
+  usersProfile(){
+    wx.$methods.usersProfile({}).then(res=>{
         console.log(res)
-      if (res.body.headImgUrl.indexOf("kshop-pro-data") != -1){
+      if (!res.data.nick_name){
           this.setData({
             needAuthorUserInfo:true
           })
@@ -12,11 +12,8 @@ module.exports = {
         })
       }
         this.setData({
-          userInfo:res.body
+          userInfo:res.data
         })
-      if (this.data.userInfo.memberCardLevel < 4){
-        this.getLuckyBugRecevingRecord()
-      }
     })
   },
 
