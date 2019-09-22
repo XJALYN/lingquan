@@ -3,11 +3,12 @@
 <view class='findGoods'>
     <view class='fgList' >
         <view class='fgName'>
-          <image class='fgnHead' src='{{newsData.sender.avatar_url}}'></image>
+          <image class='fgnHead' src='{{newsData.author.avatar_url}}'></image>
           <view class='fgInfo'>
               <view class='fgiName'>
-                <text>{{newsData.sender.nick_name}}</text>
-                <text>{{newsData.sender.is_certified?'已认证':'未认证'}}</text>
+                <text>{{newsData.author.nick_name}}</text>
+                <image wx:if="{{newsData.author.is_certified}}" class="fgiName__icon" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/homeV.png"></image>
+           
               </view>
               <view class='fgTime'>{{newsData.publish_time}}</view>
           </view>

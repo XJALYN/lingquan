@@ -1,0 +1,14 @@
+/* packageA/pages/myPublishList/myPublishList.wxss */
+.btn-add{
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+  bottom: 80rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80rpx;
+  z-index: 10;
+
+}

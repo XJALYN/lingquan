@@ -32,7 +32,7 @@ const checkNetStatus= function(res){
 //  1005 token 失效
 //  1006 token 失效
 const handleLoginError=function(res){
-  if (res.code == 205 && (res.exception.errorCode == 1006 || res.exception.errorCode == 1005 || res.exception.errorCode == 3005 || res.exception.errorCode == 1009 || res.exception.errorCode == 1000)) {
+  if (res.code == 1000) {
   console.log("-------ddddddd");
     return true
   } else {
@@ -70,10 +70,7 @@ const request = function(method, url, params = {}){
               // hideAuthorModal()
               resolve(res)
             } else {
-              let msg = res.exception.message
-              if (res.exception.message.indexOf("@@@") > -1){
-                msg = res.exception.message.split('@@@')[1]
-              }
+              let msg = res.message
               if(params.pass){
                 reject && reject(data)
               }else{

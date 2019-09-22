@@ -1,10 +1,9 @@
 {
   "pages": [
-    
     "pages/index/index",
+    "pages/merchant/merchant",
     "pages/myPushlishJobs/myPushlishJobs",
     "pages/merchantRegister/merchantRegister",
-    "pages/merchant/merchant",
     "pages/jobDetail/jobDetail",
     "pages/find/find",
     "pages/home/home",
@@ -38,7 +37,6 @@
     "pages/addressList/addressList",
     "pages/addressAdd/addressAdd",
     "pages/addressEdit/addressEdit",
-    
     "pages/setting/setting",
     "pages/addressChoiceList/addressChoiceList",
     "pages/commodityDetail/commodityDetail",
@@ -52,9 +50,8 @@
     {
       "root": "packageA",
       "pages": [
-        "pages/qixi/qixi",
-        "pages/rateGoods/rateGoods",
-        "pages/goodsRateList/goodsRateList"
+        "pages/jobPublish/jobPublish",
+        "pages/myPublishList/myPublishList"
       ]
     }
   ],
@@ -98,17 +95,16 @@
     "kc-modal": "/components/modal/index",
     "page": "/components/page/index",
     "kc-form": "/components/form/index",
-    "kc-back-home":"/components/backhome/index",
+    "kc-back-home": "/components/backhome/index",
     "kc-author-userinfo": "/components/authorUserInfo/index",
     "kc-rater": "/components/rater/index",
-    "kc-navigation-bar":"/components/navigationBar/index",
-    "kc-banner":"/components/banner/index",
-    "kc-job-cell":"/components/jobCell/index",
-    "kc-job-list":"/components/jobList/index"
+    "kc-navigation-bar": "/components/navigationBar/index",
+    "kc-banner": "/components/banner/index",
+    "kc-job-cell": "/components/jobCell/index",
+    "kc-job-list": "/components/jobList/index"
   },
   "sitemapLocation": "sitemap.json",
   "navigateToMiniProgramAppIdList": [
     "wx6106b6dfe9370a7c"
   ]
-
 }

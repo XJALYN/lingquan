@@ -105,7 +105,7 @@ module.exports = {
           if (result.code == 0) {
             resolve(result)
           } else {
-            wx.$showToast(result.exception.message)
+            wx.$showToast(result.message)
           }
         }, fail: (res) => {
           console.log(res)

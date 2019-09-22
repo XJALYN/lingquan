@@ -1,24 +1,17 @@
-// pages/addressAdd/addressAdd.js
-const event = require("./event.js")
+// packageA/pages/jobPublish/jobPublish.js
 const net = require("./net.js")
-
+const event = require("./event.js")
 Page({
-  ...event,
   ...net,
+  ...event,
   /**
    * 页面的初始数据
    */
   data: {
-    loading: false,
-    check: false,
-    params: {
-      "name": "",
-      "logo_url": "",
-      "license_no": "",
-      "license_url": "",
-      "main_industry_category": "",
-      "main_industry_category_name":"",
-      "main_business": "",
+    params:{
+      "content": "1",
+      "category_id": 1,
+      "image_urls": [],
       "contact_name": "",
       "contact_mobile": "",
       "address": {
@@ -28,19 +21,17 @@ Page({
         "address_detail": ""
       }
     },
-    categories:[],
-    flag:"create",// create edit
+    certify:{
 
+    }
   },
-
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.industriesCategories()
-    
+    this.certifyInfo()
+    this.newsCategories()
   },
 
   /**
@@ -82,6 +73,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
 
   }
 })

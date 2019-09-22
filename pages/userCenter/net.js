@@ -2,15 +2,6 @@ module.exports = {
   usersProfile(){
     wx.$methods.usersProfile({}).then(res=>{
         console.log(res)
-      if (!res.data.nick_name){
-          this.setData({
-            needAuthorUserInfo:true
-          })
-      }else{
-        this.setData({
-          needAuthorUserInfo: false
-        })
-      }
         this.setData({
           userInfo:res.data
         })

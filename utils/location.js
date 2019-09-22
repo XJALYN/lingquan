@@ -25,8 +25,8 @@ module.exports = {
             if (geocodes && geocodes.length > 0){
               let list = geocodes[0].location.split(',')
               let t = {
-                "latitude": list[0],
-                "longitude": list[1],
+                "latitude": list[1],
+                "longitude": list[0],
               }
               resolve(t)
             }else{

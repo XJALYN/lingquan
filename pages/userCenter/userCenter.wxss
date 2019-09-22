@@ -2,7 +2,7 @@
 @import "./header/index";
 @import "./orderList/index";
 .content-top{
-  margin-top: 360rpx;
+  margin-top: 150rpx;
   height: 63rpx;
   width: 750rpx;
   background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/minePullBg.png");
@@ -92,7 +92,7 @@
   height: 32rpx;
   line-height: 32rpx;
   color: #666666;
-  font-size: 24rpx;
+  font-size: 22rpx;
 }
 .more-list{
   margin-top: 20rpx;
@@ -237,4 +237,9 @@
  flex:1;
  text-align: right;
  margin-right: 24rpx;
+}
+
+.more-list__item__status{
+  font-size: 24rpx;
+  color: #666666;
 }

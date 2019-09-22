@@ -1,0 +1,38 @@
+<template name="uploadImages">
+<view class="upload">
+
+<view class="upload-header">
+ <image class="upload-header__icon" src="{{certify.logo_url}}"></image>
+ <view class="upload-header__title">请输入招聘信息</view>
+ <view class="upload-header__rater">
+ </view>
+ 
+</view>
+
+<view class="upload-content">
+ <textarea class="upload-content__input" placeholder="输入的信息越详细,越能吸引求职者哦~" placeholder-class="upload-content__input-placeholder" bindinput="onInputContent"></textarea>
+ <!-- <view class="upload-content__tip">0/500</view> -->
+</view>
+
+<view class="upload-images__title">添加视频/图片 ({{params.image_urls.length}}/9)</view>
+
+<view class="upload-images-placeholder" bindtap="onUploadImage" wx:if="{{params.image_urls.length == 0}}">
+  <view class="upload-images-placeholder__icon iconfont tianjiatupian"></view>
+  <view class="upload-images-placeholder__title">添加图片/视频能吸引求职者</view>
+</view>
+<view class="upload-images">
+  <view class="upload-images__list">
+    <view class="upload-images__list__item" wx:for="{{params.image_urls}}" wx:key="{{index}}">
+      <image class="upload-image__list__item__image" src="{{item}}"></image>
+      <image class="upload-image__list__item__image__delete iconfont qingchu"></image>
+    </view>
+     
+     <!-- 添加图片 -->
+    <view class="upload-images__list__item__add" bindtap="onUploadImage" wx:if="{{params.image_urls.length < 9 &&params.image_urls.length != 0 }}">
+      <view class="upload-images__list__item__add__icon iconfont tianjiatupian"></view>
+      <view class="upload-images__list__item__add__title">添加图片/视频</view>
+    </view>
+  </view>
+</view>
+</view>
+</template>

@@ -10,6 +10,12 @@ Page({
   data: {
     bannerList: [{ src:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566732525910&di=2bad8eb429652fec32019f2dcc9f3924&imgtype=0&src=http%3A%2F%2Fpic.qqtn.com%2Ffile%2F2013%2F2013-9%2F201399110938537731.png"}],
     currentCountry:"上海",
+    jobParams:{
+      "category_id":1,
+      "page_no": 1,
+      "page_size": 20,
+      "noMore":false
+    },
     newList:[]
   },
 

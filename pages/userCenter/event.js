@@ -46,6 +46,11 @@ module.exports = {
   onPushToPath(e){
      wx.$router.push(e.currentTarget.dataset.path)
   },
+  onPushToMerchantRegister(e){
+    if (this.data.userInfo.certified_status == -1 || this.data.userInfo.certified_status == 2){
+      wx.$router.push("/pages/merchantRegister/merchantRegister")
+    }
+  },
 
   onAuthorSuccess(){
     this.usersProfile()

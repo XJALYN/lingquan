@@ -1,0 +1,4 @@
+<!--packageA/pages/myPublishList/myPublishList.wxml-->
+<kc-job-list list="{{newsList}}"/>
+
+<view class="btn-add  iconfont fabu" bindtap="onPushToPublish"></view>

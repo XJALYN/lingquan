@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+page{
+  background: white !important;
+}
+
 .color_gray{
  color:#333;
 }
@@ -23,7 +27,6 @@
   background: #F61B6D;
 }
 
-page{background-color: #F5F5F5;}
 
 
 .main_font_color {

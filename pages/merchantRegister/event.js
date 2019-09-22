@@ -1,6 +1,15 @@
 const addressToGeoCode = require("../../utils/location.js").addressToGeoCode
 
 module.exports = {
+  onInputCategory(e){
+    let value = e.detail.value
+    let categorie = this.data.categories[value]
+    this.setData({
+      'params.main_industry_category_name':categorie.name,
+      'params.main_industry_category':categorie.code
+    })
+    console.log(e)
+  },
   // 
   onInputCompanyName(e){
     this.data.params.name= e.detail.value
@@ -24,37 +33,58 @@ module.exports = {
       'params.address.address': list.join(',')
     })
   },
+  onInputBusinessLicense(e){
+    this.data.params.license_no = e.detail.value
+  },
   // 请输入主营业务
   onInputBusinessDescribe(e){
     this.data.params.main_business = e.detail.value
   },
   onChooseImage(e){
-   wx.chooseImage({
-     count:1,
-     success:(res)=>{
-       let t = {
-         filePath: res.tempFilePaths[0]
-       }
-       console.log(res)
-       wx.showLoading({
-         title: '上传中...',
-         duration:10000
-       })
-       wx.$methods.fileUpload(t).then(res=>{
-         wx.hideLoading()
-         this.setData({
-           'params.license_url': res.data.absolute_url
-         })
-         console.log(res)
-       }).catch(err=>{
-         wx.hideLoading()
-       })
-     },
-     fail:err=>{
-       
-     }
-   })
+    this.selecteImage().then(data => {
+      console.log("data", data)
+      this.setData({
+        'params.license_url': data.absolute_url
+      })
+    })
   },
+  selecteImage(){
+   return new Promise((resolve,reject)=>{
+   wx.chooseImage({
+    count: 1,
+    success: (res) => {
+      let t = {
+        filePath: res.tempFilePaths[0]
+      }
+      console.log(res)
+      wx.showLoading({
+        title: '上传中...',
+        duration: 10000
+      })
+      wx.$methods.fileUpload(t).then(res => {
+        wx.hideLoading()
+        resolve(res.data)
+        console.log(res)
+      }).catch(err => {
+        wx.hideLoading()
+        reject(err)
+      })
+    },
+    fail: err => {
+
+    }
+  })
+})
+},
+  onChooseLogoImage(){
+    this.selecteImage().then(data=>{
+      console.log("data", data)
+      this.setData({
+        'params.logo_url':data.absolute_url
+      })
+    })
+  },
+
 
   //  请求添加地址
   onAddressAdd(e){
@@ -87,7 +117,13 @@ module.exports = {
     } = this.data.params
     if (!name){
       if (showToast){
-        wx.$showToast('联系人未填写')
+        wx.$showToast('店铺名称未填写')
+      }
+      return false
+    }
+    if (!license_no){
+      if (showToast) {
+        wx.$showToast('营业执照编号未填写')
       }
       return false
     }
@@ -98,6 +134,15 @@ module.exports = {
       }
       return false
     }
+
+    if (!contact_name) {
+      if (showToast) {
+        wx.$showToast('联系人姓名未填写')
+      }
+      return false
+    }
+
+    
 
     if (!/1[0-9]{10}/.test(contact_mobile)){
       if (showToast) {

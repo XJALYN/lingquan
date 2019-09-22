@@ -57,6 +57,26 @@ const fileUpload = (params = {}) => {
   return Upload(Api.fileUpload, params.filePath,params)
 }
 
+const industriesCategories = (params = {}) => {
+  return Post(Api.industriesCategories,params)
+}
+
+const certifyInfo = (params = {}) => {
+  return Post(Api.certifyInfo,params)
+}
+
+const newCreate = (params = {}) => {
+  return Post(Api.newCreate,params)
+}
+
+const newsCategories = (params = {}) => {
+  return Post(Api.newsCategories,params)
+}
+
+const myPublishedList = (params = {}) =>{
+  return Post(Api.myPublishedList,params)
+}
+
 
 
 module.exports = {
@@ -68,6 +88,10 @@ module.exports = {
   usersProfile,
   authorWxInfo,
   fileUpload,
-  
+  industriesCategories,
+  certifyInfo,
+  newCreate,
+  newsCategories,
+  myPublishedList
 }
 

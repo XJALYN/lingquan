@@ -4,13 +4,13 @@
           <view class='fgInfo'>
               <view class='fgiName'>
                 <text>{{data.contact_name}}</text>
-                <text>已认证</text>
+                <image class="fgInfo__icon" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/homeV.png"></image>
               </view>
               <view class='fgTime'>{{data.publish_time}}</view>
           </view>
           <view class='fgSup'>
             <text>{{data.liked_count}}</text>
-            <icon class="hasSupport iconfont dianzan" bindtap='onclickNoSupport'></icon>
+            <view class="hasSupport iconfont zan" bindtap='onclickNoSupport'></view>
           </view>
         </view>
 
@@ -23,7 +23,6 @@
 
         <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
             <text class='ellips_line3'>{{data.content}}</text>
-            <text>查看</text>
         </view>
         
         <view class='fgdPeople'>
@@ -31,7 +30,7 @@
                <image wx:for="{{item.buyHeadImgUrlList}}" src='{{item}}' wx:key="{{index}}" lazy-load></image>
             </view>
             <view class='fgdPnum'>
-                已有<text>{{data.visited_count}}</text>位用户浏览
+                <text>{{data.visited_count}}</text>人已查看
             </view>  
         </view>
     </view>

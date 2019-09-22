@@ -5,10 +5,18 @@ module.exports = {
       "page_no": 1,
       "page_size": 30
     }
-    wx.$methods.newList(t).then(res=>{
+    this.data.jobParams.page_no = 1
+    wx.$methods.newList(this.data.jobParams).then(res=>{
       this.setData({
         newList:res.data
       })
+      if (res.data.length < this.data.jobParams.page_size){
+        this.setData({
+          noMore:true
+        })
+      }else{
+        this.data.jobParams.page_no ++
+      }
     })
   },
   advertisingBanners(){

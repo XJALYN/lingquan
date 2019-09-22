@@ -5,8 +5,7 @@
   <view class="header__top">
     <image class="header__top__avatar" src="{{avatar_url}}"></image>
     <text class="header__top__name">{{nick_name?nick_name:'邻圈'}}</text>
-    <image class="header__top__rank-icon" wx:if="{{memberCardLevel==4}}" src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineGeneral.png"></image>
-    <image class="header__top__rank-icon"  src="https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineVipMember.png"></image>
+    <image class="header__top__rank-icon" wx:if="{{is_certified}}" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/certification_icon.png"></image>
     <view style='flex:1'></view>
     <view class="header__top__setting-icon iconfont iconshezhi" bindtap='onPushToSetting'></view>
   </view>

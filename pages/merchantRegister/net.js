@@ -14,5 +14,15 @@ module.exports = {
         wx.navigateBack({})
       },1000)
     })
+  },
+  // 获取行业分类信息
+  industriesCategories(){
+    wx.$methods.industriesCategories().then(res=>{
+      this.setData({
+        categories:res.data
+      })
+      console.log(this.data.categories)
+      this.certifyInfo()
+    })
   }
 }

@@ -1,10 +1,21 @@
 <!--pages/addressAdd/addressAdd.wxml-->
 <import src="./cell/index" />
 <import src="./addressSelectCell/index" />
+<import src="./categories/index" />
 <view class="content">
+
+  <template is="categories" data="{{title:'请选择行业',value: params.main_industry_category_name,placehold:'选择所属行业(必填)',input:'onInputCategory',categories}}"/>
+
   <template is="cell" data="{{title:'公司/商铺名称',placehold:'请输入公司/商铺名称(必填)',input:'onInputCompanyName',type:'text',maxLength:10}}"/>
+   <view class="add-title">上传公司logo</view>
+  <image class="add-icon iconfont shangchuantouxiang" bindtap="onChooseLogoImage" src="{{params.logo_url}}"></image>
+
+
+   <template is="cell" data="{{title:'营业执照编号',placehold:'营业执照编号(必填)',input:'onInputBusinessLicense',type:'text',maxLength:20}}"/>
+
   <view class="add-title">上传营业执照</view>
   <image class="add-icon iconfont shangchuantouxiang" bindtap="onChooseImage" src="{{params.license_url}}"></image>
+
   <view class="add-title">主营业务</view>
   <textarea class="business-desc" placeholder="请输入主营业务" placeholder-class="business-desc__placehold" bindinput="onInputBusinessDescribe"></textarea>
 
