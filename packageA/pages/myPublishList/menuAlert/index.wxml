@@ -1,0 +1,11 @@
+<template name="menuAlert">
+  <view class="menu-alert-mask" bindtap="onHideMenuAlert"></view>
+  <view class="menu-alert">
+  <block wx:for="{{categories}}" wx:key="{{index}}">
+    <view class="menu-alert-item" bindtap="onPushToPublish" data-item="{{item}}">
+      <image class="menu-alert-item__icon" src="{{item.icon}}"></image>
+      <view class="menu-alert-item__title">{{item.name}}</view>
+    </view>
+  </block>
+  </view>
+</template>

@@ -21,6 +21,7 @@ Page({
         "address_detail": ""
       }
     },
+    title:"",
     certify:{
 
     }
@@ -30,6 +31,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.data.params.category_id = +options.id
+    this.setData({
+      title:options.name
+    })
+    wx.setNavigationBarTitle({
+      title: `发布${options.name}`,
+    })
     this.certifyInfo()
     this.newsCategories()
   },

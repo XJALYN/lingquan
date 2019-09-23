@@ -3,14 +3,14 @@
 
 <view class="upload-header">
  <image class="upload-header__icon" src="{{certify.logo_url}}"></image>
- <view class="upload-header__title">请输入招聘信息</view>
+ <view class="upload-header__title">请输入相关信息</view>
  <view class="upload-header__rater">
  </view>
  
 </view>
 
 <view class="upload-content">
- <textarea class="upload-content__input" placeholder="输入的信息越详细,越能吸引求职者哦~" placeholder-class="upload-content__input-placeholder" bindinput="onInputContent"></textarea>
+ <textarea class="upload-content__input" placeholder="输入的信息越详细,越能吸其他人哦~" placeholder-class="upload-content__input-placeholder" bindinput="onInputContent"></textarea>
  <!-- <view class="upload-content__tip">0/500</view> -->
 </view>
 
@@ -18,7 +18,7 @@
 
 <view class="upload-images-placeholder" bindtap="onUploadImage" wx:if="{{params.image_urls.length == 0}}">
   <view class="upload-images-placeholder__icon iconfont tianjiatupian"></view>
-  <view class="upload-images-placeholder__title">添加图片/视频能吸引求职者</view>
+  <view class="upload-images-placeholder__title">添加图片/视频能吸其他人哦~</view>
 </view>
 <view class="upload-images">
   <view class="upload-images__list">

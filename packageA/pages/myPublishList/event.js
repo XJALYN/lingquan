@@ -1,5 +1,16 @@
 module.exports = {
   onPushToPublish(e){
-    wx.$router.push("/packageA/pages/jobPublish/jobPublish")
+    let item = e.currentTarget.dataset.item
+     wx.$router.push(item.path,item)
+  },
+  onHideMenuAlert(e){
+    this.setData({
+      showMenuAlert:false
+    })
+  },
+  onShowMenuAlert(e){
+    this.setData({
+      showMenuAlert: true
+    })
   }
 }

@@ -8,7 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    newsList:[]
+    newsList:[],
+    showMenuAlert:false,
+    categories:[]
   },
 
   /**
@@ -30,6 +32,7 @@ Page({
    */
   onShow: function () {
     this.myPublishedList()
+    this.newsCategories()
   },
 
   /**
