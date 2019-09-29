@@ -24,7 +24,7 @@ Component({
     onReport(e){
       let formId = e.detail.formId
       this.triggerEvent("tap", {data:this.data.data})
-      wx.$methods.saveForm({ formId}).then(res=>{
+      wx.$methods.saveForm({ form_id:formId}).then(res=>{
         console.log(res)
       })
       console.log(formId)

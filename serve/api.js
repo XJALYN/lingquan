@@ -11,5 +11,8 @@ module.exports = {
   certifyInfo:"/certify/account_info", // 获取商家认证信息
   newCreate:"/news/create",// 创建信息
   newsCategories:"/news/categories", // 获取新闻分类
-  myPublishedList:"/news/published_list" // 获取发布列表
+  myPublishedList:"/news/published_list", // 获取发布列表
+  saveForm:"/wechat/form_id/save",  // 上传formId
+  newsDelete:"/news/delete", // 删除文章
+  reportsLocation:"/reports/location",// 上报地理位置
 }

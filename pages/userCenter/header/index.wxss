@@ -12,7 +12,7 @@
  background-size: 100%;
  background-repeat: no-repeat;
  background-origin: 0 -1px;
-  background-color: #020202;
+ background-color: #eee;
 }
 .header__top{
  margin-top: 40rpx;

@@ -5,7 +5,6 @@
   margin-top: 150rpx;
   height: 63rpx;
   width: 750rpx;
-  background: url("https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/minePullBg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

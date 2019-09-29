@@ -2,6 +2,7 @@
 // var qqmapsdk = new QQMapWX({
 //   key: 'OLRBZ-ZTBHJ-24TF4-KTVYL-BSGMS-CQFZC'
 // });
+let key = '5fbf30eb292886114016454cd028c7eb'
 
 module.exports = {
     /**
@@ -14,7 +15,7 @@ module.exports = {
   // },
   addressToGeoCode(t){
     t.output = 'JSON'
-    t.key = '5fbf30eb292886114016454cd028c7eb'
+    t.key = key
     return new Promise((resolve,reject) =>{
       wx.request({
         url: 'http://restapi.amap.com/v3/geocode/geo',
@@ -36,10 +37,36 @@ module.exports = {
             reject(res)
           }
           },
-        fail:reject
+        fail: err => {
+          console.log(err)
+          reject(err)
+        }
       })
     })
    
+  },
+  geoCodeToAddress(t){
+    t.output = 'JSON'
+    t.key = key
+    t.radius = 1000 
+    t.extensions="all"
+    return new Promise((resolve, reject) => {
+      wx.request({
+        url: 'https://restapi.amap.com/v3/geocode/regeo',
+        data: t,
+        success: res => {
+          if (res.statusCode == 200) {
+            resolve(res.data)
+          } else {
+            reject(res)
+          }
+        },
+        fail: err=>{
+          console.log(err)
+          reject(err)
+        }
+      })
+    })
   }
 
 }

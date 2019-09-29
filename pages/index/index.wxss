@@ -1,2 +1,4 @@
 /* pages/index/index.wxss */
+@import "./menu/index";
+@import "./list/index";
 

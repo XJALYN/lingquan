@@ -101,7 +101,7 @@
 }
 
 .fgImg {
-  padding: 30rpx 0;
+  padding: 20rpx 0;
   height: auto;
   overflow: hidden;
 }
@@ -120,6 +120,9 @@
 }
 
 .fgMes {
+  margin-top: 20rpx;
+  font-weight: bold;
+  font-size: 34rpx;
   width: 100%;
   height: auto;
   overflow: hidden;

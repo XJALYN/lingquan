@@ -6,7 +6,11 @@
       <view wx:if="{{showHome}}" class="navigation-bar__home iconfont xiaochengxu-shouye" bindtap="onTapHome"></view>
   </view>
   
-  <picker mode="region" bindchange="onChangeAddress" wx:if="{{showLocation}}">
+   <view class="navigation-bar__location" bindtap="onSelectedAddress" wx:if="{{showLocation && !showCustomAddress}}">
+   <view class="navigation-bar__location__icon iconfont dizhi"></view>
+   <view class="navigation-bar__location__title color_gray">{{country}}</view>
+  </view>
+  <picker mode="region" bindchange="onChangeAddress" wx:if="{{showLocation && showCustomAddress}}">
     <view class="navigation-bar__location">
    <view class="navigation-bar__location__icon iconfont dizhi"></view>
    <view class="navigation-bar__location__title color_gray">{{country}}</view>

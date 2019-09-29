@@ -1,0 +1,303 @@
+/* inPages/findGoods/index.wxss */
+
+.fgList {
+ padding-top: 20rpx;
+ padding-bottom: 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.fgName {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.fgnHead {
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  float: left;
+}
+
+.fgInfo {
+  width: 303rx;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin-left: 16rpx;
+}
+
+.fgiName {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fgiName text:nth-child(1) {
+  color: #343434;
+  font-size: 28rpx;
+  float: left;
+  margin-right: 16rpx;
+}
+
+.fgiName text:nth-child(2) {
+  color: rgb(0, 211, 0);
+  font-size: 22rpx;
+  float: left;
+  margin-right: 16rpx;
+  background: rgba(0, 211, 0, 0.1);
+  display: block;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  padding: 0 16rpx;
+}
+
+.fgTime {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #959595;
+  font-size: 20rpx;
+  padding-top: 2rpx;
+}
+
+.fgSup {
+  width: 90rpx;
+  height: 35rpx;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.fgSup text {
+  font-size: 24rpx;
+  color: #888;
+  margin-right: 10rpx;
+}
+
+.hasSupport {
+ line-height: 30rpx;
+ height: 30rpx;
+  margin-right: 5rpx;
+  font-size: 30rpx;
+  color: #888;
+}
+
+.noSupport {
+  display: block;
+  float: right;
+  margin-right: 5rpx;
+  font-size: 30rpx;
+  color: #f61b6d;
+}
+
+.fgImg {
+  padding: 20rpx 0;
+  height: auto;
+  overflow: hidden;
+}
+
+.fgImg image {
+  display: block;
+  width: 214rpx;
+  height: 214rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.fgImg image:last-child {
+  margin-right: 0;
+}
+
+.fgMes {
+  margin-top: 20rpx;
+  font-weight: bold;
+  font-size: 34rpx;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.fgDetail {
+  padding: 0rpx 15rpx 0 0;
+  height: auto;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  margin-top: 30rpx;
+}
+
+.fgDetail image {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.fgdMes {
+  padding: 15rpx 0 0rpx 0;
+  width: 440rpx;
+  height: auto;
+  overflow: hidden;
+  float: left;
+}
+
+.fgdmName {
+  display: block;
+  width: 100%;
+  height: 64rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.fgdPrice {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 6rpx;
+}
+
+.fgdPrice text:nth-child(1) {
+  font-size: 20rpx;
+  color: #f61b6d;
+  float: left;
+  padding-top: 10rpx;
+}
+
+.fgdPrice text:nth-child(2) {
+  font-size: 30rpx;
+  color: #f61b6d;
+  float: left;
+  font-weight: bold;
+}
+
+.fgdPrice view {
+  display: block;
+  float: right;
+  color: #f61b6d;
+  font-size: 28rpx;
+  margin-top: 3rpx;
+}
+
+.fgdPeople {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 30rpx 0 0 0;
+  height: 50rpx;
+}
+
+.fgdHead {
+  width: 325rpx;
+  height: auto;
+  position: relative;
+  float: left;
+}
+
+.fgdHead image {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  border: none;
+}
+
+.fgdHead image:nth-child(1) {
+  background-color: #333;
+  left: 0;
+}
+
+.fgdHead image:nth-child(2) {
+  background-color: #999;
+  left: 25rpx;
+}
+
+.fgdHead image:nth-child(3) {
+  background-color: #333;
+  left: 45rpx;
+}
+
+.fgdHead image:nth-child(4) {
+  background-color: #999;
+  left: 65rpx;
+}
+
+.fgdHead image:nth-child(5) {
+  background-color: #333;
+  left: 85rpx;
+}
+
+.fgdHead image:nth-child(6) {
+  background-color: #999;
+  left: 105rpx;
+}
+
+.fgdHead image:nth-child(7) {
+  background-color: #333;
+  left: 125rpx;
+}
+
+.fgdHead image:nth-child(8) {
+  background-color: #999;
+  left: 145rpx;
+}
+
+.fgdHead image:nth-child(9) {
+  background-color: #333;
+  left: 165rpx;
+}
+
+.fgdHead image:nth-child(10) {
+  background-color: #999;
+  left: 185rpx;
+}
+
+.fgdPnum {
+  width: 300rpx;
+  height: auto;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+  float: right;
+}
+
+.fgdPnum text {
+  color: #333;
+  font-weight: bold;
+}
+
+.fgInfo__icon {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.cell-footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.cell-footer__delete{
+  margin-right: 20rpx;
+  width: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 4rpx;
+  border:1px solid #eee;
+  color: #333;
+  box-sizing: border-box;
+
+}

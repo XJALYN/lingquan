@@ -1,0 +1,36 @@
+.address-select-cell{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.address-select-cell__title{
+  margin-top:45rpx;
+  font-size:24rpx;
+  color: #999;
+  margin-left: 40rpx;
+  font-weight: normal
+}
+.address-select-cell__value{
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #020202;
+  font-weight: normal
+}
+.address-select-cell__value__placehold{
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+  height: 40rpx;
+   font-size: 32rpx;
+   color: #CCCCCC;
+  font-weight: normal
+}
+.address-select-cell__line{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  height: 2rpx;
+  background-color: #E8E8E8;
+}

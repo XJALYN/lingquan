@@ -14,6 +14,10 @@
           </view>
         </view>
 
+        <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
+            <text class='ellips_line3'>{{data.content}}</text>
+        </view>
+
         <view class='fgImg' >
           <block wx:for="{{data.images}}" wx:key="{{imageIndex}}" wx:for-item="image" wx:for-index="imageIndex">
 <image src='{{image.thumb_image_url}}' wx:key="{{imageIndex}}" catchtap='onPreviewImages' data-index="{{imageIndex}}" data-list='{{item.articleImgUrlList}}' lazy-load></image>
@@ -21,9 +25,7 @@
             
         </view>
 
-        <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
-            <text class='ellips_line3'>{{data.content}}</text>
-        </view>
+
         
         <view class='fgdPeople'>
             <view class='fgdHead'>

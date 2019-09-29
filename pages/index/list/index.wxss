@@ -1,0 +1,14 @@
+@import "../cell/index";
+
+.job-list {
+  padding: 20rpx 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-data-image {
+  margin-top: 100rpx;
+  font-size: 100rpx;
+  color: #eee;
+}

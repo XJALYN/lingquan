@@ -51,7 +51,9 @@
       "root": "packageA",
       "pages": [
         "pages/jobPublish/jobPublish",
-        "pages/myPublishList/myPublishList"
+        "pages/myPublishList/myPublishList",
+        "pages/merchant/merchant",
+        "pages/merchantRegister/merchantRegister"
       ]
     }
   ],
@@ -106,5 +108,11 @@
   "sitemapLocation": "sitemap.json",
   "navigateToMiniProgramAppIdList": [
     "wx6106b6dfe9370a7c"
-  ]
+  ],
+  "permission": {
+    "scope.userLocation":{
+      "desc": "为你切换到当前地区"
+    }
+  }
+ 
 }

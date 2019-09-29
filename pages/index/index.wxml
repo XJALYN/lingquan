@@ -1,7 +1,11 @@
 <!--pages/index/index.wxml-->
+<import src="./menu/index" />
+<import src="./list/index" />
 <kc-navigation-bar title="邻圈" bindchangeaddress="onChangeAddress" showLocation="true" country="{{currentCountry}}"/>
-<kc-banner list="{{bannerList}}"/>
 
-<kc-job-list list="{{newList}}"/>
+<kc-banner list="{{bannerList}}"/>
+   <template is="menu" data="{{menuList,menuIndex}}" />
+<template is="newsList" data="{{list:newsList}}"/>
+<kc-footer-loading noMore="{{newsParams.noMore}}" wx:if="{{newsList.length > 0}}"/>
 
 

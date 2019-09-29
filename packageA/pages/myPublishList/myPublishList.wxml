@@ -1,6 +1,9 @@
 <!--packageA/pages/myPublishList/myPublishList.wxml-->
 <import src="./menuAlert/index" />
-<kc-job-list list="{{newsList}}"/>
+<import src="./list/index" />
+<template is="newsList" data="{{list:newsList}}" />
+<kc-footer-loading noMore="{{noMore}}" wx:if="{{newsList.length > 0}}"/>
+
 
 <view class="btn-add  iconfont fabu" bindtap="onShowMenuAlert"></view>
 <template is="menuAlert"  wx:if="{{showMenuAlert}}" data="{{categories}}"/>

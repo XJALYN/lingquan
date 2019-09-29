@@ -1,0 +1,24 @@
+<template name="menu">
+<scroll-view class="menu" scroll-x="true"  scroll-left="{{scrollTop}}" scroll-with-animation="true" >
+<block wx:for="{{menuList}}" wx:key="kc-{{index}}">
+   <view class="menu__item {{menuIndex==index?'menu__item--active':''}}" bindtap='onChangeMenu' data-index='{{index}}'>
+   
+    <!-- 其它选项 -->
+    <!-- <view  wx:if="{{index!=1}}">{{item.title}}</view> -->
+     <!-- 鲲美会 -->
+      <kc-form>
+    <view class="menu__item__title" style='{{"width:"+item.title.length * 34+"rpx"}}'>
+   
+      <view>{{item.title}}</view>
+    
+    </view>
+    </kc-form>
+
+    <view  class="menu__item__line {{menuIndex==index? 'menu__item__line--active':''}}"></view>
+   </view>
+</block>
+ <view style='width:32rpx;display:inline-block;'></view>
+</scroll-view>
+  
+
+</template>

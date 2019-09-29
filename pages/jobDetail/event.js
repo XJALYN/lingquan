@@ -1,8 +1,12 @@
 module.exports = {
   onPreviewImages(e) {
     let { list, index } = e.currentTarget.dataset
+    list = list.map(item=>{
+      return item.image_url
+    })
+    console.log(list, list[index].image_url)
     wx.previewImage({
-      current: list[index], // 当前显示图片的http链接
+      current: list[index].image_url, // 当前显示图片的http链接
       urls: list // 需要预览的图片http链接列表
     })
   },

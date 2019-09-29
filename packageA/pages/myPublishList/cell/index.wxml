@@ -1,0 +1,21 @@
+<template name="cell">
+      <view class='fgList' bindtap="onPushToJobDetail" data-id="{{id}}">
+        <view class='fgName'>
+              <view class='fgTime'>{{publish_time}}</view>
+          </view>
+
+        <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
+            <text class='ellips_line3'>{{content}}</text>
+        </view>
+
+        <view class='fgImg' >
+          <block wx:for="{{images}}" wx:key="{{imageIndex}}" wx:for-item="image" wx:for-index="imageIndex">
+<image src='{{image.thumb_image_url}}' wx:key="{{imageIndex}}" catchtap='onPreviewImages' data-index="{{imageIndex}}" data-list='{{item.articleImgUrlList}}' lazy-load></image>
+          </block>
+        </view>
+
+        <view class="cell-footer">
+          <view class="cell-footer__delete" catchtap="onDeleteNews" data-id="{{id}}" data-index="{{index}}">删除</view>
+        </view>
+    </view>
+</template>

@@ -20,7 +20,7 @@
 
         <view class='fgImg' >
            <block wx:for="{{newsData.images}}" wx:key="{{index}}">
-             <image src='{{item.image_url}}' catchtap='onPreviewImages' data-index="{{index}}" data-list="{{articleData.articleImgUrlList}}"></image>
+             <image src='{{item.image_url}}' catchtap='onPreviewImages' data-index="{{index}}" data-list="{{newsData.images}}"></image>
            </block>
             
         </view>
@@ -29,7 +29,7 @@
             <text>{{newsData.content}}</text>
         </view>
         <view class="contant">联系人:{{newsData.contact_name}}</view>
-        <view class="phone" bindtap="onCallPhone" data-phone="18817572718">联系方式:<text>18817572222</text></view>
+        <view class="phone" bindtap="onCallPhone" data-phone="{{newsData.contact_mobile}}">联系方式:<text>点击联系</text></view>
     </view>
 
     <view class="footer-title">联系我时,请说是在【邻圈】看到的,谢谢!</view>

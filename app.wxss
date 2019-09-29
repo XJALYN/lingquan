@@ -54,6 +54,7 @@ page{
   text-overflow: ellipsis;
   white-space: normal;
 }
+
 .ellips{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .ellips_clip{white-space:nowrap;overflow:hidden;text-overflow:clip;}
 .ellips_line3{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;}

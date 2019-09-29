@@ -1,0 +1,33 @@
+<template name="cell">
+      <view class='fgList' bindtap="onPushToJobDetail" data-id="{{id}}">
+        <view class='fgName'>
+          <image class='fgnHead' src='{{author.avatar_url}}' lazy-load></image>
+          <view class='fgInfo'>
+              <view class='fgiName'>
+                <text>{{author.nick_name}}</text>
+                <image class="fgInfo__icon" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/homeV.png"></image>
+              </view>
+              <view class='fgTime'>{{publish_time}}</view>
+          </view>
+          <view class='fgSup'>
+            <text>{{liked_count}}</text>
+            <view class="hasSupport iconfont zan" bindtap='onclickNoSupport'></view>
+          </view>
+        </view>
+
+        <view class='fgMes' bindtap='onclickDetail' data-articleId="{{item.articleId}}">
+            <text class='ellips_line3'>{{content}}</text>
+        </view>
+
+        <view class='fgImg' >
+          <block wx:for="{{show_images}}" wx:key="{{imageIndex}}" wx:for-item="image" wx:for-index="imageIndex">
+<image src='{{image.thumb_image_url}}' wx:key="{{imageIndex}}" catchtap='onPreviewImages' data-index="{{imageIndex}}" data-list='{{item.articleImgUrlList}}' lazy-load></image>
+          </block>
+        </view>
+        <view class='fgdPeople'>
+            <view class='fgdPnum'>
+                <text>{{visited_count}}</text>人已查看
+            </view>  
+        </view>
+    </view>
+</template>

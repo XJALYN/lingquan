@@ -1,0 +1,8 @@
+<!--pages/merchant/merchant.wxml-->
+<view class="page">
+ <image class="icon" src="{{logo_url}}"></image>
+ <view class="name">{{name}}</view>
+ <view class="phone">联系方式:{{mobile}}</view>
+ <view class="address">如需修改相关资料请联系客服</view>
+
+</view>

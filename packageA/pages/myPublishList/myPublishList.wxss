@@ -1,5 +1,6 @@
 /* packageA/pages/myPublishList/myPublishList.wxss */
 @import "./menuAlert/index";
+@import "./list/index";
 .btn-add{
   width: 80rpx;
   height: 80rpx;
@@ -12,4 +13,8 @@
   font-size: 80rpx;
   z-index: 9;
   background: white;
+  border-radius: 50%;
+}
+page{
+  background: #eee;
 }

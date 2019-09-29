@@ -1,16 +1,24 @@
 // packageA/pages/myPublishList/myPublishList.js
 const event = require("./event.js")
 const net = require("./net.js")
+const cell = require("./cell/index.js")
 Page({
   ...event,
   ...net,
+  ...cell,
   /**
    * 页面的初始数据
    */
   data: {
     newsList:[],
     showMenuAlert:false,
-    categories:[]
+    categories:[],
+    params:{
+      page_no:1,
+      page_size:20
+    },
+    noMore:false
+    
   },
 
   /**

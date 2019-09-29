@@ -11,7 +11,7 @@ Page({
    userInfo:{},
    needAuthorUserInfo:true,
    shopTools:[
-     { name: "商家信息", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineInvoice.png", path: ""},
+     { name: "商家信息", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineInvoice.png", path: "/packageA/pages/merchant/merchant"},
      { name: "信息发布", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineInvoice.png", path: "/packageA/pages/myPublishList/myPublishList"},
    ],
    list:[
@@ -19,7 +19,7 @@ Page({
      { name: "升级会员", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineAi.png", openType: ""},
      { name: "领券中心", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineTicketcenter.png", openType: "" },
      { name: "邀请返利", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/my_balance_4.png", openType: ""},
-     { name: "客户服务", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineService.png", openType: "contact" },
+     { name: "在线客服", src: "https://kshop-pro-data.oss-cn-hangzhou.aliyuncs.com/kmh/mineService.png", openType: "contact" },
    ],
   },
 

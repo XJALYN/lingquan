@@ -1,0 +1,9 @@
+<import src="../cell/index" />
+<template name="newsList">
+ <view class="job-list">
+ <template is="cell" data="{{...item,index}}" wx:for="{{list}}" wx:key="{{index}}" />
+
+ <view class="no-data-image iconfont wurenhejilu" wx:if="{{list.length == 0}}"></view>
+</view>
+
+</template>

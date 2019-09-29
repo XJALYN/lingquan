@@ -77,6 +77,17 @@ const myPublishedList = (params = {}) =>{
   return Post(Api.myPublishedList,params)
 }
 
+const saveForm = (params = {}) => {
+  return Post(Api.saveForm,params)
+}
+
+const newsDelete = (params = {}) => {
+  return Post(Api.newsDelete,params)
+}
+
+const reportsLocation = (params = {}) => {
+  return Post(Api.reportsLocation,params)
+}
 
 
 module.exports = {
@@ -92,6 +103,9 @@ module.exports = {
   certifyInfo,
   newCreate,
   newsCategories,
-  myPublishedList
+  myPublishedList,
+  saveForm,
+  newsDelete,
+  reportsLocation
 }
 
