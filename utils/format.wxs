@@ -14,5 +14,6 @@ function toFormatPhone(value){
   return result
 }
 
+
 module.exports.toFixed = toFixed
 module.exports.toFormatPhone = toFormatPhone

@@ -24,6 +24,41 @@ module.exports = {
     wx.makePhoneCall({
       phoneNumber: e.currentTarget.dataset.phone,
     })
+  },
+  onBindToLike(e){
+    let t = {
+      news_id:e.currentTarget.dataset.id
+    }
+    wx.$methods.likeNews(t).then(res=>{
+        this.setData({
+          'newsData.is_liked':true,
+          'newsData.liked_count': ++this.data.newsData.liked_count
+        })
+    })
+  },
+  onBindToUnLike(e){
+    let t = {
+      news_id: e.currentTarget.dataset.id
+    }
+    wx.$methods.unLikesNews(t).then(res => {
+      this.setData({
+        'newsData.is_liked': false,
+        'newsData.liked_count': --this.data.newsData.liked_count
+      })
+    })
+  },
+  // 绑定手机成功
+  onBindPhoneSuccess(e){
+    this.setData({
+      showAuthorPhone:false
+    })
+    this.usersProfile()
+  },
+  // 关闭绑定手机
+  onCloseBindPhone(e){
+    this.setData({
+      showAuthorPhone: false
+    })
   }
 
 }

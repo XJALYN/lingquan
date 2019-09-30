@@ -15,6 +15,10 @@ const login = (params = {}) => {
 }
 
 const authorWxInfo = (params = {}) => {
+  let inviteId = wx.getStorageSync("inviteId")
+  if(inviteId){
+    params.referrer = inviteId
+  }
   return Post(Api.authorWxInfo, params)
 }
 
@@ -89,6 +93,30 @@ const reportsLocation = (params = {}) => {
   return Post(Api.reportsLocation,params)
 }
 
+const likeNews = (params = {}) => {
+  return Post(Api.likeNews,params)
+}
+const unLikesNews = (params = {}) =>{
+  return Post(Api.unLikesNews, params)
+}
+const newsCommentsList = (params = {})=>{
+  return Post(Api.newsCommentsList,params)
+}
+
+const newsComments = (params = {}) => {
+  return Post(Api.newsComments, params)
+}
+const newsCommentsReply = (params = {})=>{
+  return Post(Api.newsCommentsReply, params)
+}
+
+const currentLocation = (params = {}) => {
+  return Post(Api.currentLocation, params)
+}
+
+const authoPhone = (params = {}) => {
+  return Post(Api.authoPhone,params)
+}
 
 module.exports = {
   login,
@@ -106,6 +134,13 @@ module.exports = {
   myPublishedList,
   saveForm,
   newsDelete,
-  reportsLocation
+  reportsLocation,
+  likeNews,
+  unLikesNews,
+  newsCommentsList,
+  newsCommentsReply,
+  newsComments,
+  currentLocation,
+  authoPhone
 }
 

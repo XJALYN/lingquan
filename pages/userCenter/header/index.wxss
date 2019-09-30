@@ -48,6 +48,12 @@
   color: white;
   font-size: 40rpx;
 }
+.header__top__integral{
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  color: white;
+  font-weight: bold;
+}
 .header__mid{
  margin-top: 60rpx;
  display: flex;

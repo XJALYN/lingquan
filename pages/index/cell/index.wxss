@@ -74,10 +74,10 @@
 }
 
 .hasSupport {
- line-height: 30rpx;
- height: 30rpx;
+ line-height: 20rpx;
+ height: 20rpx;
   margin-right: 5rpx;
-  font-size: 30rpx;
+  font-size: 20rpx;
   color: #888;
 }
 

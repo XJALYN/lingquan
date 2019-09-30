@@ -7,6 +7,9 @@ module.exports = {
     })
     wx.$showLoading()
     wx.$methods.newList(this.data.newsParams).then(res=>{
+      res.data.map(item=>{
+        item.publish_time = wx.$toFormatTimeText(item.publish_time)
+      })
       wx.hideLoading()
       wx.stopPullDownRefresh()
       res.data.map(item=>{
@@ -27,6 +30,9 @@ module.exports = {
 
   moreNewsList(){
     wx.$methods.newList(this.data.newsParams).then(res => {
+      res.data.map(item => {
+        item.publish_time = wx.$toFormatTimeText(item.publish_time)
+      })
       let list = res.data
       res.data.map(item => {
         item.show_images = item.images.slice(0, 3)

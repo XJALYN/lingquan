@@ -1,0 +1,15 @@
+<template name="footer">
+<view class="footer">
+ <view class="footer-input-bg">
+ <input placeholder="请输入发表评论" bindinput="onInputComments" class="footer-input" bindfocus="onInputFocus" bindblur="onInputBlur" cursor-spacing="10"></input>
+ </view>
+  
+  <view class="footer-comment-btn {{comment.length?'footer-comment-btn--active':''}}" wx:if="{{showCommentBtn}}" bindtouchstart="onPublishComment">发布</view>
+  <view class="item" wx:if="{{!showCommentBtn}}">
+    <view class="item__icon iconfont weidianzan" wx:if="{{!is_liked}}" bindtap="onBindToLike" data-id="{{id}}"></view>
+    <view class="item__icon item__icon__active iconfont dianzan" wx:if="{{is_liked}}" bindtap="onBindToUnLike" data-id="{{id}}"></view>
+    <view class="item__title">{{liked_count}}</view>
+  </view>
+  <button class="item iconfont fenxiang1" open-type="share" plain style="border:none"></button>
+</view>
+</template>

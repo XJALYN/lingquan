@@ -15,9 +15,12 @@
 
 .btn-publish{
   margin-top: 30rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 100rpx;
   margin-left: 30rpx;
   margin-right: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
   color: white;
   font-size: 32rpx;
+
 }

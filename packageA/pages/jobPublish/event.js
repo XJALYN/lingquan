@@ -49,14 +49,6 @@ module.exports = {
               duration: 10000
             })
             list.push(wx.$methods.fileUpload(t))
-            // wx.$methods.fileUpload(t).then(res => {
-            //   wx.hideLoading()
-            //   resolve(res.data)
-            //   console.log(res)
-            // }).catch(err => {
-            //   wx.hideLoading()
-            //   reject(err)
-            // })
           }
           Promise.all(list).then(res=>{
             wx.hideLoading()

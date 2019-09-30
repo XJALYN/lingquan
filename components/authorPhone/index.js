@@ -4,10 +4,6 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    needPhone:{
-      type:Boolean,
-      value:false
-    }
   },
 
   /**
@@ -20,9 +16,7 @@ Component({
     wx.login({
       success: res => {
         this.setData({
-          code: res.code,
-          ivStr: res.iv,
-          encryptedData: res.encryptedData,
+          code: res.code
         })
         console.log(res)
       }
@@ -34,43 +28,28 @@ Component({
    */
   methods: {
     onHide(){
-     this.setData({
-       needPhone:false
-     })
+      this.triggerEvent("hide")
     },
     onGetUserPhone(e){
       let { encryptedData, errMsg, iv } = e.detail
       if (errMsg == 'getPhoneNumber:ok') {
         let t = {
           code: this.data.code,
-          encryptedData,
-          channel: 3,
-          ivStr: iv
+          encrypted_data:encryptedData,
+          iv: iv
         }
-        this.bindPhone(t)
+        this.authoPhone(t)
       }
     },
     // 获取绑定用户手机号码
-    bindPhone(t) {
-      wx.$methods.bindPhone(t).then(res => {
-        this.setData({
-          needPhone: false
-        })
+    authoPhone(t) {
+      wx.$methods.authoPhone(t).then(res => {
+        this.triggerEvent("success")
         wx.showToast({
           title: '绑定手机成功',
         })
-        let pages = getCurrentPages()
-        setTimeout(()=>{
-          if (pages.length > 0) {
-            pages[0].onLoad(pages[0].options)
-            //wx.$router.reLaunch("/" + pages[0].route, pages[0].options)
-          }
-        },1000)
-         
       }).catch(err=>{
-        this.setData({
-          needPhone: false
-        })
+        this.triggerEvent("hide")
       })
     },
   }

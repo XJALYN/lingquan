@@ -9,12 +9,15 @@ let Raven = require("./common/raven/raven.js")
 let config = require("./config/config.js")
 let md5 = require("./utils/md5.js")
 let shake = require("./utils/util.js").shake
+let toFormatTimeText = require("./utils/util.js").toFormatTimeText
+
 
 wx.$router = router
 wx.$methods = methods
 wx.$showToast = showToast
 wx.$md5 = md5
 wx.$shake = shake
+wx.$toFormatTimeText = toFormatTimeText
 
 //
 wx.$showLoading = function (title ='加载中…'){

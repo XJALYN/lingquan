@@ -1,0 +1,15 @@
+<template name="commentList">
+ <view class="comment-list">
+   <view class="comment-list-item" wx:for="{{list}}" wx:key="{{index}}">
+   <image class="comments-list-item__icon" src="{{item.from_user.avatar_url}}"></image>
+     <view class="comment-list-item__right">
+       <view class="commnet-list-item__right__top">
+         <view class="comment-list-item__right__top__name">{{item.from_user.nick_name}}</view>
+       </view>
+       <view class="comment-list-item__right__content">{{item.content}}</view>
+       <view class="comment-list-item__right__time">{{item.comment_time}}</view>
+     </view>
+   </view>
+    <kc-footer-loading noMore="{{noMore}}" wx:if="{{list.length}}"/>
+ </view>
+</template>

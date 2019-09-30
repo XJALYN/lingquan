@@ -9,8 +9,27 @@ module.exports = {
     })
   },
   onShowMenuAlert(e){
+    if (!this.data.is_certified_mobile){
+      this.setData({
+        showAuthorPhone: true
+      })
+      return
+    }
     this.setData({
       showMenuAlert: true
+    })
+  },
+  // 绑定手机成功
+  onBindPhoneSuccess(e) {
+    this.setData({
+      showAuthorPhone: false
+    })
+    this.usersProfile()
+  },
+  // 关闭绑定手机
+  onCloseBindPhone(e) {
+    this.setData({
+      showAuthorPhone: false
     })
   }
 }

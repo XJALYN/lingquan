@@ -1,5 +1,7 @@
 <!--inPages/findGoods/index.wxml-->
-<kc-navigation-bar title="招聘详情" showHome="true" />
+<import src="./footer/index" />
+<import src="./commentList/index" />
+<kc-navigation-bar title="详情" showHome="true" />
 <view class='findGoods'>
     <view class='fgList' >
         <view class='fgName'>
@@ -27,12 +29,20 @@
 
         <view class='fgMes'>
             <text>{{newsData.content}}</text>
+            <view class="footer-title">联系我时,请说是在【邻圈】看到的,谢谢!</view>
         </view>
-        <view class="contant">联系人:{{newsData.contact_name}}</view>
-        <view class="phone" bindtap="onCallPhone" data-phone="{{newsData.contact_mobile}}">联系方式:<text>点击联系</text></view>
+        <view class="contant" wx:if="{{newsData.contact_name}}">联系人:{{newsData.contact_name}}</view>
+        <view class="phone" bindtap="onCallPhone" data-phone="{{newsData.contact_mobile}}" wx:if="{{newsData.contact_mobile}}">联系方式:<text>点击联系</text></view>
     </view>
 
-    <view class="footer-title">联系我时,请说是在【邻圈】看到的,谢谢!</view>
+    <!-- 评论 -->
+    <template is="commentList"  data="{{list:commentList,noMore}}"/>
+   
+   <!-- 授权手机 -->
+   <kc-auth-phone wx:if="{{showAuthorPhone}}" bindsuccess="onBindPhoneSuccess" bindhide="onCloseBindPhone"/>
+    
+
+    <template is="footer" data="{{...newsData,showCommentBtn,comment}}" />
         
        
 </view>

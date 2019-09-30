@@ -1,46 +1,20 @@
-// packageA/pages/jobPublish/jobPublish.js
+// packageA/pages/invite/invite.js
 const net = require("./net.js")
-const event = require("./event.js")
 Page({
-  ...net,
-  ...event,
+ ...net,
   /**
    * 页面的初始数据
    */
   data: {
-    params:{
-      "content": "1",
-      "category_id": 1,
-      "image_urls": [],
-      "contact_name": "",
-      "contact_mobile": "",
-      "address": {
-        "latitude": 0,
-        "longitude": 0,
-        "address": "",
-        "address_detail": ""
-      }
-    },
-    title:"",
-    certify:{
-
-    }
+    userInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.params.category_id = +options.id
-    this.setData({
-      title:options.name
-    })
-    wx.setNavigationBarTitle({
-      title: `发布${options.name}`,
-    })
-    this.certifyInfo()
-    this.newsCategories()
-    this.currentLocation()
+   
+    this.usersProfile()
   },
 
   /**
@@ -89,6 +63,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title:"邻圈,发现你身边有趣的故事",
+      imageUrl: "http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/share_icon.png",
+      path:"/pages/index/index?inviteId="+this.data.userInfo.id
+    }
   }
 })

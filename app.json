@@ -2,48 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/merchant/merchant",
-    "pages/myPushlishJobs/myPushlishJobs",
     "pages/merchantRegister/merchantRegister",
     "pages/jobDetail/jobDetail",
     "pages/find/find",
     "pages/home/home",
-    "pages/unionAuthor/unionAuthor",
-    "pages/author/author",
-    "pages/luckyBag/luckyBag",
-    "pages/newUserWelfare/newUserWelfare",
-    "pages/refundNode/refundNode",
-    "pages/giftCardRecharge/giftCardRecharge",
-    "pages/aboutKmh/aboutKmh",
-    "pages/afterDetails/afterDetails",
-    "pages/afterSaleApplay/afterSaleApplay",
-    "pages/myIntegral/myIntegral",
-    "pages/myBalance/myBalance",
-    "pages/afterSale/afterSale",
-    "pages/coupon/coupon",
-    "pages/shareMoneyList/shareMoneyList",
-    "pages/logisticsInfor/logisticsInfor",
-    "pages/logisticsTracking/logisticsTracking",
-    "pages/orderDetail/orderDetail",
-    "pages/weixin/weixin",
-    "pages/goodsSearch/goodsSearch",
-    "pages/livePlayer/livePlayer",
-    "pages/electronicInvoice/electronicInvoice",
-    "pages/shoppingCart/shoppingCart",
-    "pages/find1/find",
-    "pages/member/member",
-    "pages/member1/member",
     "pages/userCenter/userCenter",
-    "pages/orderList/orderList",
-    "pages/addressList/addressList",
-    "pages/addressAdd/addressAdd",
-    "pages/addressEdit/addressEdit",
-    "pages/setting/setting",
-    "pages/addressChoiceList/addressChoiceList",
-    "pages/commodityDetail/commodityDetail",
-    "pages/balanceMes/balanceMes",
-    "pages/search/search",
-    "pages/vipBuyRecord/vipBuyRecord",
-    "pages/shopCenter/shopCenter",
+    "pages/author/author",
     "pages/webview/webview"
   ],
   "subpackages": [
@@ -53,7 +17,8 @@
         "pages/jobPublish/jobPublish",
         "pages/myPublishList/myPublishList",
         "pages/merchant/merchant",
-        "pages/merchantRegister/merchantRegister"
+        "pages/merchantRegister/merchantRegister",
+        "pages/invite/invite"
       ]
     }
   ],
@@ -110,9 +75,8 @@
     "wx6106b6dfe9370a7c"
   ],
   "permission": {
-    "scope.userLocation":{
+    "scope.userLocation": {
       "desc": "为你切换到当前地区"
     }
   }
- 
 }

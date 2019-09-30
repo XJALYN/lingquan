@@ -17,7 +17,9 @@ Page({
       page_no:1,
       page_size:20
     },
-    noMore:false
+    noMore:false,
+    is_certified_mobile:false,
+    showAuthorPhone:false
     
   },
 
@@ -25,7 +27,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.usersProfile()
   },
 
   /**

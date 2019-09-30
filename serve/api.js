@@ -15,4 +15,11 @@ module.exports = {
   saveForm:"/wechat/form_id/save",  // 上传formId
   newsDelete:"/news/delete", // 删除文章
   reportsLocation:"/reports/location",// 上报地理位置
+  likeNews:"/likes/news", // 点赞新闻
+  unLikesNews:"/likes/news/cancel", // 取消点赞
+  newsCommentsList:"/comments/news/list",// 评价列表
+  newsComments:"/comments/news", // 新闻评价
+  newsCommentsReply:"/comments/reply",// 新闻评价回复
+  currentLocation:"/users/current_location",// 获取用户当前位置
+  authoPhone:"/certify/mobile", // 授权微信手机号码
 }

@@ -11,7 +11,9 @@
   box-sizing: border-box;
 }
 
+
 page{
+  font-weight: 500;
   background: white !important;
 }
 

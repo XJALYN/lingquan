@@ -1,15 +1,121 @@
 /* components/authorPhone/index.wxss */
-
 @import "../../app.wxss";
-.mask{position: fixed;left: 0rpx;top:0rpx;right: 0rpx;bottom: 0rpx;background:rgba(2,2,2,1);
-opacity:0.68;z-index: 9;}
-.userInfo{width:600rpx;max-height:460rpx;position: fixed;left: 50%;margin-left: -300rpx;top: 50%;margin-top: -355rpx;background-color:#fff;border-radius:6rpx;z-index: 10; }
-.uiHeader{min-height: 157rpx;padding:24rpx 30rpx;height: auto;overflow: hidden;background-color: #00A9B2;border-radius:6rpx 6rpx 0rpx 0rpx; }
-.uhName{display:block;width: 100%;height: auto;overflow: hidden;font-size:56rpx;color: #fff;text-align:center;}
-.uhMes{display: block;width: 100%;height: auto;overflow: hidden;font-size:24rpx;color: #fff;text-align: center;padding-top: 30rpx;}
-.useList{margin-left:40rpx;margin-right:40rpx;margin-top:40rpx; height: 140rpx;overflow: hidden;background:linear-gradient(0deg,rgba(240,239,245,1) 0%,rgba(240,239,244,1) 100%);display: flex;flex-direction: row;align-items: center;justify-content: center;border-radius: 6rpx;}
-.userico{font-size:32rpx;color:#020202;margin-left: 20rpx;padding-bottom: 10rpx;}
-.userMes{float: left;margin-left: 10rpx;color:#020202;font-size: 28rpx;line-height: 28rpx;}
-.userHint{display:block;text-align:center; width: 140rpx;height: 62rpx;float: right;font-size: 24rpx;color: #00A9B2;margin-right: 60rpx;}
-.userBtn{width: 140rpx;height: 62rpx;background-color:#00A9B2;float: right;font-size: 24rpx;color: #fff;margin-top:0rpx;margin-right: 20rpx;}
-.closeIco{font-size: 80rpx;margin:160rpx auto 0rpx auto;float: left;margin-left:256rpx;color: #fff;  }
+
+.mask {
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  right: 0rpx;
+  bottom: 0rpx;
+  background: rgba(2, 2, 2, 1);
+  opacity: 0.68;
+  z-index: 9;
+}
+
+.userInfo {
+  width: 600rpx;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  border-radius: 6rpx;
+  z-index: 10;
+}
+
+.uiHeader {
+  min-height: 157rpx;
+  padding: 24rpx 30rpx;
+  height: auto;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 6rpx 6rpx 0rpx 0rpx;
+}
+
+.uhName {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 56rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.uhMes {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  padding-top: 30rpx;
+}
+
+.useList {
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 40rpx;
+  height: 140rpx;
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(240, 239, 245, 1) 0%, rgba(240, 239, 244, 1) 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6rpx;
+}
+
+.userico {
+  font-size: 32rpx;
+  color: #020202;
+  margin-left: 20rpx;
+  padding-bottom: 10rpx;
+}
+
+.userMes {
+  float: left;
+  margin-left: 10rpx;
+  color: #020202;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+
+.userHint {
+  display: block;
+  text-align: center;
+  width: 140rpx;
+  height: 62rpx;
+  float: right;
+  font-size: 24rpx;
+  color: #00a9b2;
+  margin-right: 60rpx;
+}
+.footer{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.footer-cancle{
+  height: 100rpx;
+  flex:1;
+  line-height: 100rpx;
+  text-align: center;
+  color: #888;
+  border-right: 1px solid #eee;
+  font-size: 34rpx;
+}
+
+.userBtn {
+flex:1;
+  height: 100rpx;
+  color: #333;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 34rpx;
+
+}
+

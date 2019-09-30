@@ -5,6 +5,9 @@ module.exports = {
     wx.$showLoading()
     this.data.params.page_no = 1
     wx.$methods.myPublishedList(this.data.params).then(res=>{
+      res.data.map(item => {
+        item.publish_time = wx.$toFormatTimeText(item.publish_time)
+      })
       wx.hideLoading()
       wx.stopPullDownRefresh()
       console.log(res)
@@ -23,6 +26,9 @@ module.exports = {
   },
   moreMyPublishedList(){
     wx.$methods.myPublishedList(this.data.params).then(res => {
+      res.data.map(item => {
+        item.publish_time = wx.$toFormatTimeText(item.publish_time)
+      })
       let list = res.data
       if(list.length < this.data.params.page_size){
         this.setData({
@@ -56,6 +62,13 @@ module.exports = {
       this.setData({
         newsList:this.data.newsList
       })
+    })
+  },
+  // 获取用户信息
+  usersProfile() {
+    wx.$methods.usersProfile().then(res => {
+      this.data.is_certified_mobile = res.data.is_certified_mobile
+      console.log(res)
     })
   }
 }

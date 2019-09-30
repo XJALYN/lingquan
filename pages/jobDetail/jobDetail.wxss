@@ -1,6 +1,7 @@
 /* inPages/findGoods/index.wxss */
 @import "../../app.wxss";
-
+@import "./footer/index";
+@import "./commentList/index";
 .findGoods {
   margin-top: 20px;
   padding: 0rpx 30rpx;
@@ -10,7 +11,7 @@
 }
 
 .fgList {
-  padding: 20rpx 30rpx;
+  
   background-color: #fff;
   border-radius: 10rpx;
   margin-bottom: 17rpx;
@@ -117,8 +118,8 @@ align-items: center;
 
 .fgImg image {
   display: block;
-  width: 200rpx;
-  height: 200rpx;
+  width: 214rpx;
+  height: 214rpx;
   float: left;
   margin-right: 10rpx;
 }
@@ -344,6 +345,5 @@ align-items: center;
   width: 100%;
   line-height: 100rpx;
   color: #888;
-  font-size: 30rpx;
-  
+  font-size: 24rpx;
 }

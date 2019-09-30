@@ -28,5 +28,19 @@ module.exports = {
         categories:res.data
       })
     })
+  },
+  currentLocation(){
+    wx.$methods.currentLocation().then(res=>{
+      let address = {
+        "latitude": res.data.latitude,
+        "longitude": res.data.longitude,
+        "address": res.data.province + res.data.city + res.data.district,
+        "address_detail": res.data.address
+      }
+      this.setData({
+         'params.address':address
+      })
+      console.log(res)
+    })
   }
 }

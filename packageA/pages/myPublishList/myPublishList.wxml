@@ -7,3 +7,6 @@
 
 <view class="btn-add  iconfont fabu" bindtap="onShowMenuAlert"></view>
 <template is="menuAlert"  wx:if="{{showMenuAlert}}" data="{{categories}}"/>
+
+ <!-- 授权手机 -->
+   <kc-auth-phone wx:if="{{showAuthorPhone}}" bindsuccess="onBindPhoneSuccess" bindhide="onCloseBindPhone"/>

@@ -2,7 +2,7 @@
 <template name="cell">
 <view class="cell">
    <view class="cell__title">{{title}}</view>
-   <input class="cell__value" placeholder='{{placehold}}' placeholder-class='cell__value__placehold' bindinput='{{input}}' type='{{type}}' maxlength='{{maxLength?maxLength:50}}'></input>
+   <input class="cell__value" placeholder='{{placehold}}' placeholder-class='cell__value__placehold' bindinput='{{input}}' type='{{type}}' maxlength='{{maxLength?maxLength:50}}' value="{{value}}"></input>
    <view class="cell__line" wx:if="{{!hideLine}}"></view>
    </view>
 </template>
