@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -76,6 +76,20 @@
 					"name": "邀请好友送积分",
 					"pathName": "packageA/pages/invite/invite",
 					"query": "id=24",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "任务中心",
+					"pathName": "packageA/pages/taskCenter/taskCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分兑换",
+					"pathName": "packageA/pages/convert/convert",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -78,6 +78,15 @@ Component({
       })
      
     },
+    bindopensetting(e){
+      if (e.detail.authSetting['scope.userLocation']){
+        this.setData({
+          showCustomAddress:false
+        })
+        this.triggerEvent("GetLocation")
+      }
+     console.log(e)
+    },
     onSelectedAddress(){
       wx.chooseLocation({
         success: (res) =>{

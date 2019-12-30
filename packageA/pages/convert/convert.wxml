@@ -1,0 +1,28 @@
+<!--packageA/pages/convert/convert.wxml-->
+<view class="header">
+  <view class="header-title">我的钻石:</view>
+  <view class="header-num">{{userInfo.integral}}个</view>
+  <view class="header-icon iconfont gem-o"></view>
+</view>
+
+<view class="list">
+  <view class="list-item">
+     <image class="list-item__img" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/redpacket_01.jpeg"></image>
+     <view class="list-item__title">100钻石兑换1元红包</view>
+     <view class="list-item__bottom">
+       <view class="list-item__bottom__icon iconfont gem-o"></view>
+       <view class="list-item__bottom__num">100</view>
+       <view class="list-item__bottom__btn" bindtap="onConvert">兑换</view>
+     </view>
+  </view>
+
+  <view class="list-item">
+     <image class="list-item__img" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/repacket_02.jpeg"></image>
+     <view class="list-item__title">300钻石兑换3元红包</view>
+     <view class="list-item__bottom">
+       <view class="list-item__bottom__icon iconfont gem-o"></view>
+       <view class="list-item__bottom__num">300</view>
+       <view class="list-item__bottom__btn" bindtap="onConvert">兑换</view>
+     </view>
+  </view>
+</view>

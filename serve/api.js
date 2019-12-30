@@ -22,4 +22,9 @@ module.exports = {
   newsCommentsReply:"/comments/reply",// 新闻评价回复
   currentLocation:"/users/current_location",// 获取用户当前位置
   authoPhone:"/certify/mobile", // 授权微信手机号码
+  signDates:"/integrals/sign/dates", // 获取签到日期
+  sign:"/integrals/sign", // 用户签到
+  dayTasks:"/daily_tasks/info", // 每日任务
+  taskList:"/tasks/list", // 任务列表
+  ocrLicense:"/ocr/business_license",// ocr营业执照识别
 }

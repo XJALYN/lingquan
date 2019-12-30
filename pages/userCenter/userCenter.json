@@ -1,7 +1,7 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "我的",
-  "navigationBarBackgroundColor": "#020202",
-  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
   "backgroundColor": "#eee"
 }

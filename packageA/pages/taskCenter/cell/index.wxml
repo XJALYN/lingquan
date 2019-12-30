@@ -1,0 +1,8 @@
+<template name="cell">
+  <view class="cell">
+    <view class="cell__title">{{name}}</view>
+    <view class="cell__integral">{{reward}}</view>
+    <view class="cell__btn" bindtap="onSign" wx:if="{{!is_finished && code=='DAILY_SIGN'}}">签到</view>
+    <view class="cell__btn cell__btn--invalid"  wx:if="{{is_finished && code=='DAILY_SIGN'}}">已签到</view>
+  </view>
+</template>

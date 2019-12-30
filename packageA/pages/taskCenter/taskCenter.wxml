@@ -1,0 +1,6 @@
+<!--packageA/pages/taskCenter/taskCenter.wxml-->
+<import src="./cell/index" />
+<block wx:for="{{list}}" wx:key="{{index}}">
+  <template is="cell" data="{{...item}}"/>
+</block>
+

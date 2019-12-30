@@ -18,7 +18,9 @@
         "pages/myPublishList/myPublishList",
         "pages/merchant/merchant",
         "pages/merchantRegister/merchantRegister",
-        "pages/invite/invite"
+        "pages/invite/invite",
+        "pages/taskCenter/taskCenter",
+        "pages/convert/convert"
       ]
     }
   ],

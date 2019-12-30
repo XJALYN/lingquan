@@ -23,6 +23,7 @@
   width: 600rpx;
 }
 .title{
+  margin-top: 100rpx;
   color: red;
   font-size: 40rpx;
   margin-bottom: 20rpx;

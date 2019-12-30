@@ -2,6 +2,9 @@
 @import "../../app.wxss";
 @import "./footer/index";
 @import "./commentList/index";
+page{
+  background: white !important;
+}
 .findGoods {
   margin-top: 20px;
   padding: 0rpx 30rpx;
@@ -327,12 +330,14 @@ align-items: center;
 }
 .contant{
  margin-top: 30rpx;
- font-size: 32rpx;
+ font-size: 24rpx;
+ color: #333;
 
 }
 .phone{
   margin-top: 20rpx;
- font-size: 32rpx;
+  font-size: 24rpx;
+  color: #333;
 
 }
 .phone text:first-child{

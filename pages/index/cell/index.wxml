@@ -26,7 +26,7 @@
         </view>
         <view class='fgdPeople'>
             <view class='fgdPnum'>
-                浏览量{{visited_count}}·评论{{comment_count}}
+                距离{{formatted_distance}}·浏览量{{visited_count}}·评论{{comment_count}}
             </view>  
         </view>
     </view>

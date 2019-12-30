@@ -1,4 +1,7 @@
 /* pages/index/index.wxss */
 @import "./menu/index";
 @import "./list/index";
+page{
+  background: white !important;
+}
 

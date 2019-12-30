@@ -4,7 +4,9 @@ module.exports = {
     let t = {
       id:+this.data.id
     }
+    wx.$showLoading()
     wx.$methods.newsDetail(t).then(res => {
+      wx.hideLoading()
       res.data.publish_time = wx.$toFormatTimeText(res.data.publish_time)
       this.setData({
         newsData: res.data,

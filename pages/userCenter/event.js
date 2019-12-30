@@ -1,50 +1,32 @@
 module.exports = {
-  // 跳转到工具页面
-  onPushToTools(e){
-    wx.$showToast("敬请期待!")
-  },
-
   onPushToSetting(e){
     wx.navigateTo({
       url: '/pages/setting/setting',
     })
-   
-  },
-  onPushToVipBuyRecord(){
-    wx.navigateTo({
-      url: '/pages/vipBuyRecord/vipBuyRecord',
-    })
-  },
-  onPushToMember(){
-    wx.switchTab({
-      url: '/pages/member/member',
-    })
-  },
-  // 进入订单列表页面
-  onPushToOrderList(e) {
-    let index = e.currentTarget.dataset.index
-    wx.$router.push('/pages/orderList/orderList', { filterIndex: index})
-  },
-  // 跳转到我的分享金
-  onPushToShareMoney(e){
-    wx.$router.push('/pages/shareMoneyList/shareMoneyList')
-  },
-  onPushToMyCoupon(){
-    wx.$router.push('/pages/coupon/coupon')
-  },
-
-  // 我的积分页面
-  onPushToMyIntegral(){
-    wx.$router.push("/pages/myIntegral/myIntegral")
-  },
-
-  // 我的余额
-  onPushToMyBalance(){
-    wx.$router.push("/pages/myBalance/myBalance")
   },
 
   onPushToPath(e){
-     wx.$router.push(e.currentTarget.dataset.path)
+    let item = e.currentTarget.dataset.item
+    if (item.authorPhone && !this.data.userInfo.is_certified_mobile) {
+      this.setData({
+        showAuthorPhone: true
+      })
+    return
+    }
+    if (item.needMerchant && (this.data.userInfo.certified_status == -1 || this.data.userInfo.certified_status == 2)){
+      wx.showModal({
+        title: '此操作需要认证商家',
+        content: '',
+        confirmText:"去认证",
+        success:res=>{
+          if(res.confirm){
+            this.onPushToMerchantRegister()
+          }
+        }
+      })
+      return
+    }
+    wx.$router.pushByInfo(item)
   },
   onPushToMerchantRegister(e){
     if (this.data.userInfo.certified_status == -1 || this.data.userInfo.certified_status == 2){
@@ -54,5 +36,20 @@ module.exports = {
 
   onAuthorSuccess(){
     this.usersProfile()
+  },
+
+
+  // 绑定手机成功
+  onBindPhoneSuccess(e) {
+    this.setData({
+      showAuthorPhone: false
+    })
+    this.usersProfile()
+  },
+  // 关闭绑定手机
+  onCloseBindPhone(e) {
+    this.setData({
+      showAuthorPhone: false
+    })
   }
 }

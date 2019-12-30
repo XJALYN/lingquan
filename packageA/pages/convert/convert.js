@@ -1,26 +1,21 @@
-// pages/userCenter/userCenter.js
-const net = require("./net.js")
+// packageA/pages/convert/convert.js
 const event = require("./event.js")
-const data = require("./data.js")
+const net = require("./net.js")
 Page({
-  ...net,
-  ...event,
+ ...net,
+ ...event,
   /**
    * 页面的初始数据
    */
   data: {
-   userInfo:{},
-   needAuthorUserInfo:true,
-    baseList: data.baseList,
-    marketingList: data.marketingList,
-    publicList:data.publicList,
-    showAuthorPhone:false // 显示手机授权弹窗
+   userInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.usersProfile()
   },
 
   /**
@@ -34,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.usersProfile()
+
   },
 
   /**
@@ -62,12 +57,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })

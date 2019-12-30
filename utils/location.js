@@ -18,7 +18,7 @@ module.exports = {
     t.key = key
     return new Promise((resolve,reject) =>{
       wx.request({
-        url: 'http://restapi.amap.com/v3/geocode/geo',
+        url: 'https://restapi.amap.com/v3/geocode/geo',
         data: t,
         success:res=>{
           if(res.statusCode==200){

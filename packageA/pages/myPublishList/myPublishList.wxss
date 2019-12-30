@@ -1,6 +1,9 @@
 /* packageA/pages/myPublishList/myPublishList.wxss */
 @import "./menuAlert/index";
 @import "./list/index";
+page{
+  background: white !important;
+}
 .btn-add{
   width: 80rpx;
   height: 80rpx;

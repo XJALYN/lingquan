@@ -1,0 +1,2 @@
+/* packageA/pages/taskCenter/taskCenter.wxss */
+@import "./cell/index";

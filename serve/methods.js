@@ -118,6 +118,26 @@ const authoPhone = (params = {}) => {
   return Post(Api.authoPhone,params)
 }
 
+const signDates = (params = {}) => {
+  return Post(Api.signDates,params)
+}
+
+const sign = (params = {}) =>{
+  return Post(Api.sign,params)
+}
+
+const dayTasks = (params = {}) => {
+  return Post(Api.dayTasks,params)
+}
+
+const taskList = (params = {}) => {
+  return Post(Api.taskList,params)
+}
+
+const ocrLicense = (params = {}) => {
+  return Post(Api.ocrLicense,params)
+}
+
 module.exports = {
   login,
   newList,
@@ -141,6 +161,11 @@ module.exports = {
   newsCommentsReply,
   newsComments,
   currentLocation,
-  authoPhone
+  authoPhone,
+  signDates,
+  sign,
+  dayTasks,
+  taskList,
+  ocrLicense
 }
 

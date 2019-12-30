@@ -14,7 +14,7 @@
 
 page{
   font-weight: 500;
-  background: white !important;
+  background: #eee;
 }
 
 .color_gray{

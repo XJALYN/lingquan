@@ -10,12 +10,16 @@
    <view class="navigation-bar__location__icon iconfont dizhi"></view>
    <view class="navigation-bar__location__title color_gray">{{country}}</view>
   </view>
-  <picker mode="region" bindchange="onChangeAddress" wx:if="{{showLocation && showCustomAddress}}">
+  <!-- <picker mode="region" bindchange="onChangeAddress" wx:if="{{showLocation && showCustomAddress}}">
     <view class="navigation-bar__location">
    <view class="navigation-bar__location__icon iconfont dizhi"></view>
    <view class="navigation-bar__location__title color_gray">{{country}}</view>
   </view>
-  </picker>
+  </picker> -->
+  <button open-type="openSetting" class="navigation-bar__location" plain="true" wx:if="{{showLocation && showCustomAddress}}" style="border:none;padding:0" bindopensetting="bindopensetting">
+   <view class="navigation-bar__location__icon iconfont dizhi"></view>
+   <view class="navigation-bar__location__title color_gray">{{country}}</view>
+  </button>
 
 </view>
 <view class="navigation-bar-bg"></view>

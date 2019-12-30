@@ -1,7 +1,7 @@
 <!--pages/index/index.wxml-->
 <import src="./menu/index" />
 <import src="./list/index" />
-<kc-navigation-bar title="邻圈" bindchangeaddress="onChangeAddress" showLocation="true" country="{{currentCountry}}"/>
+<kc-navigation-bar title="邻圈" bindchangeaddress="onChangeAddress" showLocation="true" country="{{currentCountry}}" bindGetLocation="getLocation"/>
 
 <kc-banner list="{{bannerList}}"/>
    <template is="menu" data="{{menuList,menuIndex}}" />

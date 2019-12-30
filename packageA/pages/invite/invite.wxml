@@ -1,12 +1,11 @@
 <!--packageA/pages/invite/invite.wxml-->
 <view class="page">
-  <image class="image" mode="widthFix" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/jifen_image1.png"></image>
+  <!-- <image class="image" mode="widthFix" src="http://linquan.oss-cn-shanghai.aliyuncs.com/linquan/jifen_image1.png"></image> -->
   <view class="title">活动规则</view>
-  <view class="rule">1.老用户每邀请新用户注册即可获得20积分</view>
+  <view class="rule">1.老用户每邀请新用户注册即可获得1颗钻石</view>
   <view class="rule">2.老用户每天邀请的新用户暂不设置上限</view>
-  <view class="rule">3.每位用户每天最多获得积分上限为20000</view>
-  <view class="rule">4.邀请的新用户必须为真实用户,如果系统检测有恶意刷单的行为将做封号处置</view>
-  <view class="rule">5.活动即日起,至10月30日截止</view>
-   <view class="rule">6.以上活动的解释权归领圈官网所有</view>
+  <view class="rule">3.邀请的新用户必须为真实用户,如果系统检测有恶意刷单的行为将做封号处置</view>
+  <view class="rule">4.活动即日起,至10月30日截止</view>
+   <view class="rule">5.以上活动的解释权归领圈官网所有</view>
   <button class="btn-share" open-type="share" plain style="border:none;color:white;background-color: red;">邀请好友送积分</button>
 </view>

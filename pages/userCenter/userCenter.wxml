@@ -16,28 +16,42 @@
    <template is="orderList" data="{{...orderStatusNums}}"/>
   </view> -->
 
-  <!-- 工具 -->
-  <view class="tools" wx:if="{{userInfo.certified_status==1}}">
-    <view class="tools__title">商家工具</view>
+ <!-- 我的认证 -->
+  <view class="tools">
+    <view class="tools__title">我的信息</view>
     <view class="tools__list">
-      <button class="tools__list__item" wx:for="{{shopTools}}" wx:key="{{index}}" plain style='border:none;padding:0 0' open-type='{{item.openType}}' bindtap='onPushToPath' data-path='{{item.path}}'>
+      <button class="tools__list__item" wx:for="{{baseList}}" wx:key="{{index}}" plain style='border:none;padding:0 0' open-type='{{item.linkType==6?"contact":""}}' bindtap='onPushToPath' data-item='{{item}}'>
         <image class="tools__list__item__icon" src="{{item.src}}"></image>
         <view class="tools__list__item__title">{{item.name}}</view>
       </button>
     </view>
   </view>
-
 
   <!-- 工具 -->
   <view class="tools">
-    <view class="tools__title">必备工具</view>
+    <view class="tools__title">发布工具</view>
     <view class="tools__list">
-      <button class="tools__list__item" wx:for="{{list}}" wx:key="{{index}}" plain style='border:none;padding:0 0' open-type='{{item.openType}}' bindtap='onPushToTools' data-index='{{index}}'>
+      <button class="tools__list__item" wx:for="{{publicList}}" wx:key="{{index}}" plain style='border:none;padding:0 0' open-type='{{item.linkType==6?"contact":""}}' bindtap='onPushToPath' data-item='{{item}}'>
         <image class="tools__list__item__icon" src="{{item.src}}"></image>
         <view class="tools__list__item__title">{{item.name}}</view>
       </button>
     </view>
   </view>
+
+
+      <!-- 工具 -->
+  <view class="tools">
+    <view class="tools__title">赚钱工具</view>
+    <view class="tools__list">
+      <button class="tools__list__item" wx:for="{{marketingList}}" wx:key="{{index}}" plain style='border:none;padding:0 0' open-type='{{item.linkType==6?"contact":""}}' bindtap='onPushToPath' data-item='{{item}}'>
+        <image class="tools__list__item__icon" src="{{item.src}}"></image>
+        <view class="tools__list__item__title">{{item.name}}</view>
+      </button>
+    </view>
+  </view>
+
+
+
 
   <!-- 我的会员卡 -->
   <view class="more-list">
@@ -49,7 +63,7 @@
 
     <!-- 我的会员卡 -->
     <!-- <view class="more-list__item" bindtap='onPushToVipBuyRecord'>
-     <view class="more-list__item__title">我的收藏</view>
+     <view class="more-list__item__title">车主入住</view>
      <view class="more-list__item__arrow iconfont iconyoujiantou"></view>
     </view> -->
 
@@ -65,4 +79,6 @@
 </view>
 
 <kc-author-modal show="{{needAuthor}}"/>
+ <!-- 授权手机 -->
+   <kc-auth-phone wx:if="{{showAuthorPhone}}" bindsuccess="onBindPhoneSuccess" bindhide="onCloseBindPhone"/>
 </view>

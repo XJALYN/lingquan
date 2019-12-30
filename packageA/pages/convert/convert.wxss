@@ -1,0 +1,90 @@
+/* packageA/pages/convert/convert.wxss */
+page{
+  background-color: #eee !important;
+}
+.header{
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+.header-title{
+ margin-left: 20rpx;
+ font-size: 30rpx;
+ color: #333;
+}
+.header-num{
+ margin-left: 20rpx;
+ font-size: 30rpx;
+ color: #F48500;
+}
+.header-icon{
+  color: #F48500;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20rpx;
+}
+.list-item{
+  width: calc(50vw - 30rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin-right: 20rpx;
+}
+.list-item__img{
+  margin-top: 20rpx;
+ width: calc(50vw - 70rpx);
+ height: calc(50vw - 70rpx);
+
+}
+.list-item__title{
+  margin-top: 10rpx;
+ font-size: 30rpx;
+ color: #333;
+ font-weight: bold;
+ text-align: left;
+ width: calc(50vw - 70rpx);
+}
+.list-item__bottom{
+  margin-top: 10rpx;
+ display: flex;
+ align-items: center;
+ width: 100%;
+ margin-bottom: 20rpx;
+}
+.list-item__bottom__icon{
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-left: 20rpx;
+  color: #F48500;
+}
+.list-item__bottom__num{
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  flex: 1;
+  text-align: left;
+  color: #F48500;
+}
+.list-item__bottom__btn{
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: red;
+  color: white;
+  margin-right: 20rpx;
+  font-size: 20rpx;
+}

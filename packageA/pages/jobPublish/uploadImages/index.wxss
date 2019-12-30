@@ -28,7 +28,7 @@
 .upload-content{
   margin-top: 30rpx;
   width: 687rpx;
-  height: 500rpx;
+  height: 300rpx;
   background:rgba(246,246,246,1);
   border-radius: 10rpx;
   position: relative;
